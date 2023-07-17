@@ -1,0 +1,146 @@
+@import "../../../../assets/scss/imgRender.scss";
+
+.arxonasFunctionality {
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  padding: 135px 0 0;
+
+  * {
+    font-family: Roboto, sans-serif;
+  }
+
+  img {
+    max-width: 100%;
+    @include imgRender;
+  }
+
+  .functionalityBg, .functionalityMobileBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+  }
+
+  .functionalityMobileBg {
+    display: none;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 70px;
+    text-align: left;
+    letter-spacing: 0.03em;
+    color: #FFF;
+    position: relative;
+    margin-bottom: 55px;
+    text-transform: uppercase;
+
+    &:after {
+      content: 'Functionality';
+      color: #fff;
+      font-weight: bold;
+      font-size: 75px;
+      line-height: 75px;
+      letter-spacing: 0.03em;
+      opacity: 0.1;
+      left: 0;
+      bottom: 15%;
+      text-transform: uppercase;
+      position: absolute;
+    }
+  }
+
+  .arxonasRoadmap {
+    h2 {
+      &:after {
+        content: 'Roadmap';
+      }
+    }
+  }
+}
+
+.arxonasFunctionalityWrapper {
+  max-width: 1680px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.arxonasFunctionalityImg {
+  display: block;
+  margin: 0 0 0 auto;
+}
+
+.arxonasFunctionalityMobileImg {
+  width: 100%;
+  padding-left: 15px;
+  display: none;
+}
+
+.arxonasRoadmapMobileImg, .arxonasRoadmapTabletImg {
+  width: 100%;
+  display: none;
+}
+
+@media only screen and (min-width: 669px) and (max-width: 1280px) {
+  .arxonasFunctionality {
+    .arxonasFunctionalityImg {
+      padding-left: 20px;
+    }
+
+    .arxonasRoadmapImg {
+      display: none;
+    }
+
+    .arxonasRoadmapTabletImg {
+      display: block;
+      margin-top: -85px;
+      padding-right: 20px;
+      padding-bottom: 95px;
+    }
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .arxonasFunctionality {
+    padding-top: 85px;
+    padding-bottom: 85px;
+
+    h2 {
+      font-size: 26px;
+      line-height: 30px;
+      margin-bottom: 30px;
+
+      &:after {
+        font-size: 38px;
+        line-height: 52px;
+        width: 95%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: clip;
+      }
+    }
+
+    .arxonasRoadmap h2 {
+      margin-bottom: 0;
+    }
+
+    .arxonasFunctionalityMobileImg, .arxonasRoadmapMobileImg, .functionalityMobileBg  {
+      display: block;
+    }
+
+    .arxonasRoadmapMobileImg {
+      padding-right: 15px;
+    }
+
+    .arxonasFunctionalityImg, .arxonasRoadmapImg, .functionalityBg {
+      display: none;
+    }
+  }
+}

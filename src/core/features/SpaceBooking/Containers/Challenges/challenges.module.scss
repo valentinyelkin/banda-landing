@@ -1,0 +1,106 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.container {
+  max-width: 1920px;
+  padding: 0 60px 0 60px;
+  font-family: Montserrat, sans-serif;
+  margin-top: -70px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    padding: 168px 40px 0 40px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    padding: 56px 30px 0 30px
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    padding: 0 15px 0 15px;
+  }
+}
+
+.subTitle {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  color: #2C006E;
+  margin-top: 12px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    font-size: 28px;
+    line-height: 36px;
+    margin-top: 8px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    margin-bottom: 56px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 40px;
+    margin-top: 12px;
+  }
+}
+
+.containerCards {
+  display: flex;
+  gap: 71px;
+  width: 100%;
+  margin-top: 64px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    margin-top: 56px;
+    gap: 54px;
+  }
+
+  .firstCard {
+    width: 30%;
+  }
+
+  .secondCard {
+    width: 30%;
+  }
+
+  .thirdCard {
+    width: 30%;
+  }
+}
+
+.wrapperCard {
+  margin-top: 48px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    margin-top: 52px;
+  }
+}
+
+.customDotList {
+  position: absolute;
+  transform: translate(0%, -8px);
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    transform: translate(0%, -11px);
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    transform: translate(0%, -58px);
+  }
+
+  @media only screen and (max-width: $breakpoint-480) {
+    transform: translate(0%, -5px);
+  }
+}
+
+.customContainer {
+  height: 555px;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    height: 637px;
+  }
+
+  @media only screen and (max-width: $breakpoint-480) {
+    height: 850px;
+  }
+}

@@ -1,0 +1,94 @@
+@import "../../../../../../assets/scss/breakPoints";
+
+.containerCommunicationsPlace {
+  width: 100%;
+  background: #0C111F;
+  margin-top: -1px;
+
+  .wrapperCommunicationsPlace {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    max-width: 1920px;
+
+    @media only screen and (max-width: $breakpoint-ipad) {
+      flex-direction: column-reverse;
+    }
+
+    .wrapperImg {
+      width: 100%;
+      position: relative;
+      left: 0;
+      top: 348px;
+
+      @media only screen and (max-width: $breakpoint-1680) {
+        width: 85%;
+      }
+
+      @media only screen and (max-width: $breakpoint-laptop) {
+        width: 73%;
+        top: 306px;
+      }
+
+      @media only screen and (max-width: $breakpoint-max-width) {
+        width: 66%;
+      }
+
+      @media only screen and (max-width: $breakpoint-tablet) {
+        width: 79%;
+        top: 516px;
+      }
+
+      @media only screen and (max-width: $breakpoint-mobile) {
+        width: 108%;
+        top: 542px;
+        left: -93px;
+      }
+
+      @media only screen and (max-width: $breakpoint-425) {
+        width: 122%;
+      }
+
+      @media only screen and (max-width: $breakpoint-320) {
+        top: 598px;
+      }
+    }
+
+    .wrapperText {
+      position: absolute;
+      left: 51%;
+      width: 40%;
+      top: 57%;
+
+      @media only screen and (max-width: $breakpoint-1600) {
+        top: 79%;
+        left: 51%;
+      }
+
+      @media only screen and (max-width: $breakpoint-tablet) {
+        width: 100%;
+        top: 48%;
+        left: 4%;
+      }
+
+      @media only screen and (max-width: $breakpoint-mobile) {
+        top: 37%;
+      }
+    }
+
+    .wrapperBtnScroll {
+      position: absolute;
+      right: -6%;
+      top: 21px;
+
+      @media only screen and (max-width: $breakpoint-1600) {
+        top: 10px;
+        right: -13%;
+      }
+
+      @media only screen and (max-width: $breakpoint-max-width) {
+        display: none;
+      }
+    }
+  }
+}

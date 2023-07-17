@@ -1,0 +1,47 @@
+@import '../../../../../../assets/scss/breakPoints';
+
+.customContainer {
+  height: 655px;
+  top: -122px;
+  padding-left: 16px;
+
+  > li:last-of-type {
+      padding-left: 0 !important;
+    }
+
+  @media only screen and (max-width: $breakpoint-1800) {
+    top: -176px;
+    padding-left: 33px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    top: -80px;
+    padding-left: 60px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    top: -70px;
+    height: 800px;
+    padding-left: 29px;
+  }
+}
+
+.customDotList {
+  bottom: 14px;
+  left: -11%;
+
+  @media only screen and (max-width: $breakpoint-1800) {
+    bottom: 86px;
+    left: -8%;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    bottom: 63px;
+    left: 0;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    bottom: 50px;
+    left: 4%;
+  }
+}

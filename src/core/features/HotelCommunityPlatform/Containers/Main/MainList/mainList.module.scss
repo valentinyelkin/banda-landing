@@ -1,0 +1,52 @@
+@import '../../../../../../assets/scss/breakPoints';
+
+.container {
+  position: absolute;
+  right: 60px;
+  top: 396px;
+
+  @media only screen and (max-width: $breakpoint-1800) {
+    right: 39px;
+    top: 441px;
+  }
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    top: 302px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    top: 409px;
+    right: -224px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet-768) {
+    width: 79%;
+    top: 518px;
+    right: -111px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    top: 435px;
+    right: -40px;
+  }
+
+  @media only screen and (max-width: $breakpoint-480) {
+    flex-wrap: wrap;
+    width: 75%;
+    top: 316px;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    top: 302px;
+  }
+
+  @media only screen and (max-width: $breakpoint-375) {
+    width: 80%;
+    top: 284px;
+  }
+}

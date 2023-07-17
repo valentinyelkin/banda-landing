@@ -1,0 +1,50 @@
+@import "../../../../../../../../assets/scss/breakPoints";
+
+.stepWrapper {
+  display: none;
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .stepWrapper {
+    display: block;
+    margin: 20px 0 0;
+  }
+
+  .currentStep {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 150%;
+    color: #fff;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .stepProgress {
+    height: 10px;
+    border: 1px solid #fff;
+    margin: 0 auto 20px;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      background: #fff;
+      transition: .3s;
+    }
+  }
+
+  .showSecondStep {
+    .stepProgress {
+      &:before {
+        top: -1px;
+        width: 100%;
+      }
+    }
+  }
+}

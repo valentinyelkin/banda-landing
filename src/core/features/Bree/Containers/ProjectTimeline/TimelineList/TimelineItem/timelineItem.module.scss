@@ -1,0 +1,354 @@
+@import '../../../../../../../assets/scss/breakPoints';
+
+.wrapperRing {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    margin-bottom: 40px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    margin-bottom: 32px;
+  }
+
+  .titleRingTopResearch,
+  .titleRingBottomDeploy,
+  .titleRingTopTesting,
+  .titleRingBottom,
+  .titleRingTop {
+    width: 87%;
+    position: absolute;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    color: #02202a;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      width: 100%;
+    }
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      width: 80%;
+      font-size: 28px;
+      line-height: 40px;
+    }
+
+    @media only screen and (max-width: $breakpoint-max-width) {
+      width: 90%;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      width: 37%;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+      width: 44%;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      width: 37%;
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+
+  .titleRingTopResearch,
+  .titleRingTopTesting,
+  .titleRingTop {
+    top: -179px;
+    left: 116px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      top: -152px;
+      left: 99px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      top: 20px;
+      left: 286px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      top: 17px;
+      left: 180px;
+    }
+  }
+
+  .titleRingTopResearch {
+    @media only screen and (max-width: $breakpoint-mobile) {
+      width: 46%;
+    }
+  }
+
+  .titleRingBottomDeploy {
+    @media only screen and (max-width: $breakpoint-tablet) {
+      width: 100%;
+    }
+
+    @media only screen and (max-width: $breakpoint-425) {
+      width: 53%;
+    }
+  }
+
+  .titleRingTopTesting {
+    width: 86%;
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+      width: 25%;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      width: 31%;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+      width: 36%;
+    }
+  }
+
+  .titleRingBottomDeploy,
+  .titleRingBottom {
+    left: 116px;
+    top: 287px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      left: 96px;
+      top: 229px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      left: 286px;
+      top: 35px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      left: 179px;
+      top: 28px;
+    }
+  }
+}
+
+.wrapperRingDeploy,
+.wrapperRingTesting,
+.wrapperRingFrontEnd,
+.wrapperRingBackEnd,
+.wrapperRingUi,
+.wrapperRingResearch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    width: 120px;
+    height: 120px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 100px;
+    height: 100px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 142px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      height: 120px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      transform: rotate(90deg);
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      width: 2px;
+      height: 51px;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.wrapperRingResearch,
+.wrapperRingUi {
+  background: linear-gradient(54.12deg, #ee9820 14.48%, #f1ad4d 86.37%);
+  box-shadow: 3px 7px 20px rgba(241, 173, 77, 0.3);
+
+  &:after {
+    background: #f1ad4d;
+  }
+
+  &:before {
+    background: #f1ad4d;
+  }
+}
+
+.wrapperRingTesting,
+.wrapperRingBackEnd,
+.wrapperRingResearch {
+  &:after {
+    top: -141px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      top: -120px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      top: 0;
+      left: 177px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      top: 25px;
+      left: 124px;
+    }
+  }
+
+  &:before {
+    top: -163px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      top: -143px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      top: 48px;
+      left: 238px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      top: 43px;
+      left: 150px;
+    }
+  }
+}
+
+.wrapperRingDeploy,
+.wrapperRingFrontEnd,
+.wrapperRingUi {
+  &:after {
+    bottom: -141px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      bottom: -120px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      bottom: 0;
+      left: 177px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      bottom: 23px;
+      left: 124px;
+    }
+  }
+
+  &:before {
+    bottom: -165px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      bottom: -143px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      bottom: 48px;
+      left: 238px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      bottom: 41px;
+      left: 150px;
+    }
+  }
+}
+
+.wrapperRingFrontEnd,
+.wrapperRingBackEnd {
+  background: linear-gradient(
+      258.57deg,
+      #0a82aa 4.14%,
+      #07556e 69.71%,
+      #054155 161.65%
+  );
+  box-shadow: 3px 7px 20px rgba(4, 49, 64, 0.2);
+
+  &:after {
+    background: #0a82aa;
+  }
+
+  &:before {
+    background: #0a82aa;
+  }
+}
+
+.wrapperRingDeploy,
+.wrapperRingTesting {
+  background: linear-gradient(216.59deg, #538b9e 11.55%, #365c69 85%);
+  box-shadow: 3px 7px 20px rgba(4, 49, 64, 0.2);
+
+  &:after {
+    background: #538b9e;
+  }
+
+  &:before {
+    background: #538b9e;
+  }
+}
+
+.number {
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 119%;
+  text-align: center;
+  color: #ffffff;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 68px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 44px;
+  }
+}
+
+.monthWrapper {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  text-align: center;
+  color: #ffffff;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}

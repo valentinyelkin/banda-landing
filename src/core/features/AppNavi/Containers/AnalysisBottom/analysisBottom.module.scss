@@ -1,0 +1,191 @@
+.analysisBottomWrapper {
+  margin: 80px auto 100px;
+  max-width: 1920px;
+}
+
+.analysisLayout {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+}
+
+.analysisDecor {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(-20%);
+  z-index: -1;
+}
+
+.analysisText {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  p {
+    max-width: 845px;
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+.logosContainer {
+  position: relative;
+}
+
+.analysisLogoWrapper {
+  max-width: 1500px;
+  padding: 0 15px;
+  width: 100%;
+  margin: 0 auto 80px;
+
+  img {
+    max-width: 20vw;
+  }
+}
+
+.dashedLogoWrapper {
+  position: absolute;
+  top: 9vw;
+  right: 50px;
+  padding: 0 50px 0 0;
+  max-width: 1920px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+
+  img {
+    display: block;
+    margin: 0 0 0 auto;
+    max-width: 40vw;
+  }
+}
+
+.analysisFigure {
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  object-fit: cover;
+  height: 127%;
+}
+
+.analysisVideo {
+  width: 100%;
+  padding: 0 15px;
+  margin: 130px auto 0;
+  background: linear-gradient(#161E1D 50%, #fff 50%);
+
+  img {
+    width: 100%;
+    max-width: 1500px;
+    border-radius: 30px;
+    outline: none;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.analysisTopText {
+  max-width: 930px;
+  margin: 0 auto 60px;
+}
+
+.logosText {
+  max-width: 1500px;
+  width: 100%;
+  margin: 80px auto 130px;
+  padding: 0 15px;
+
+  p {
+    max-width: 870px;
+    color: #fff;
+  }
+}
+
+@media only screen and (max-width: 1260px) {
+  .logosContainer {
+    margin-top: 15vw;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .logosText {
+    p {
+      max-width: 70%;
+    }
+  }
+
+  .analysisTopText {
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .analysisBottomWrapper {
+    margin: 40px auto;
+  }
+
+  .analysisTopText {
+    padding: 0 15px;
+    margin: 0 auto 20px;
+  }
+
+  .analysisText {
+    margin: 20px auto 0;
+  }
+
+  .analysisLogoWrapper {
+    margin :0 auto 15px;
+
+    img {
+      max-width: 120px;
+    }
+  }
+
+  .logosText {
+    margin: 15px auto 20px;
+  }
+
+  .analysisVideo {
+    margin: 20px auto 0;
+
+    video {
+      border-radius: 0;
+    }
+  }
+
+  .analysisFigure {
+    height: 135%;
+  }
+
+  .logosContainer {
+    margin-top: 30vw;
+  }
+
+  .dashedLogoWrapper {
+    top: -29vw;
+    right: 15px;
+    padding: 0;
+    left: auto;
+    transform: none;
+  }
+
+  .analysisDecor {
+    display: none!important;
+  }
+}
+
+
+@media only screen and (max-width: 550px) {
+  .logosText {
+    p {
+      max-width: none;
+    }
+  }
+}

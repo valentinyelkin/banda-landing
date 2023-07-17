@@ -1,0 +1,250 @@
+@import "../../../../../assets/scss/breakPoints";
+
+.containerOptionalFeatures {
+  width: 100%;
+  background: #0C111F;
+  font-family: 'Raleway', sans-serif;
+  margin-top: -1px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    padding: 0 40px 0 150px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    padding: 250px 30px 0 30px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    padding: 31px 0 0 0;
+  }
+
+  .wrapperOptionalFeatures {
+    display: flex;
+    max-width: 1480px;
+    margin: 0 auto;
+    position: relative;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      max-width: 100%;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      flex-direction: column;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      max-width: 100%;
+    }
+  }
+}
+
+.wrapperText {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 180px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    margin-top: 161px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    padding: 0 15px 0 15px;
+    margin-top: 20px;
+  }
+
+  .title {
+    width: 363px;
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    color: #EFE314;
+    margin-bottom: 35px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      font-size: 70px;
+      line-height: 120%;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      width: 100%;
+      font-size: 70px;
+      line-height: 120%;
+      margin-bottom: 38px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      margin-bottom: 16px;
+      font-size: 40px;
+    }
+  }
+
+  .lowerTitle {
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      font-size: 30px;
+    }
+  }
+
+  .wrapperLists {
+    display: flex;
+    flex-direction: column;
+    width: 71%;
+    margin-top: 30px;
+    margin-left: 26px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      width: 83%;
+      margin-top: 34px;
+      margin-left: 31px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      width: 93%;
+      margin-top: 31px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      width: 89%;
+      margin-top: 11px;
+      margin-left: 1px;
+    }
+
+    .textLists {
+      position: relative;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      color: #FFFFFF;
+
+      @media only screen and (max-width: $breakpoint-mobile) {
+        text-indent: 30px;
+        line-height: 170%;
+        font-size: 20px;
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #FFFFFF;
+        left: -18px;
+        top: 10px;
+
+        @media only screen and (max-width: $breakpoint-mobile) {
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+.containerImg {
+  width: 100%;
+  height: 100%;
+  margin-top: 126px;
+  z-index: 1;
+
+  @media only screen and (max-width: $breakpoint-max-width) {
+    margin-top: 210px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    margin-top: 120px;
+  }
+
+  .wrapperPagination {
+    position: absolute;
+    right: 0;
+    top: 209px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      top: 162px;
+      right: 104px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      left: 688px;
+      top: -69px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+}
+
+.optionalImg {
+  position: relative;
+  top: 123px;
+  left: 25px;
+  width: 729px;
+  height: 652px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    width: 111%;
+    top: 95px;
+    left: -65px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 103%;
+    top: -93px;
+    left: -24px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    display: none;
+  }
+}
+
+.backgroundCrosses {
+  position: absolute;
+  width: 144%;
+  height: 88%;
+  top: 7%;
+  left: -359px;
+  transform: rotate(-5.44deg);
+  background-image: url(/images/projects/Gastehaus/cross-img.svg);
+  background-repeat: repeat;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    display: none;
+  }
+}
+
+.optionalMobileImg {
+  display: none;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 561px;
+    left: -119px;
+    top: -104px;
+  }
+
+  @media only screen and (max-width: $breakpoint-480) {
+    height: 488px;
+    left: -54px;
+  }
+
+  @media only screen and (max-width: $breakpoint-375) {
+    left: 0;
+  }
+}

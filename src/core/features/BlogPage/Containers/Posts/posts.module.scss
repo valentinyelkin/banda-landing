@@ -1,0 +1,48 @@
+@import '../../../../../assets/scss/breakPoints.scss';
+
+.blogWrapper {
+  height: 100vh;
+  position: relative;
+  background-color: #333;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  display: grid;
+  grid-template-rows: min-content 691px;
+  grid-template-columns: 100%;
+  row-gap: 5.5vh;
+  align-content: center;
+  padding: 90px 60px 50px 57px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    padding: 90px 40px 30px 41px;
+    row-gap: 30px;
+    grid-template-rows: min-content 459px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    padding: 90px 30px 30px 30px;
+    grid-template-rows: min-content 849px;
+    align-content: start;
+  }
+
+  @media screen and (max-width: $breakpoint-740) {
+    padding-bottom: 20px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: unset;
+    background: unset;
+    padding: 60px 15px 0 15px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0;
+    display: none;
+    background: transparent;
+  }
+}

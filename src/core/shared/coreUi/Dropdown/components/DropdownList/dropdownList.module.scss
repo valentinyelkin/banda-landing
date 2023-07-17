@@ -1,0 +1,67 @@
+@import '../../../../../../assets/scss/breakPoints.scss';
+
+.dropdownListWrapper {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  max-height: 0px;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    transform: translateX(-50%);
+    left: 50%;
+    width: 100vw;
+  }
+
+  &.active {
+    max-height: none;
+  }
+}
+
+.disableOverlay {
+  position: relative;
+}
+
+.dropdownList {
+  padding: 40px 25px;
+  overflow: hidden;
+  background-color: #efe314;
+  transition: transform 0.3s, opacity 0.3s;
+  transform: scaleY(0);
+  height: 0;
+  transform-origin: top;
+  opacity: 0;
+  display: grid;
+  column-gap: 50px;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto, auto);
+
+  &.active {
+    overflow: auto;
+
+    opacity: 1;
+    transform: scaleY(1);
+    height: auto;
+  }
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 3px;
+    height: 5px;
+
+    &-thumb {
+      background-color: #171718;
+    }
+
+    &-track {
+      background-color: #efe314;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    padding: 25px 20px;
+  }
+
+  & > :last-child {
+    margin-bottom: 0 !important;
+  }
+}

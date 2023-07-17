@@ -1,0 +1,70 @@
+@import '../../../../assets/scss/breakPoints.scss';
+
+.cardResults {
+    background: #FFFFFF;
+    box-shadow: 4px 4px 30px rgba(117, 119, 113, 0.1);
+    padding: 48px 40px;
+    max-width: 772px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+    align-items: center;
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+        max-width: 688px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+        max-width: 708px;
+        padding: 48px 50px;
+    }
+
+    @media only screen and (max-width: $breakpoint-425) {
+        padding: 40px 15px;
+        row-gap: 24px;
+    }
+}
+
+.cardList {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    row-gap: 24px;
+    column-gap: 80px;
+    max-height: 232px;
+    min-width: 574px;
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+       min-width: 536px; 
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        column-gap: 30px;
+        max-height: unset;
+        min-width: unset;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+        row-gap: 16px;
+    }
+}
+
+.cardTitle {
+    font-family: 'Nunito Sans';
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: #474747;
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    span {
+        color: #7F9E2F;
+    }
+}

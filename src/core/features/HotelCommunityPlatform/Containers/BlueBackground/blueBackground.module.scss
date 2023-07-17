@@ -1,0 +1,33 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.bgBlue {
+  position: absolute;
+  transform: translate(-19%, -12%);
+}
+
+.timelineBg {
+  @media only screen and (max-width: $breakpoint-1600) {
+    transform: translate(-9%, -21%);
+  }
+}
+
+.bgFeatures {
+  width: 90%;
+  transform: translate(21%, -53%);
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    transform: translate(3%, 18%);
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    transform: translate(3%, 65%);
+  }
+}
+
+.bgResults {
+  transform: translate(-21%, 6%);
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    transform: translate(-21%, 105%);
+  }
+}

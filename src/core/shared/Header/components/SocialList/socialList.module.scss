@@ -1,0 +1,68 @@
+@import '../../../../../assets/scss/breakPoints.scss';
+
+.socialWrapper {
+  margin: 95px auto 0;
+}
+
+.socialListBree,
+.socialList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+}
+
+.socialListInsidely {
+  display: flex;
+  flex-wrap: nowrap !important;
+  gap: 30px;
+
+  @media only screen and (max-width: $breakpoint-tablet-768) {
+    gap: 20px;
+  }
+  @media only screen and (max-width: $breakpoint-mobile) {
+    gap: 5px;
+  }
+}
+
+.socialWrapperGastehaus {
+  margin-top: 162px;
+
+  @media screen and (max-width: $breakpoint-laptop) {
+    margin-top: 87px;
+    margin-left: -60px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .socialListBree,
+  .socialWrapperGastehaus,
+  .socialWrapper {
+    margin: 0;
+  }
+
+  .socialListHotelCommunity,
+  .socialListBree,
+  .socialList {
+    width: 225px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+  }
+
+  .socialListBree {
+    width: 250px;
+  }
+
+  .socialListSpaceBooking {
+    justify-content: center;
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  .socialListHotelCommunity {
+    width: 250px;
+  }
+}

@@ -1,0 +1,174 @@
+@import '../../../../../../assets/scss/breakPoints';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  margin-left: 15px;
+
+  .wrapperTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -13px;
+    left: -15px;
+    width: 100%;
+    height: 4px;
+    background-color: #6800FD;
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      height: 370px;
+      width: 4px;
+      bottom: -281px;
+      left: -19px;
+      border-radius: 12px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      height: 297px;
+      bottom: -228px;
+    }
+  }
+}
+
+.wrapperInProgress {
+  &:after {
+    @media only screen and (max-width: $breakpoint-tablet) {
+      opacity: 0.2;
+      height: 202px;
+      bottom: -86px;
+    }
+  }
+}
+
+.phase {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #6800FD;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 68px;
+  color: #250B4A;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    font-size: 40px;
+    line-height: 56px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+.months {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #6800FD;
+  padding: 10px 28px 0 0;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    font-size: 20px;
+    line-height: 36px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    display: none;
+  }
+}
+
+.wrapperMonths5,
+.wrapperMonths1 {
+  width: 56px;
+  position: absolute;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 47px;
+  }
+}
+
+.wrapperMonths1 {
+  left: -86px;
+  bottom: -44px;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    left: -74px;
+    bottom: -65px;
+  }
+}
+
+.wrapperMonths5 {
+  left: -85px;
+  bottom: -127px;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    left: -74px;
+    bottom: -138px;
+  }
+}
+
+.inProgressMob {
+  position: absolute;
+  bottom: -204px;
+  left: -94px;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    bottom: -208px;
+    left: -82px;
+  }
+}
+
+.num,
+.inProgressMob,
+.months5,
+.months1 {
+  text-align: end;
+  width: 56px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #6800FD;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-size: 10px;
+    width: 47px;
+  }
+}
+
+.num {
+  font-size: 22px;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-size: 20px;
+  }
+}
+
+.months1 {
+  left: -92px;
+  bottom: -44px;
+}
+

@@ -1,0 +1,179 @@
+.sunUpProblems {
+  padding: 175px 0 0 0;
+  margin-bottom: 200px;
+  overflow: hidden;
+
+  * {
+    font-family: Roboto, sans-serif;
+  }
+}
+
+.sunUpProblemsWrapper {
+  max-width: 1480px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sunUpProblemsInfo {
+  max-width: 720px;
+
+  h3 {
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 70px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 24px;
+    line-height: 150%;
+    color: #333;
+  }
+}
+
+.sunUpProblemsBlocks {
+  flex-grow: 1;
+  position: relative;
+
+  p {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #fff;
+  }
+}
+
+.sunUpProblemsGoogle,
+.sunUpProblemsImport,
+.sunUpProblemsWhiteboard {
+  max-width: 630px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 50px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.sunUpProblemsGoogle {
+  background: url("/images/projects/SunUp/problems1.png") no-repeat center;
+  margin-bottom: 25px;
+}
+
+.sunUpProblemsImport {
+  background: url("/images/projects/SunUp/problems2.png") no-repeat center;
+  margin-bottom: 25px;
+}
+
+.sunUpProblemsWhiteboard {
+  background: url("/images/projects/SunUp/problems3.png") no-repeat center;
+}
+
+.sunUpProblemsSmall,
+.sunUpProblemsMiddle,
+.sunUpProblemsBig {
+  border: 1px solid #213659;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.sunUpProblemsSmall {
+  width: 770px;
+  height: 770px;
+  opacity: .2;
+}
+
+.sunUpProblemsMiddle {
+  width: 990px;
+  height: 990px;
+  opacity: .1;
+}
+
+.sunUpProblemsBig {
+  width: 1220px;
+  height: 1220px;
+  opacity: .05;
+}
+
+.sunUpProblemsInterface {
+  margin: 100px auto 0;
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .sunUpProblemsWrapper {
+    flex-flow: column;
+  }
+
+  .sunUpProblemsInfo {
+    max-width: none;
+    padding: 0 20px;
+    margin-bottom: 25px;
+  }
+
+  .sunUpProblemsGoogle, .sunUpProblemsImport, .sunUpProblemsWhiteboard {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sunUpProblemsBlocks {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .sunUpProblems {
+    padding: 70px 0 0 0;
+    margin-bottom: 60px;
+  }
+
+  .sunUpProblemsInfo  {
+    h3 {
+    font-size: 30px;
+    line-height: 35px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .sunUpProblemsBlocks {
+    padding: 0 20px;
+  }
+
+  .sunUpProblemsSmall {
+    width: 340px;
+    height: 340px;
+  }
+
+  .sunUpProblemsMiddle {
+    width: 440px;
+    height: 440px;
+  }
+
+  .sunUpProblemsBig {
+    width: 540px;
+    height: 540px;
+  }
+
+  .sunUpProblemsInterface {
+    margin: 30px auto 0;
+    padding: 20px;
+  }
+}

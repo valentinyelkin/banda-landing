@@ -1,0 +1,63 @@
+@import '../../../../../assets/scss/breakPoints.scss';
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 200px 0 368px 0;
+    position: relative;
+    background-image: url('/images/projects/Sestra/hexagons/bg-timeline-hexagons.svg'),
+        url('/images/projects/Sestra/hexagons/bg-timeline-hexagon.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 60px) 42px, calc(100% - 580px) calc(100% + 111px);
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+        background-size: 200px 272px, 200px 230px;
+        background-position: calc(100% - 60px) 42px, calc(100% - 410px) calc(100% + 98px);
+        padding: 160px 0 266px 0;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+        padding: 120px 0 182px 30px;
+        background-position: calc(100% - 103px) 80px, calc(100% - 40px) calc(100% + 82px);
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+        padding: 100px 0 140px 15px;
+        background-size: 110px 152px, 120px 138px;
+        background-position: calc(100% - 10px) 75px, calc(100% - 20px) calc(100% + 48px);
+    }
+
+    &::before {
+        content: "";
+        width: 2px;
+        height: 100px;
+        background: #757575;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+
+        @media only screen and (max-width: $breakpoint-laptop-1366) {
+            height: 70px;
+        }
+
+        @media only screen and (max-width: $breakpoint-375) {
+            height: 50px;
+            width: 1px;
+        }
+    }
+}
+
+.titleWrapper {
+    padding: 0 60px;
+    margin-bottom: 87px;
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+        margin-bottom: 56px;
+        padding: 0;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+        margin-bottom: 40px;
+    }
+}

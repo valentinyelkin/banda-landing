@@ -1,0 +1,10 @@
+@import '../../../../../../assets/scss/breakPoints';
+
+.container {
+  display: flex;
+  flex-direction: row;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+  }
+}

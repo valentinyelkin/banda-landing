@@ -1,0 +1,303 @@
+@import "../../../../../../assets/scss/breakPoints";
+
+.discussWrapper {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.discussContainer {
+  padding: 0 60px;
+  z-index: 1;
+
+  h2 {
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 130%;
+    color: #FFFFFF;
+    margin: 0 0 20px;
+  }
+
+  h6 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFF;
+    opacity: 0.5;
+    margin: 0 0 20px;
+  }
+}
+
+.formMainInfo {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  &> div {
+    flex: 0 0 calc(50% - 15px);
+
+    @media screen and (max-width: $breakpoint-max-width) {
+      flex: 0 0 calc(50% - 15px);
+    }
+  }
+}
+
+.formContacts {
+  margin: 0 30px 0 0;
+}
+
+.formProjectType {
+  margin: 30px 0 0;
+}
+
+.projectRadioRow {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 1250px;
+}
+
+.discussForm {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.discussFormLeftPart {
+  margin: 0 60px 0 0;
+}
+
+.discussFormRightPart {
+  flex: 0 0 auto;
+}
+
+.error {
+  color: #EB5757 !important;
+}
+
+@media screen and (max-width: $breakpoint-1600) {
+  .discussWrapper {
+    h2 {
+      font-size: 54px;
+      line-height: 1;
+    }
+
+    h6 {
+      font-size: 22px;
+      line-height: 24px;
+    }
+  }
+
+  .discussFormRightPart {
+    .btnWithArrow {
+      margin-top: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-max-width) {
+  .discussFormLeftPart {
+    margin-right: 30px;
+  }
+
+  .projectRadioContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+  }
+
+  .projectRadioRow {
+    flex-flow: column nowrap;
+    flex: 0 0 calc(50% - 10px);
+
+    &:first-child {
+      margin-right: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+  .discussContainer {
+    padding: 0 30px;
+  }
+  .textareaWrapper {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-height: 930px) {
+  .discussWrapper {
+    align-items: flex-end;
+  }
+}
+
+@media screen and (max-height: 930px) and (min-width: $breakpoint-mobile) and (max-width: 1600px) {
+  .discussFormRightPart {
+    .btnWithArrow {
+      margin-top: 58px;
+    }
+  }
+}
+
+@media screen and (max-height: 930px) and (min-width: $breakpoint-mobile) {
+  .discussContainer {
+    h2 {
+      font-weight: bold;
+      font-size: 40px;
+    }
+  }
+
+  .discussFormRightPart {
+    .btnWithArrow {
+      margin-top: 32px;
+    }
+  }
+
+  .formProjectType {
+    margin: 5px 0 0;
+    h6 {
+      margin-top: 15px;
+    }
+  }
+
+  .formMainInfo {
+    .inputText {
+      input[type="text"],
+      input[type="email"]{
+        height: 40px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .formBudget {
+    .inputRadio {
+      &.smallInput {
+        &:not(:last-child) {
+          margin-bottom: 13px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .gradient-vertical,
+  .gradient-horizontal {
+    display: none;
+  }
+
+  .discussWrapper {
+    display: block;
+    overflow: visible;
+    height: auto;
+    background-image: linear-gradient( rgba(255,255,255,.1), transparent 1px), linear-gradient( 90deg, rgba(255,255,255,.1), transparent 1px);
+    background-size: 15px 15px;
+    background-position: center center;
+
+    h2 {
+      font-size: 26px;
+      line-height: 130%;
+
+      span {
+        color: #EFE314;
+        font-size: 36px;
+      }
+    }
+
+    h6 {
+      font-size: 20px;
+      line-height: 23px;
+      margin: 0 0 15px;
+    }
+  }
+
+  .discussContainer {
+    padding: 60px 15px;
+  }
+
+  .discussForm {
+    display: block;
+
+    &.showSecondStep {
+      .formMainInfo {
+        display: none;
+      }
+
+      .formProjectType,
+      .discussFormRightPart {
+        display: block;
+      }
+    }
+  }
+
+  .discussFormLeftPart {
+    margin: 0;
+    width: 100%;
+  }
+
+  .discussFormRightPart {
+    display: none;
+    width: 100%;
+  }
+
+  .formMainInfo {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    &> div {
+      flex: 1 0 100%;
+      width: 100%;
+    }
+  }
+
+  .formContacts {
+    margin: 0 auto 30px;
+  }
+
+  .formProjectType {
+    display: none;
+    margin: 0 0 10px;
+
+    h6 {
+      font-size: 24px;
+    }
+  }
+
+  .projectRadioContainer {
+    flex-flow: column;
+  }
+
+  .projectRadioRow {
+    flex: 1 0 100%;
+    margin: 0;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+
+  .formBudget {
+    h6 {
+      display: none;
+    }
+  }
+}
+
+.inputTextStar {
+  display: inline !important;
+  position: relative !important;
+  top: -5px !important;
+  right: -1px !important;
+  font-size: 11px !important;
+}

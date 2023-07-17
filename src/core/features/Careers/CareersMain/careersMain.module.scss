@@ -1,0 +1,261 @@
+@import "../../../../assets/scss/breakPoints";
+
+$careers-title-font-sizes: (
+        null: 24px,
+        768px: 40px,
+        1024px: 60px,
+        1280px: 80px,
+        1600px: 80px,
+        1900px: 107px,
+);
+
+$careers-subtitle-font-sizes: (
+        null: 24px,
+        768px: 40px,
+        1024px: 40px,
+        1280px: 40px,
+        1600px: 40px,
+        1900px: 40px,
+);
+
+$careers-text-font-sizes: (
+        null: 14px,
+        768px: 24px,
+        1024px: 24px,
+        1280px: 24px,
+        1600px: 24px,
+        1900px: 24px,
+);
+
+@mixin font-size($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    } @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+};
+
+.careersWrapper {
+  height: 100vh;
+  overflow: scroll;
+  background: #333333;
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #3C3C3C;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      background: #EFE314;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #EFE314;
+  }
+}
+
+.careersContent {
+  margin: 250px 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.casesHeader {
+  background: none;
+}
+
+.careersTitle {
+  color: #FFFFFF;
+  max-width: 569px;
+  max-height: 457px;
+  text-transform: uppercase;
+  white-space: pre;
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 146px;
+  text-align: right;
+  letter-spacing: 0.25em;
+  border-right: 10px solid #EFE314;
+  margin: 30px 60px;
+  padding-left: 80px;
+  z-index: 1;
+  @include font-size($careers-title-font-sizes);
+}
+
+.careersList {
+  height: 450px;
+  overflow-y: scroll;
+  padding: 0 90px;
+  z-index: 1;
+
+  li {
+    position: relative;
+    width: 646px;
+    border: 1px solid #FFFFFF;
+    margin-bottom: 15px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  li:hover {
+    .jobTitle {
+      transition: color .3s;
+      color: #EFE314;
+    }
+
+    .jobDescription {
+      transition: color .3s;
+      color: #FFFFFF;
+    }
+
+    .arrow {
+      display: block;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #3C3C3C;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      background: #EFE314;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #EFE314;
+  }
+}
+
+.jobTitle {
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 130%;
+  //margin: 14px 30px 0 20px; margin, when properties tech, time and rank exists
+  margin: 14px 30px 14px 20px;
+  color: #FFFFFF;
+  @include font-size($careers-subtitle-font-sizes)
+}
+
+.jobDescription {
+  color: #BDBDBD;
+  padding: 7px 0 11px 20px;
+  font-family: OpenSans, sans-serif;
+  font-style: normal;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  @include font-size($careers-text-font-sizes);
+}
+
+.arrow {
+  display: none;
+  position: absolute;
+  left: 95%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.horizontalLine {
+  display: none;
+  width: 40%;
+  height: 7px;
+  background-color: #EFE314;
+  margin: 0 auto 20px;
+}
+
+@media screen and (max-width: 1280px) {
+  .careersTitle {
+    line-height: 125px;
+    margin: 0 50px;
+    padding: 30px;
+  }
+
+  .careersList {
+    max-height: 415px;
+    padding: 10px 48px 0 30px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+  .careersContent {
+    max-width: 691px;
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto 0;
+  }
+
+  .careersTitle {
+    display: inline-block;
+    overflow: visible;
+    white-space: nowrap;
+    border-right: none;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  .careersList {
+    padding: 5px 10px;
+    max-height: 100%;
+  }
+
+  .horizontalLine {
+    display: block;
+  }
+
+  .jobTitle {
+    line-height: 100%;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .careersList {
+    padding: 5px 20px;
+    height: 550px;
+    li {
+      width: 100%;
+    }
+  }
+
+  .careersTitle {
+    line-height: 80px;
+  }
+
+  .horizontalLine {
+    margin: 15px auto 50px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .careersTitle {
+    line-height: 35px;
+  }
+
+  .jobTitle {
+    margin: 10px;
+  }
+
+  .jobDescription {
+    padding: 0 10px 5px;
+  }
+  .horizontalLine {
+    margin: 0 auto 15px;
+    height: 5px;
+  }
+}

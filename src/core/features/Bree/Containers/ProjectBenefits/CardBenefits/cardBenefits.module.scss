@@ -1,0 +1,117 @@
+@import "../../../../../../assets/scss/breakPoints";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 416px;
+  height: 392px;
+  background: #FFFFFF;
+  box-shadow: 3px 7px 20px rgba(4, 49, 64, 0.2);
+  border-radius: 24px;
+  padding-top: 51px;
+  position: relative;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    width: 336px;
+    height: 340px;
+  }
+
+  @media only screen and (max-width: $breakpoint-laptop-1366) {
+    padding-top: 36px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 223px;
+    height: 324px;
+    padding-top: 29px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 350px;
+    height: 284px;
+  }
+
+  @media only screen and (max-width: $breakpoint-480) {
+    width: 288px;
+    height: 271px;
+  }
+
+  .img {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -15px);
+    width: 156px;
+    height: 156px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      transform: translate(-50%, -4px);
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      width: 130px;
+      height: 130px;
+      transform: translate(-50%, -9px);
+      left: 52%;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      width: 100px;
+      height: 100px;
+      transform: translate(-50%, 5px);
+      left: 51%;
+    }
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    color: #02202A;
+    padding-bottom: 16px;
+    margin-top: -15px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      font-size: 28px;
+      line-height: 40px;
+    }
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+      padding-bottom: 12px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      padding: 0 32px 12px 32px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      font-size: 32px;
+      line-height: 36px;
+      padding: 23px 20px 8px 20px;
+    }
+  }
+
+  .description {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #02202A;
+    padding: 0 80px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      font-size: 18px;
+      line-height: 28px;
+      padding: 0 48px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      padding: 0 32px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+}

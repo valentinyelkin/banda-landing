@@ -1,0 +1,294 @@
+@import '../../../../../../assets/scss/breakPoints';
+
+.containerItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 13px;
+  position: relative;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    margin-bottom: 16px;
+    gap: 7px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    margin-bottom: 12px;
+  }
+
+  .wrapper {
+    position: relative;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      margin-left: 12px;
+    }
+  }
+
+  .square {
+    display: flex;
+    min-width: 20px;
+    height: 20px;
+    background: #824DCE;
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      min-width: 16px;
+      height: 16px;
+    }
+  }
+
+  .lineTop {
+    position: absolute;
+    left: -125px;
+    bottom: -36px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      left: -124px;
+      bottom: -26px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+
+  .lineTopMobile {
+    display: none;
+    position: absolute;
+    top: 124px;
+    left: 9px;
+    width: 32px;
+    height: 327px;
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      display: block;
+    }
+
+    @media only screen and (max-width: $breakpoint-480) {
+      top: 123px;
+    }
+
+    @media only screen and (max-width: $breakpoint-425) {
+      top: 154px;
+      left: 9px;
+    }
+  }
+
+  .lineBottom {
+    position: absolute;
+    left: -27px;
+    bottom: -84px;
+    width: 124%;
+    height: 96px;
+
+    @media only screen and (max-width: $breakpoint-1800) {
+      left: 2px;
+      bottom: -73px;
+    }
+
+    @media only screen and (max-width: $breakpoint-1680) {
+      width: 135%;
+      left: 1px;
+      bottom: -68px;
+    }
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      display: none;
+    }
+  }
+
+  .lineBottomLaptop {
+    display: none;
+    position: absolute;
+    left: 8px;
+    bottom: -35px;
+    width: 126%;
+    height: 59px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      display: block;
+    }
+
+    @media only screen and (max-width: $breakpoint-max-width) {
+      bottom: -20px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+
+  .lineBottomMobile {
+    display: none;
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      display: block;
+      position: absolute;
+      top: 13px;
+      left: 7px;
+      height: 398px;
+      width: 23px;
+    }
+
+    @media only screen and (max-width: $breakpoint-425) {
+      top: 37px;
+      left: 8px;
+      width: 24px;
+    }
+  }
+
+  .lineLeft {
+    position: absolute;
+    width: 133%;
+    left: -7px;
+    bottom: -8px;
+
+    @media only screen and (max-width: $breakpoint-1680) {
+      width: 157%;
+    }
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      width: 125%;
+    }
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+      display: none;
+    }
+  }
+
+  .lineLeftLaptop {
+    display: none;
+    position: absolute;
+    width: 133%;
+    left: 11px;
+    bottom: -14px;
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+      display: block;
+    }
+
+    @media only screen and (max-width: $breakpoint-max-width) {
+      width: 159%;
+    }
+
+    @media only screen and (max-width: $breakpoint-1170) {
+      bottom: -2px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+
+  .lineLeftTablet {
+    display: none;
+    position: absolute;
+    width: 60%;
+    left: 10px;
+    bottom: -282px;
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      display: block;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+
+  .lineRight {
+    position: absolute;
+    width: 136%;
+    left: -70px;
+    bottom: -154px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      bottom: -155px;
+      left: -63px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+
+  .lineRightTablet {
+    display: none;
+    position: absolute;
+    width: 90%;
+    left: 8px;
+    bottom: 22px;
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      display: block;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+}
+
+.boldStr,
+.str {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #250B4A;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    line-height: 32px;
+  }
+}
+
+.boldStr {
+  font-weight: 600;
+}
+
+.strFeatures {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    padding-left: 7px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.containerFunctionalitySecond {
+  gap: 20px;
+}
+
+.containerFeatures {
+  margin-bottom: 32px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    margin-bottom: 24px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    display: flex;
+    gap: 0;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    margin-bottom: 11px;
+  }
+}
+

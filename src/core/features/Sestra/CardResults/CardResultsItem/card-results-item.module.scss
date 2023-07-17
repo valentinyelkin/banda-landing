@@ -1,0 +1,21 @@
+@import '../../../../../assets/scss/breakPoints.scss';
+
+.cardResultsItem {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    color: #173864;
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    span {
+        flex-shrink: 0;
+    }
+}

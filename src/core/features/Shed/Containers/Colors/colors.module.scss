@@ -1,0 +1,162 @@
+.shedColors {
+  max-width: 1470px;
+  padding: 0 15px;
+  margin: 0 auto 180px;
+  overflow: hidden;
+
+  h2 {
+    font-size: 56px;
+    text-transform: uppercase;
+    color: #8CD50B;
+    margin-bottom: 55px;
+    font-weight: 300;
+  }
+
+  p {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    color: #8CD50B;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+  }
+}
+
+.shedColorsList {
+  margin-top: 55px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  align-items: flex-end;
+}
+
+.shedColorsItem {
+  margin-bottom: 65px;
+  margin-right: 5px;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  p {
+    color: #8A8A8A;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: lowercase;
+    margin-top: 40px;
+  }
+}
+
+%colorWrapper {
+  height: 285px;
+  width: 285px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-height: 100%;
+  }
+
+  @media only screen and (max-width: 668px) {
+    height: 135px;
+    width: 135px;
+  }
+}
+
+
+.shedColorWrapper {
+  &1 {
+    @extend %colorWrapper;
+    background: #01454F;
+  }
+
+  &2 {
+    @extend %colorWrapper;
+    background: #8CD50B;
+
+    img {
+      max-width: calc(100% + 20px);
+    }
+  }
+
+  &3 {
+    @extend %colorWrapper;
+    background: #000;
+  }
+
+  &4 {
+    @extend %colorWrapper;
+    background: #8A8A8A;
+  }
+
+  &5 {
+    @extend %colorWrapper;
+    background: #F3F5F6;
+  }
+
+  &6 {
+    @extend %colorWrapper;
+    background: #2F80ED;
+  }
+
+  &7 {
+    @extend %colorWrapper;
+    background: #EB5757;
+  }
+
+  &8 {
+    @extend %colorWrapper;
+    background: #F2994A;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .shedColors {
+    h2 {
+      font-size: 48px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .shedColorsItem {
+    max-width: 50%;
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .shedColors {
+    margin: 40px auto 60px;
+    padding: 0;
+
+    h2 {
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 25px;
+      padding: 0 15px;
+    }
+
+    p {
+      padding: 0 15px;
+    }
+  }
+
+  .shedColorsList {
+    padding: 0 10px;
+    max-width: 340px;
+    margin: 30px auto 0;
+  }
+
+  .shedColorsItem {
+    margin-bottom: 40px;
+    max-width: 135px;
+
+    p {
+      font-size: 16px;
+      margin-top: 15px;
+    }
+  }
+}

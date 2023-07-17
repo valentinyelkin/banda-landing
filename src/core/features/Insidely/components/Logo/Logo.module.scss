@@ -1,0 +1,17 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.logo{
+  width: 180px;
+}
+
+@media only screen and (max-width: $breakpoint-laptop-1366) {
+  .logo{
+    width: 140px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+  .logo{
+    width: 100px;
+  }
+}

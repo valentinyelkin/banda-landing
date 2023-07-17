@@ -1,0 +1,204 @@
+@import '../../../../../assets/scss/breakPoints.scss';
+
+.sestraMain {
+    background-color: #173864;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 180px;
+    position: relative;
+    background-image: url('/images/projects/Sestra/bg-dots/bg-main-dots.svg'),
+        url('/images/projects/Sestra/bg-dots/bg-main-blue-dots.svg'),
+        url('/images/projects/Sestra/hexagons/bg-main-hexagons.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 207px) 30px, calc(100% + 16px) calc(100% - 55px), 365px calc(100% + 40px);
+    background-size: 890px 660px, 660px 200px, 290px 397px;
+    padding: 160px 0 119px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+        padding: 130px 0 80px;
+        background-size: 890px 660px, 660px 200px, 200px 265px;
+        background-position: calc(100% + 110px) -200px, calc(100% + 200px) calc(100% - 25px), 259px calc(100% + 40px);
+        column-gap: 140px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+        background-image: url('/images/projects/Sestra/bg-dots/bg-main-dots.svg'),
+            url('/images/projects/Sestra/bg-dots/bg-main-blue-dots.svg');
+        background-position: right -720px top 20px, calc(100% + 16px) calc(100% - 66px);
+        padding-left: 30px;
+        flex-direction: column;
+        row-gap: 60px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+        padding: 220px 0 120px 30px;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+        padding: 180px 0 80px 15px;
+        background-image: url('/images/projects/Sestra/bg-dots/bg-main-mobile-green-dots.svg'),
+            url('/images/projects/Sestra/bg-dots/bg-main-mobile-blue-dots.svg');
+        background-position: right top, 100px calc(100% - 45px);
+        background-size: initial;
+        row-gap: 85px;
+    }
+
+    &::before {
+        content: "";
+        width: 2px;
+        height: 80px;
+        background: #FFFFFF;
+        position: absolute;
+        right: 180px;
+        bottom: 0;
+
+        @media only screen and (max-width: $breakpoint-laptop-1366) {
+            right: 227px;
+            height: 40px;
+        }
+
+        @media only screen and (max-width: $breakpoint-tablet-768) {
+            right: 50%;
+            transform: translateX(-50%);
+        }
+
+        @media only screen and (max-width: $breakpoint-375) {
+            height: 30px;
+            width: 1px;
+        }
+    }
+}
+
+.mainHeading {
+    font-family: 'Sestra';
+    font-size: 119px;
+    color: #FFFFFF;
+    font-weight: 100;
+    position: relative;
+    right: 10px;
+    top: -10px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+        font-size: 84.7px;
+        right: 8px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        font-size: 13vw;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+        font-size: 54px;
+        right: 6px;
+        letter-spacing: 0.02em;
+    }
+}
+
+.sestraInfo {
+    position: relative;
+    padding-left: 60px;
+    padding-top: 140px;
+    height: min-content;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+        padding-top: 120px;
+        padding-left: 40px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+        padding: 0 15px 0 0;
+        padding-right: 15px;
+    }
+}
+
+.logoWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    column-gap: 44px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+        max-width: 518px;
+        column-gap: 30px;
+        width: 100%;
+        height: 196px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+        padding-left: 10px;
+        max-width: 528px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        column-gap: 20px;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+        max-width: 345px;
+        height: 130px;
+        padding-left: 0;
+    }
+
+    svg {
+        min-width: 78px;
+
+        @media only screen and (max-width: $breakpoint-mobile) {
+            max-width: 120px;
+        }
+
+        @media only screen and (max-width: $breakpoint-375) {
+            max-width: 78px;
+            height: 130px;
+        }
+    }
+}
+
+.mediaWrapper {
+    height: 801px;
+    width: 100%;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+        height: 558px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+        padding-left: 100px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+        padding-left: 0;
+        height: 645px;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+        height: 337px;
+    }
+
+    &>div {
+        height: 100%;
+    }
+
+    img {
+        height: calc(100% + 35px) !important;
+        min-height: calc(100% + 35px) !important;
+        max-height: calc(100% + 35px) !important;
+
+        @media only screen and (max-width: $breakpoint-laptop) {
+            height: calc(100% + 30px) !important;
+            min-height: calc(100% + 30px) !important;
+            max-height: calc(100% + 30px) !important;
+        }
+
+        @media only screen and (max-width: $breakpoint-mobile) {
+            height: calc(100% + 20px) !important;
+            min-height: calc(100% + 20px) !important;
+            max-height: calc(100% + 20px) !important;
+        }
+    }
+}

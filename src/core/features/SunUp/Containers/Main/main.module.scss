@@ -1,0 +1,94 @@
+.sunUpMain {
+  padding: 100px 0 190px 0;
+  background: url("/images/projects/SunUp/main-bg.png") no-repeat center;
+  background-size: cover;
+  margin: 0 auto;
+  max-width: 1920px;
+
+  * {
+    font-family: Roboto, sans-serif;
+  }
+}
+
+.sunUpMainWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1920px;
+  padding-left: 130px;
+}
+
+.sunUpMainInfo {
+  max-width: 400px;
+  font-size: 20px;
+  line-height: 150%;
+  color: #4F4F4F;
+
+  .title {
+    opacity: 0;
+    margin-top: -18px;
+  }
+}
+
+.sunUpMainLogo {
+  margin-bottom: 40px;
+}
+
+.sunUpInterface {
+  flex-shrink: 1;
+  flex-grow: 0;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .sunUpMainWrapper {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .sunUpResultsInfo {
+    position: static;
+    margin: 0 0 40px auto;
+  }
+
+  .sunUpResults {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    margin: 0 auto 100px;
+  }
+
+  .sunUpMainWrapper {
+    flex-flow: column;
+    padding: 0;
+  }
+
+  .sunUpMain {
+    padding: 100px 0;
+  }
+
+  .sunUpMainInfo {
+    margin-bottom: 40px;
+    font-size: 14px;
+    padding: 0 20px;
+  }
+
+  .sunUpMainLogo {
+    max-width: 160px;
+    margin-bottom: 20px;
+  }
+
+  .sunUpMainLogo img {
+    display: block;
+    max-width: 100%;
+  }
+
+  .sunUpInterface {
+    padding-left: 20px;
+  }
+}

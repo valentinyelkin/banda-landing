@@ -1,0 +1,105 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 134px 59px 0 60px;
+  font-family: 'Montserrat', sans-serif;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    padding: 112px 31px 0 40px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    flex-direction: column;
+    padding: 69px 30px 0 30px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    padding: 144px 15px 0 15px;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    padding: 17px 15px 0 15px;
+  }
+}
+
+.wrapperText {
+  width: 41%;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: $breakpoint-375) {
+    margin-top: -7px;
+  }
+
+  .descriptionBold,
+  .subDescription,
+  .description {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #250B4A;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      line-height: 32px;
+    }
+  }
+
+  .descriptionBold {
+    font-weight: 600;
+  }
+
+  .wrapperDescription {
+    margin: 48px 0 32px 0;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      margin: 42px 0 45px 0;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+      margin: 31px 0 31px 0;
+    }
+  }
+}
+
+.wrapperSubDescription {
+  @media only screen and (max-width: $breakpoint-mobile) {
+    margin-bottom: 30px;
+  }
+}
+
+.wrapperDetail {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 83px;
+  width: 47%;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    padding-top: 110px;
+  }
+
+  @media only screen and (max-width: $breakpoint-max-width) {
+    width: 53%;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 100%;
+    padding: 48px 0 0 30px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+    padding: 0 0 0 36px;
+  }
+}

@@ -1,0 +1,139 @@
+.shedAbout {
+  max-width: 1950px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto 180px;
+
+  p {
+    font-family: 'Open Sans', sans-serif;
+    color: #8a8a8a;
+    font-weight: 300;
+  }
+}
+
+.shedAboutWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  h2 {
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #8CD50B;
+    margin-bottom: 55px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    text-indent: 25px;
+  }
+
+  span {
+    color: #8CD50B;
+  }
+}
+
+.shedAboutImg {
+  flex-shrink: 1;
+  min-width: 300px;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.shedAboutContent {
+  max-width: 700px;
+  margin-left: 50px;
+  z-index: 1;
+
+  &Second {
+    margin-left: 0;
+    margin-right: 50px;
+    max-width: 700px;
+
+    p {
+      text-indent: 0;
+    }
+  }
+}
+
+.shedAboutDecor {
+  margin-top: -50px;
+  margin-bottom: -50px;
+  z-index: 0;
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.shedAboutVideo {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .shedAboutWrapper {
+    h2 {
+      font-size: 48px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .shedAbout {
+    margin-top: 60px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .shedAbout {
+    margin: 40px auto;
+  }
+
+  .shedAboutWrapper {
+    flex-flow: column-reverse;
+
+    &:nth-child(3) {
+      flex-flow: column;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 32px;
+    }
+  }
+
+  .shedAboutContent {
+    margin: 0 auto;
+
+    &Second {
+      margin: 0 auto;
+    }
+  }
+
+  .shedAboutDecor {
+    display: none;
+  }
+}

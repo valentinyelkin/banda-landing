@@ -1,0 +1,173 @@
+@import "../../../../../../assets/scss/breakPoints";
+
+.wrapperChallenges {
+  width: 100%;
+  background: #0C111F;
+  font-family: 'Raleway', sans-serif;
+  margin-top: -1px;
+
+  .containerChallenges {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .wrapperImg {
+    margin-top: 240px;
+    position: relative;
+    left: 0;
+    top: 0;
+
+    @media only screen and (max-width: $breakpoint-1800) {
+      margin-top: 140px;
+    }
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      width: 77%;
+      margin-top: 154px;
+    }
+
+    @media only screen and (max-width: $breakpoint-max-width) {
+      width: 63%;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      width: 81%;
+      margin-top: 25px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      width: 118%;
+      top: -8px;
+      left: -148px;
+    }
+
+    @media only screen and (max-width: $breakpoint-425) {
+      left: -77px;
+    }
+  }
+
+  .wrapperScrollBtn {
+    position: absolute;
+    right: 7%;
+    top: 22%;
+
+    @media only screen and (max-width: $breakpoint-1800) {
+      top: 15%;
+    }
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      right: 4%;
+      top: 19%;
+    }
+
+    @media only screen and (max-width: $breakpoint-max-width) {
+      display: none;
+    }
+  }
+
+  .containerPagination {
+    position: absolute;
+    left: 73%;
+    top: 21%;
+
+    @media only screen and (max-width: $breakpoint-1800) {
+      top: 14%;
+      left: 72%;
+    }
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      top: 18%;
+      left: 70%;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      left: 62%;
+      top: 8%;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+}
+
+.wrapperTitle {
+  position: absolute;
+  left: 51%;
+  top: 27%;
+  width: 35%;
+
+  @media only screen and (max-width: $breakpoint-1800) {
+    top: 19%;
+  }
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    top: 29%;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    width: 100%;
+    position: static;
+    margin: 158px 0 0 30px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    margin: 20px 0 0 15px;
+  }
+
+  .title {
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    color: #EFE314;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      font-size: 70px;
+      line-height: 120%;
+      margin-bottom: 6px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      margin-bottom: 15px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      font-size: 40px;
+    }
+  }
+
+  .lowerTitle {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    margin-bottom: 75px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      font-size: 50px;
+      line-height: 120%;
+      margin-bottom: 40px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      margin-bottom: 37px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
+  }
+}

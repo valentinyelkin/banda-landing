@@ -1,0 +1,301 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #25333A;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-left: none;
+  width: 30%;
+  height: 126px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    height: 91px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    height: 68px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    height: 53px;
+  }
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 80px;
+  line-height: 96px;
+  color: #25333A;
+  padding-right: 50px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    font-size: 64px;
+    line-height: 72px;
+  }
+
+  @media only screen and (max-width: $breakpoint-max-width) {
+    font-size: 40px;
+    line-height: 48px;
+    padding-right: 40px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-size: 32px;
+    line-height: 32px;
+    padding-right: 35px;
+  }
+
+  @media only screen and (max-width: $breakpoint-320) {
+    padding-right: 0;
+  }
+}
+
+.titleMain {
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 96px;
+  color: #FFFFFF;
+  padding-right: 67px;
+
+  @media only screen and (max-width: $breakpoint-1800) {
+    font-size: 72px;
+    line-height: 72px;
+  }
+
+  @media only screen and (max-width: $breakpoint-max-width) {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    padding-right: 44px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-size: 36px;
+    line-height: 40px;
+    padding-right: 0;
+    padding-left: 13px;
+  }
+}
+
+.footerTitle {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 70px;
+  color: #FFFFFF;
+  margin-left: 60px;
+
+  @media only screen and (max-width: $breakpoint-1680) {
+    font-size: 56px;
+    line-height: 56px;
+    margin-left: 38px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    margin-left: 31px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-size: 24px;
+    line-height: 26px;
+    margin-left: 15px;
+  }
+}
+
+.wrapperMain {
+  border: 1px solid #ffffff;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-left: none;
+  width: 73%;
+  height: 147px;
+  position: relative;
+
+  @media only screen and (max-width: $breakpoint-1800) {
+    width: 77%;
+    height: 102px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 96%;
+    height: 80px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    height: 110px;
+  }
+}
+
+.wrapperGoal {
+  width: 18%;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    width: 20%;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 24%;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 37%;
+  }
+}
+
+.wrapperBenefits {
+  width: 40%;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    width: 44%;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 51%;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 80%;
+  }
+}
+
+.wrapperTimeline {
+  width: 26%;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    width: 29%;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 34%;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 52%;
+  }
+}
+
+.wrapperChallenges {
+  width: 58%;
+
+  @media only screen and (max-width: $breakpoint-1800) {
+    width: 65%;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 74%;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 80%;
+    height: 84px;
+    padding-left: 14px;
+  }
+}
+
+.wrapperFunctionality {
+  width: 34%;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    width: 38%;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 44%;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 69%;
+  }
+}
+
+.wrapperFeatures {
+  width: 26%;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    width: 29%;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 34%;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 52%;
+  }
+}
+
+.wrapperTechStack {
+  @media only screen and (max-width: $breakpoint-1600) {
+    width: 33%;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 39%;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 60%;
+  }
+}
+
+.wrapperResults {
+  width: 24%;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    width: 26%;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 31%;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 47%;
+  }
+}
+
+.wrapperOptionalFeatures {
+  width: 43%;
+
+  @media only screen and (max-width: $breakpoint-1680) {
+    width: 47%;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 55%;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 86%;
+  }
+}
+
+.wrapperFooter {
+  border: 1px solid #FFFFFF;
+  border-left: none;
+  width: 61%;
+  height: 190px;
+
+  @media only screen and (max-width: $breakpoint-1680) {
+    width: 67%;
+    height: 141px;
+  }
+
+  @media only screen and (max-width: $breakpoint-max-width) {
+    width: 86%;
+    height: 125px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 98%;
+    height: 72px;
+  }
+}

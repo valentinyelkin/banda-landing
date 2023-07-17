@@ -1,0 +1,14 @@
+@import '../../../../assets/scss/breakPoints.scss';
+
+.dropdown {
+  position: relative;
+}
+
+.disableOverlay {
+  @media screen and (max-width: $breakpoint-tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

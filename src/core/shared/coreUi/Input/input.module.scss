@@ -1,0 +1,227 @@
+@import "../../../../assets/scss/breakPoints.scss";
+
+.inputText {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row-reverse nowrap;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &:hover {
+    span {
+      color: #EFE314;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      border-color: #EFE314;
+    }
+  }
+
+  span {
+    position: relative;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    width: 90px;
+    display: inline-block;
+    flex: 0 0 90px;
+    transition: .3s;
+    margin-right: 3px;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    border: 1px solid #BDBDBD;
+    height: 50px;
+    width: 100%;
+    font-size: 16px;
+    color: #171718;
+    font-weight: 600;
+    padding: 10px 20px;
+    transition: .3s;
+    background: #333;
+
+    &.filledInput {
+      background: #fff;
+      border: 1px solid transparent;
+    }
+
+    &:focus {
+      background: #fff;
+      border: 1px solid transparent;
+    }
+
+    &:disabled {
+      pointer-events: none;
+      border-color: #4f4f4f;
+
+      & + span {
+        color: #4f4f4f;
+      }
+    }
+  }
+
+  .inputWrapper {
+    width: 100%;
+    position: relative;
+  }
+
+  &.fieldError {
+    &:hover {
+      input {
+        border-color: #EB5757;
+      }
+    }
+
+    span {
+      color: #EB5757;
+    }
+
+    input {
+      border-color: #EB5757;
+    }
+
+    .errorMessageLeadMagnet,
+    .errorMessage {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 150%;
+      letter-spacing: 0.03em;
+      color: #EB5757;
+      position: absolute;
+      left: 0;
+      top: 100%;
+    }
+  }
+}
+
+.leadMagnetInput {
+  input[type="text"],
+  input[type="email"] {
+    width: 265px;
+    color: #FFFFFF;
+    letter-spacing: 0.03em;
+    font-weight: 500;
+
+    &:focus {
+      background: #333333;
+      border: 1px solid #FFFFFF;
+    }
+
+    &:not(:focus) {
+      background: #333333;
+      border: 1px solid #FFFFFF;
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      position: absolute;
+      right: 0;
+      top: -37px;
+      width: 265px;
+    }
+
+    @media screen and (max-width: $breakpoint-425) {
+      top: -24px;
+      width: 250px;
+    }
+
+    @media screen and (max-width: $breakpoint-375) {
+      width: 215px;
+    }
+
+    @media screen and (max-width: $breakpoint-320) {
+      width: 175px;
+    }
+  }
+}
+
+.errorMessageLeadMagnet {
+  position: absolute;
+  width: 160px;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    top: 29px !important;
+  }
+}
+
+@media screen and (max-width: $breakpoint-1600) {
+  .inputText {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      height: 50px;
+    }
+
+    &.fieldError {
+      .errorMessage {
+        line-height: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+  .inputText {
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      height: 50px;
+    }
+
+    span {
+      font-size: 14px;
+      flex: 0 0 auto;
+    }
+
+    &.fieldError {
+      .errorMessage {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet) and (max-height: 768px) {
+  .inputText {
+    flex-flow: row-reverse nowrap;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .inputText {
+    flex-flow: row-reverse;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    span {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      height: 50px;
+      border-color: #BDBDBD;
+    }
+  }
+}

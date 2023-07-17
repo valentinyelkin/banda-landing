@@ -1,0 +1,104 @@
+@import "../../../../../../assets/scss/breakPoints";
+
+.containerSearchingMaps {
+  width: 100%;
+  background: #0C111F;
+  margin-top: -1px;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    margin-top: -41px;
+  }
+
+  .wrapperSearchingMaps {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      flex-direction: column;
+    }
+
+    .wrapperScrollBtn {
+      position: absolute;
+      left: -59%;
+      top: 40%;
+
+      @media only screen and (max-width: $breakpoint-1600) {
+        top: 46%;
+        left: -4%;
+      }
+
+      @media only screen and (max-width: $breakpoint-laptop) {
+        left: 10%;
+      }
+
+      @media only screen and (max-width: $breakpoint-max-width) {
+        display: none;
+      }
+    }
+
+    .containerTitle {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      top: 272px;
+      left: -233px;
+
+      @media only screen and (max-width: $breakpoint-1800) {
+        top: 244px;
+        left: 16px;
+      }
+
+      @media only screen and (max-width: $breakpoint-1600) {
+        top: 244px;
+        left: 151px;
+      }
+
+      @media only screen and (max-width: $breakpoint-tablet) {
+        top: 116px;
+        left: 30px;
+        width: 95%;
+      }
+
+      @media only screen and (max-width: $breakpoint-mobile) {
+        top: 77px;
+        left: 16px;
+      }
+    }
+
+    .wrapperImg {
+      position: relative;
+      top: 184px;
+
+      @media only screen and (max-width: $breakpoint-1600) {
+        width: 78%;
+        right: -189px;
+      }
+
+      @media only screen and (max-width: $breakpoint-laptop) {
+        width: 72%;
+        right: -242px;
+      }
+
+      @media only screen and (max-width: $breakpoint-tablet) {
+        width: 82%;
+        top: 131px;
+        right: -188px;
+      }
+
+      @media only screen and (max-width: $breakpoint-tablet-768) {
+        right: -143px;
+      }
+
+      @media only screen and (max-width: $breakpoint-mobile) {
+        width: 125%;
+        right: -11px;
+        top: 92px;
+      }
+    }
+  }
+}

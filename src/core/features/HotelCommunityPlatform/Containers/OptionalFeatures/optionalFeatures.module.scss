@@ -1,0 +1,113 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  height: 100%;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 794px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      height: 696px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      flex-direction: column;
+      height: 1290px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      height: 1219px;
+    }
+
+    .lineWrapper {
+      display: flex;
+      position: absolute;
+      left: 61px;
+      width: 1px;
+      height: 100%;
+      overflow: hidden;
+
+      @media only screen and (max-width: $breakpoint-1600) {
+        left: 40px;
+      }
+
+      @media only screen and (max-width: $breakpoint-tablet) {
+        left: 30px;
+      }
+
+      @media only screen and (max-width: $breakpoint-mobile) {
+        left: 15px;
+      }
+    }
+
+    .wrapperLeftBlock {
+      width: 47%;
+      padding: 0 8px 0 141px;
+
+      @media only screen and (max-width: $breakpoint-1600) {
+        width: 52%;
+        padding: 0 10px 0 92px;
+      }
+
+      @media only screen and (max-width: $breakpoint-tablet) {
+        width: 88%;
+        padding: 0 10px 0 61px;
+      }
+
+      @media only screen and (max-width: $breakpoint-mobile) {
+        width: 97%;
+        padding: 0 15px 0 31px;
+      }
+    }
+
+    .img {
+      width: 43%;
+      position: relative;
+      top: -152px;
+
+      @media only screen and (max-width: $breakpoint-1600) {
+        width: 54%;
+        top: -113px;
+      }
+
+      @media only screen and (max-width: $breakpoint-tablet) {
+        width: 90%;
+        top: -88px;
+        left: 37px;
+      }
+
+      @media only screen and (max-width: $breakpoint-mobile) {
+        width: 92%;
+        top: -86px;
+        left: 16px;
+      }
+    }
+  }
+}
+
+.subTitle {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 48px;
+  color: #25333a;
+  margin: 16px 0 50px 0;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    font-size: 24px;
+    line-height: 36px;
+    margin: 10px 0 40px 0;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}

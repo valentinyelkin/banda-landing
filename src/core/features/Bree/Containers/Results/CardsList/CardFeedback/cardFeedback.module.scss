@@ -1,0 +1,208 @@
+@import "../../../../../../../assets/scss/breakPoints";
+
+.containerCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 885px;
+  height: 486px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 48px 64px;
+  filter: drop-shadow(3px 5px 20px rgba(4, 49, 64, 0.1));
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    width: 760px;
+  }
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    padding: 40px;
+    width: 628px;
+    height: 416px;
+  }
+
+  @media only screen and (max-width: $breakpoint-max-width) {
+    width: 572px;
+    height: 447px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 685px;
+    height: 416px;
+    margin-right: 20px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet-768) {
+    width: 628px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 308px;
+    height: 532px;
+    padding: 33px 14px;
+    margin-right: 15px;
+  }
+}
+
+.wrapperText {
+  width: 100%;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    width: 97%;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 93%;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet-768) {
+    width: 97%;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 103%;
+  }
+
+  .wrapperTestimonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 173px;
+    height: 44px;
+    background: #FFE7CD;
+    border-radius: 24px;
+    margin-bottom: 32px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      margin-bottom: 24px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      width: 129px;
+      height: 36px;
+    }
+
+    .title {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+      text-transform: uppercase;
+      color: #7C4100;
+
+      @media only screen and (max-width: $breakpoint-mobile) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .feedback {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 34px;
+    color: #054155;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      font-size: 16px;
+    }
+  }
+}
+
+.person {
+  display: flex;
+  padding-top: 10px;
+  position: relative;
+
+  @media only screen and (max-width: $breakpoint-laptop-1366) {
+    padding-top: 20px;
+  }
+
+  .photo {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin-left: -13px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      width: 105px;
+      height: 105px;
+      margin-left: -12px;
+      top: -8px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      width: 75px;
+      height: 75px;
+      margin-left: -11px;
+      top: 15px;
+    }
+  }
+
+  .personName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5px;
+    margin-top: -24px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      padding-left: 15px;
+      margin-top: -2px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      margin-top: 20px;
+      padding-left: 0;
+    }
+
+    .name {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 28px;
+      color: #02202A;
+      margin-bottom: 4px;
+
+      @media only screen and (max-width: $breakpoint-mobile) {
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+    }
+
+    .career {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+      color: #617176;
+
+      @media only screen and (max-width: $breakpoint-mobile) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .quotes {
+    position: absolute;
+    right: -51px;
+    width: 180px;
+    height: 180px;
+    top: -2px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      width: 120px;
+      height: 120px;
+      top: 6px;
+      right: -13px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      top: 42px;
+      width: 70px;
+      height: 70px;
+      right: -9px;
+    }
+  }
+}

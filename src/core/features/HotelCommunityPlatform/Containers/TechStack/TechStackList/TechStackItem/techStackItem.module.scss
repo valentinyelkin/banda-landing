@@ -1,0 +1,16 @@
+@import '../../../../../../../assets/scss/breakPoints';
+
+.img {
+  @media only screen and (max-width: $breakpoint-1800) {
+    width: 16%;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 24%;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 102%;
+    margin-bottom: -10px;
+  }
+}

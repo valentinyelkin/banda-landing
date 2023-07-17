@@ -1,0 +1,35 @@
+@import '../../../../assets/scss/breakPoints';
+
+.containerList {
+  display: flex;
+  margin-top: 103px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: $breakpoint-laptop-1366) {
+    width: 120%;
+    margin-top: 40px;
+  }
+
+  @media only screen and (max-width: $breakpoint-max-width) {
+    width: 125%;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 100%;
+    margin-top: 47px;
+  }
+
+  @media only screen and (max-width: $breakpoint-ipad) {
+    width: 110%;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 32px;
+  }
+}

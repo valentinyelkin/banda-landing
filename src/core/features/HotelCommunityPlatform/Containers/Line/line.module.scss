@@ -1,0 +1,207 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  left: 61px;
+  background: #25333a;
+  top: 0;
+  opacity: 0.98;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    left: 40px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    left: 30px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    left: 15px;
+  }
+}
+
+.lineTopGoal {
+  position: absolute;
+  height: 291px;
+  width: 1px;
+  left: 0;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    height: 182px;
+  }
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    height: 200px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    height: 119px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    height: 99px;
+  }
+}
+
+.lineGoal {
+  height: 484px;
+  top: -2px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    height: 398px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    height: 328px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    height: 420px;
+  }
+}
+
+.lineProjectBenefits {
+  height: 650px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    height: 540px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    height: 1547px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    height: 1136px;
+  }
+}
+
+.lineTimeline {
+  height: 639px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    height: 556px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    height: 498px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    height: 691px;
+  }
+}
+
+.lineChallenges {
+  height: 986px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    height: 950px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    height: 554px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    height: 591px;
+  }
+}
+
+.lineFunctionality {
+  height: 610px;
+  left: 0;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    height: 510px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    height: 412px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    height: 641px;
+  }
+}
+
+.lineFeatures {
+  height: 730px;
+  left: 0;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    height: 580px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    height: 1642px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    height: 1423px;
+  }
+}
+
+.lineTechStack {
+  height: 788px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    height: 643px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    height: 830px;
+  }
+
+  @media only screen and (max-width: $breakpoint-ipad) {
+    height: 702px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    height: 1765px;
+  }
+
+  @media only screen and (max-width: $breakpoint-480) {
+    height: 1482px;
+  }
+
+  @media only screen and (max-width: $breakpoint-375) {
+    height: 1209px;
+  }
+}
+
+.lineResults {
+  height: 738px;
+  left: 0;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    height: 574px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    height: 924px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    height: 1246px;
+  }
+}
+
+.lineOptionalFeatures {
+  height: 794px;
+  left: 0;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    height: 696px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    height: 1290px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    height: 1219px;
+  }
+}

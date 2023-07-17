@@ -1,0 +1,77 @@
+@import "../../../../assets/scss/breakPoints";
+
+.containerCardFeedback {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 2px solid #5A5B4D;
+  border-radius: 9px;
+  margin: 17px auto 0;
+  width: 340px;
+  height: 274px;
+  font-family: 'Raleway', sans-serif;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    justify-content: center;
+    align-items: center;
+    width: 91%;
+  }
+
+  .quotes {
+    position: absolute;
+    left: 84%;
+    top: -17px;
+    width: 33px;
+    height: 30px;
+  }
+
+  .wrapperCard {
+    display: flex;
+    flex-direction: row;
+    padding: 27px 19px 15px 31px;
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      padding: 27px 85px 15px 31px;
+    }
+
+    .wrapperImg {
+      padding-right: 19px;
+    }
+
+    .wrapperFeedback {
+      display: flex;
+      flex-direction: column;
+
+      .name {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 130%;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+      }
+
+      .social {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 23px;
+        color: #EFE314;
+      }
+    }
+  }
+
+  .containerFeedback {
+    width: 297px;
+    height: 138px;
+    margin: 0 16px 25px 27px;
+
+    .feedback {
+      width: 297px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+

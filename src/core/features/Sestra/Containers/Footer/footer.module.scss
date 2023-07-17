@@ -1,0 +1,106 @@
+@import '../../../../../assets/scss/breakPoints.scss';
+
+.footer {
+    background-color: #173864;
+}
+
+.container {
+    background-image: url('/images/projects/Sestra/hexagons/bg-footer-hexagons.svg');
+    background-position: calc(100% - 100px) 80px;
+    background-repeat: no-repeat;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    padding: 220px 0 80px 60px;
+    color: #FFFFFF;
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+        padding: 160px 40px 60px 40px;
+        background-size: 200px 272px;
+        background-position: calc(100% - 80px) 60px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+        padding: 220px 30px 60px;
+        background-size: 160px 217px;
+        background-position: calc(100% - 20px) 20px;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+        background-size: 110px 149px;
+        background-position: calc(100% - 15px) 10px;
+        padding: 160px 15px 50px;
+    }
+
+    &::before {
+        content: "";
+        width: 2px;
+        height: 80px;
+        background: #FFFFFF;
+        position: absolute;
+        left: 213px;
+        top: 0;
+
+        @media only screen and (max-width: $breakpoint-laptop-1366) {
+            height: 40px;
+            left: 150px;
+        }
+
+        @media only screen and (max-width: $breakpoint-tablet-768) {
+            left: 50%;
+        }
+
+        @media only screen and (max-width: $breakpoint-375) {
+            height: 30px;
+            width: 1px;
+        }
+    }
+}
+
+.footerTitle {
+    font-family: 'Nunito Sans';
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 68px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    max-width: 948px;
+    margin-bottom: 30px;
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+        font-size: 48px;
+        line-height: 56px;
+        max-width: 812px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+        font-size: 40px;
+        line-height: 52px;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 20px;
+    }
+}
+
+.footerText {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    margin-bottom: 50px;
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 40px;
+    }
+}

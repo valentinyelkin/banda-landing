@@ -1,0 +1,100 @@
+@import '../../../../../../assets/scss/breakPoints';
+
+.container {
+  width: 216px;
+
+  @media only screen and (max-width: $breakpoint-max-width) {
+    width: 190px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 158px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    margin-bottom: 32px;
+  }
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 120px;
+  line-height: 96px;
+  color: #6800FD;
+  text-shadow: 0 10px 20px rgba(119, 30, 247, 0.2);
+  position: relative;
+  margin-bottom: 16px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    font-size: 96px;
+    line-height: 96px;
+    margin-bottom: 12px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-size: 100px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: -39px;
+    top: 0;
+    width: 4px;
+    height: 90px;
+    background: #824DCE;
+    opacity: 0.2;
+    border-radius: 5px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      left: -28px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      top: 4px;
+      height: 88px;
+      left: -35px;
+    }
+  }
+}
+
+.subTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  color: #250B4A;
+  position: relative;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-size: 24px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: -39px;
+    top: -28px;
+    width: 4px;
+    height: 71px;
+    background: #824DCE;
+    border-radius: 5px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      left: -28px;
+      height: 63px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      height: 58px;
+      top: -25px;
+      left: -35px;
+    }
+  }
+}

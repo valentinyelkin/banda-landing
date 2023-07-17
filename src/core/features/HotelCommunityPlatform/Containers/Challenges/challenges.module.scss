@@ -1,0 +1,77 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  position: relative;
+  height: 986px;
+  overflow: hidden;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    height: 950px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    display: block;
+    height: 554px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    height: 591px;
+  }
+}
+
+.wrapperText {
+  padding: 0 141px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    padding: 0 91px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    padding: 0 0 0 61px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    padding: 0 0 0 31px;
+  }
+
+  .subTitle {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    color: #25333a;
+    padding-top: 18px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      font-size: 24px;
+      line-height: 36px;
+      padding-top: 10px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  .wrapperLists {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    padding-top: 63px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      padding-top: 55px;
+    }
+  }
+}
+
+.wrapperListTablet {
+  min-height: 600px;
+}

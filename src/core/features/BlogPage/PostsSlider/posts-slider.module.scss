@@ -1,0 +1,37 @@
+@import '../../../../assets/scss/breakPoints.scss';
+
+.blogContainer {
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  row-gap: 5.5vh;
+  column-gap: 30px;
+  width: 100%;
+  overflow: visible;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    row-gap: 30px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+    grid-template-rows: unset;
+    padding-bottom: 0;
+    justify-items: center;
+  }
+}
+
+.carouselContainer {
+  position: unset !important;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    position: relative !important;
+    padding-bottom: 271px;
+  }
+}

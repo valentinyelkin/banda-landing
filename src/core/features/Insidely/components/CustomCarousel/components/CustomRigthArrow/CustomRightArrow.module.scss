@@ -1,0 +1,38 @@
+@import '../../../../../../../assets/scss/breakPoints';
+
+.customRightArrowCarousel {
+  position: absolute;
+  bottom: 0;
+  right: 25%;
+  outline: 0;
+  transition: all .5s;
+  z-index: 1000;
+  background: transparent;
+  min-width: 50px;
+  min-height: 25px;
+  opacity: 1;
+  border: 0;
+
+  &:after {
+    position: absolute;
+    content: url('/images/icons/arrow-gray.svg');
+    transform: rotate(180deg);
+    left: 0;
+    top: 0;
+  }
+
+  &:hover {
+    &:after {
+      position: absolute;
+      content: url('/images/icons/arrow-blue.svg');
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-480) {
+  .customRightArrowCarousel{
+    right: 10%;
+  }
+}

@@ -1,0 +1,283 @@
+.dcrProblem {
+  background: #000;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-top: 150px;
+  position: relative;
+
+  h2 {
+    font-weight: bold;
+    font-size: 90px;
+    line-height: 130%;
+    color: #FFF;
+    margin-bottom: 30px;
+    position: relative;
+
+    &:first-letter {
+      color: #ECE014;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: 0.01em;
+    color: #E0E0E0;
+    font-family: 'Open Sans', sans-serif;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.dcrProblemWrapper {
+  max-width: 1480px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.dcrProblemText {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 220px;
+  position: relative;
+
+  div {
+    max-width: 600px;
+    &:first-child {
+      margin-right: 100px;
+    }
+  }
+}
+
+.dcrVideo {
+  max-width: 1440px;
+  margin: 0 auto;
+
+  video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.dcrColors {
+  max-width: 1480px;
+  padding: 0 20px 60px;
+  margin: 70px auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.dcrColorsText {
+  max-width: 720px;
+}
+
+.dcrColorsList {
+  max-width: 575px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: 70px;
+}
+
+.dcrColorsItem {
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  border: 2px solid;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 23px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #131516;
+  flex-shrink: 0;
+  font-family: 'Open Sans', sans-serif;
+
+  div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &1 {
+    border-color: #162B43;
+    color: #fff;
+    margin-bottom: 55px;
+
+    div {
+      background: #162B43;
+    }
+  }
+
+  &2 {
+    border-color: #42A7E4;
+
+    div {
+      background: #42A7E4;
+    }
+  }
+
+  &3 {
+    border-color: #9FDBFF;
+    margin-bottom: 55px;
+
+    div {
+      background: #9FDBFF;
+    }
+  }
+
+  &4 {
+    border-color: #F7685B;
+
+    div {
+      background: #F7685B;
+    }
+  }
+
+  &5 {
+    border-color: #F59D12;
+
+    div {
+      background: #F59D12;
+    }
+  }
+
+  &6 {
+    border-color: #2ED47A;
+
+    div {
+      background: #2ED47A;
+    }
+  }
+}
+
+.dcrProblemMapRight,
+.dcrProblemMapLeft {
+  position: absolute;
+  bottom: 0;
+}
+
+.dcrProblemMapRight {
+  right: 0;
+}
+
+.dcrProblemMapLeft {
+  left: 0;
+}
+
+.dcrProblemWrapper,
+.dcrColorsFull {
+  position: relative;
+}
+
+.dcrProblemProblemImage,
+.dcrProblemColorsImage {
+  display: block;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.dcrProblemProblemImage {
+  right: 0;
+}
+
+.dcrProblemColorsImage {
+  left: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  .dcrColors {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .dcrColorsText {
+    margin-bottom: 70px;
+    max-width: 100%;
+  }
+
+  .dcrColorsList {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 669px) {
+  .dcrProblem {
+    padding-top: 50px;
+
+    h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 14px;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .dcrProblemMapLeft {
+    display: none;
+  }
+
+  .dcrProblemMapRight {
+    display: none;
+  }
+
+  .dcrProblemProblemImage {
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    right: auto;
+  }
+
+  .dcrProblemText {
+    flex-direction: column;
+    margin-bottom: 0;
+
+    div {
+      &:first-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .dcrProblemWrapper {
+    margin-top: 60px;
+  }
+
+  .dcrProblemContent {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .dcrColorsItem {
+    width: 135px;
+    height: 135px;
+
+    div {
+      width: 88px;
+      height: 88px;
+    }
+  }
+
+  .dcrColorsText {
+    margin-bottom: 40px;
+  }
+}
+

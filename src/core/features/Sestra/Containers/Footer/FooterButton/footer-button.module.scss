@@ -1,0 +1,45 @@
+@import '../../../../../../assets/scss/breakPoints.scss';
+
+.footerBtn {
+    font-family: 'Lato';
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #122D50;
+    background: #9FC63B;
+    padding: 24px 56px;
+    width: min-content;
+    text-decoration: none;
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    @media only screen and (max-width: $breakpoint-480) {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 28px;
+        padding: 16px 40px;
+    }
+
+    &:hover {
+        background: #B2D162;
+    }
+
+    &:active {
+        background: #7F9E2F;
+        color: #FFFFFF;
+
+    }
+}
+
+.disabled,
+.disabled:hover,
+.disabled:active {
+    background: #D1D1D1;
+    color: #A3A3A3;
+}

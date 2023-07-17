@@ -1,0 +1,87 @@
+@import "../../../../../assets/scss/breakPoints";
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+  padding-bottom: 200px;
+  background: url(/images/projects/Bree/background_tech_stack.svg) no-repeat;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    padding-bottom: 128px;
+    background: url(/images/projects/Bree/background_tech_stack_laptop.svg) top / cover no-repeat;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    padding-bottom: 41px;
+    min-height: 756px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet-768) {
+    padding-bottom: 0;
+    min-height: 923px;
+    background: url(/images/projects/Bree/background_tech_stack_tablet.svg) no-repeat center;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    min-height: 569px;
+    background: url(/images/projects/Bree/background_tech_stack_mobile.svg) top / contain no-repeat;
+  }
+
+  @media only screen and (max-width: $breakpoint-375) {
+    margin-top: 60px;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 86px;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 120px 0 80px 0;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      font-size: 48px;
+      line-height: 56px;
+      padding: 80px 0 56px 0;
+
+      @media only screen and (max-width: $breakpoint-tablet) {
+        padding: 30px 11px 58px 0;
+      }
+
+      @media only screen and (max-width: $breakpoint-tablet-768) {
+        padding: 80px 11px 56px 0;
+      }
+
+      @media only screen and (max-width: $breakpoint-mobile) {
+        font-size: 40px;
+        line-height: 48px;
+        margin-left: -15px;
+        padding: 56px 0 48px 0;
+      }
+    }
+  }
+
+  .secondTechList {
+    padding-top: 80px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      padding-top: 80px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      padding-top: 50px;
+      padding-bottom: 10px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+      padding-top: 86px;
+      padding-bottom: 48px;
+    }
+
+    @media only screen and (max-width: $breakpoint-425) {
+      padding: 32px 0 10px 21px;
+    }
+  }
+}

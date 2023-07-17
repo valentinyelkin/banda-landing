@@ -1,0 +1,117 @@
+@import "../../../../assets/scss/breakPoints.scss";
+
+.textareaWrapper {
+  position: relative;
+
+  &.textareaError {
+    textarea {
+      border-color: #EB5757;
+    }
+
+    .errorMessage {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 150%;
+      letter-spacing: 0.03em;
+      color: #EB5757;
+      position: absolute;
+      left: 0;
+      top: 100%;
+    }
+  }
+}
+
+.textarea {
+  border: 1px solid #BDBDBD;
+  width: 100%;
+  max-height: 260px;
+  font-size: 16px;
+  color: #171718;
+  font-weight: 600;
+  padding: 15px;
+  resize: none;
+  transition: .3s;
+  background: #333;
+
+  &::placeholder {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #F2F2F2;
+  }
+
+  &.filledText {
+    background: #fff;
+  }
+
+  &:focus {
+    background: #fff;
+  }
+
+  &:hover {
+    border-color: #EFE314;
+
+    &::placeholder {
+      color: #EFE314;
+    }
+  }
+
+  &:disabled {
+    border-color: #4f4f4f;
+
+    &::placeholder {
+      color: #4f4f4f;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-1600) {
+  .textarea {
+    max-height: 205px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+  .textarea {
+    max-height: 262px;
+  }
+}
+
+@media screen and (max-width: 768px) and (max-height: $breakpoint-tablet){
+  .textarea {
+    max-height: 230px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .textarea {
+    max-height: 70px;
+    border-color: #BDBDBD;
+    padding: 25px 20px;
+
+    &::placeholder {
+      font-size: 14px;
+      line-height: 16px;
+      color: #828282;
+    }
+
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #3C3C3C;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #EFE314;
+    }
+  }
+
+  .textareaWrapper {
+    margin-top: 20px;
+  }
+}

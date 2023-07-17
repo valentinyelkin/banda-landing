@@ -1,0 +1,71 @@
+@import '../../../../assets/scss/breakPoints.scss';
+
+.cardSolution {
+  max-width: 580px;
+  border-left: 8px solid #B2D162;
+  background: #FFFFFF;
+  box-shadow: 4px 4px 30px rgba(117, 119, 113, 0.1);
+  padding: 32px 20px 24px 20px;
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #474747;
+
+  @media only screen and (max-width: $breakpoint-laptop-1366) {
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 409px;
+    padding: 24px 20px 20px 20px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    min-height: 376px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet-768) {
+    padding: 32px 20px 24px 15px;
+    max-width: 344px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    max-width: unset;
+    width: 100%;
+    min-height: 376px;
+  }
+}
+
+.cardTitle {
+  font-family: 'Nunito Sans';
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #173864;
+  margin-bottom: 18px;
+
+  @media only screen and (max-width: $breakpoint-laptop-1366) {
+    margin-bottom: 12px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.cardList {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(100%);
+  display: block;
+}
+
+@keyframes fadeInUp {
+  100% {
+    opacity: 1;
+    transform: rotateZ(0);
+  }
+}

@@ -1,0 +1,145 @@
+.dcrPrototypes {
+  background: linear-gradient(0deg, #000 35%, #131516 35%);
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-top: 140px;
+  position: relative;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 90px;
+    line-height: 130%;
+    color: #fff;
+    margin-bottom: 30px;
+    position: relative;
+
+    &:first-letter {
+      color: #ece014;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: 0.01em;
+    color: #e0e0e0;
+    font-family: 'Open Sans', sans-serif;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.dcrPrototypesText {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  div {
+    max-width: 530px;
+
+    &:first-child {
+      margin-right: 150px;
+    }
+  }
+}
+
+.dcrPrototypesTextWrapper {
+  max-width: 1480px;
+  padding: 0 20px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.dcrPrototypesWrapper {
+  position: relative;
+}
+
+.dcrPrototypesWireframeImage,
+.dcrPrototypesMap {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.dcrPrototypesImagesWrapper {
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 669px) {
+  .dcrPrototypes {
+    h2 {
+      font-size: 40px;
+      line-height: 130%;
+      margin-bottom: 15px;
+    }
+  }
+
+  .dcrPrototypesText {
+    flex-direction: column;
+
+    div {
+      max-width: none;
+
+      &:first-child {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .dcrPrototypesImagesWrapper {
+    img {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      &:nth-child(odd) {
+        margin: {
+          left: auto;
+          right: 0;
+        }
+      }
+
+      &:nth-child(even) {
+        margin: {
+          left: 0;
+          right: auto;
+        }
+      }
+    }
+
+    p {
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 130%;
+      color: #fff;
+      margin-top: 15px;
+      padding: 0 15px;
+    }
+  }
+
+  .dcrPrototypesMap {
+    display: none !important;
+  }
+
+  .dcrPrototypesWireframeImage {
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+  }
+}

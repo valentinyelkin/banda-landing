@@ -1,0 +1,305 @@
+@import "../../../../assets/scss/imgRender.scss";
+
+.arxonasChallenge {
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  padding: 70px 0 30px;
+
+  img {
+    max-width: 100%;
+    @include imgRender;
+  }
+
+  .emptyLogoCircle {
+    max-width: 100%;
+  }
+
+  * {
+    font-family: Roboto, sans-serif;
+  }
+
+  &Wrapper {
+    max-width: 1680px;
+    padding: 0 15px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .challengeBg, .challengeMobileBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    height: 100% !important;
+    width: 100%;
+  }
+
+  .challengeMobileBg {
+    display: none;
+  }
+}
+
+.arxonasChallengeSolution {
+  position: relative;
+}
+
+.arxonasItem {
+  max-width: 710px;
+
+  &Challenge {
+    margin: 0 0 40px;
+
+    h2 {
+      &:after {
+        content: 'Challenge';
+      }
+    }
+  }
+
+  &Solution {
+    margin: 0 0 0 auto;
+
+    h2 {
+      &:after {
+        content: 'Solution';
+      }
+    }
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 70px;
+    text-align: left;
+    letter-spacing: 0.03em;
+    color: #FFF;
+    position: relative;
+    margin-bottom: 55px;
+    text-transform: uppercase;
+
+    &:after {
+
+      color: #fff;
+      font-weight: bold;
+      font-size: 75px;
+      line-height: 75px;
+      letter-spacing: 0.03em;
+      opacity: 0.1;
+      left: 0;
+      bottom: 45%;
+      text-transform: uppercase;
+      position: absolute;
+    }
+  }
+
+  p {
+    font-size: 25px;
+    line-height: 40px;
+    color: #FFF;
+  }
+}
+
+.arxonasChallengeSolutionImg {
+  display: block;
+  margin: 210px auto 0;
+}
+
+.arxonasChallengeSolutionMobileImg {
+  display: none;
+}
+
+.arxonasAnimationWrapper {
+  max-width: 400px;
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  right: 20%;
+}
+
+.arxonasAnimationLogo {
+  position: absolute;
+  top: 50%;
+  transform: translate(-58%, -47%);
+  left: 50%;
+  max-width: 120px !important;
+}
+
+.arxonasChallengeCircle {
+  position: absolute;
+  max-width: 800px;
+  max-height: 800px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.arxonasChallengeCircleLogo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.emptyPartOfLogo {
+  position: absolute;
+  top: 0;
+  transform: translate(-10%, -75%);
+}
+
+.arxonasCircle {
+  &Wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &Big {
+    width: 100%;
+    position: absolute;
+    animation: rotate 20s linear infinite;
+  }
+
+  &Medium {
+    width: 80%;
+    opacity: .5;
+    position: absolute;
+    animation: rotate 16s linear infinite;
+  }
+
+  &Little {
+    width: 65%;
+    opacity: .4;
+    position: absolute;
+    animation: rotate 13s linear infinite;
+  }
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (min-width: 669px) and (max-width: 1280px) {
+  .arxonasChallenge {
+    .arxonasChallengeSolutionImg {
+      margin: 100px auto 0;
+    }
+
+    .arxonasItem {
+      max-width: 100%;
+    }
+
+    .emptyLogoCircle {
+      max-width: 80%;
+    }
+
+    .arxonasCircle {
+      &Big {
+        width: 70%;
+      }
+
+      &Medium {
+        width: 55%;
+      }
+
+      &Little {
+        width: 40%;
+      }
+    }
+
+    .arxonasAnimationWrapper {
+      right: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .arxonasChallenge {
+    padding-bottom: 0;
+  }
+
+  .arxonasItem {
+    h2 {
+      font-size: 26px;
+      margin-bottom: 0;
+
+      &::after {
+        font-size: 44px;
+        line-height: 52px;
+        bottom: 14px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 23px;
+    }
+  }
+
+  .top {
+    margin: 55px auto 0;
+  }
+
+  .arxonasChallengeSolutionImg, .arxonasChallengeCircle, .arxonasAnimationWrapper {
+    display: none;
+  }
+
+  .arxonasChallengeSolutionMobileImg {
+    width: 100%;
+    display: block;
+  }
+
+  .top {
+    padding-left: 8px;
+  }
+
+  .arxonasChallenge {
+    .challengeBg {
+      height: auto;
+      display: none;
+    }
+
+    .challengeMobileBg {
+      display: block;
+    }
+  }
+
+  .arxonasChallenge {
+    &Solution {
+      padding: 0 15px;
+    }
+
+    &Wrapper {
+      padding: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 668px) {
+  .arxonasChallenge {
+    &Solution {
+      p {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+@import '../../../../../assets/scss/breakPoints.scss';
+
+.tabWrapper {
+    background: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    border-top: 1px solid #BDBDBD;
+    border-bottom: 1px solid #BDBDBD;
+    transition: all 0.3s;
+    transition: outline 0s;
+    position: relative;
+    z-index: 1;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+        font-size: 20px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+        font-size: 18px;
+    }
+
+    &:hover {
+        color: #EFE314;
+    }
+}
+
+.tabInnerWrapper {
+    width: 100%;
+    height: 100%;
+    padding: 30px 60px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+        padding: 25px 40px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+        padding: 20px 25px;
+    }
+}
+
+.active {
+    outline: 1px solid #EFE314;
+    outline-offset: -1px;
+    color: #EFE314;
+    margin-left: -1px;
+    z-index: 2;
+
+    .tabText {
+        margin-left: 1px;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            width: 4px;
+            height: 4px;
+            background: #EFE314;
+        }
+    }
+}
+
+.tabText {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        justify-content: center;
+    }
+}
+
+.noBottomBorder {
+    border-top: none;
+}
+
+.bottomRow {
+    margin-top: -1px;
+}
+
+.rightBorder {
+    border-right: 1px solid #BDBDBD;
+}

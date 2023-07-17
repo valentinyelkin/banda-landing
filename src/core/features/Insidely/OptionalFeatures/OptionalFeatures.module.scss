@@ -1,0 +1,162 @@
+@import '../../../../assets/scss/breakPoints';
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 860px 1fr;
+  gap: 120px 40px;
+  position: relative;
+
+  ul {
+    margin-top: 64px;
+
+    li {
+      margin-top: 16px;
+
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.list{
+  width: 100%;
+  max-width: 705px;
+}
+
+.figures {
+  width: 860px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 20px;
+}
+
+.figure {
+  display: block;
+  width: 270px;
+  height: 270px;
+}
+
+.figure_1 {
+  background: #58D382;
+  border-radius: 160px 0 160px 160px;
+}
+
+.figure_2, .figure_5, .figure_8 {
+  background: transparent;
+  border: 60px solid #C653B9;
+  border-radius: 0 160px 160px 160px;
+}
+
+.figure_3, .figure_10 {
+  background: #FBD347;
+  border-radius: 0 0 160px 160px;
+  height: 135px;
+}
+
+.figure_4, .figure_12 {
+  background: #FBD347;
+  border-radius: 160px 160px 0 0;
+  height: 135px;
+  margin-top: 135px;
+}
+
+.figure_5 {
+  background: #3F53D9;
+  border: none;
+}
+
+.figure_6 {
+  background: #58D382;
+  border-radius: 160px 0 0 160px;
+  width: 135px;
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
+.figure_8 {
+  background: transparent;
+  border: 60px solid #C653B9;
+  border-radius: 0 160px 160px 160px;
+}
+
+.figure_9 {
+  background: #FBD347;
+  border-radius: 0 160px 160px 0;
+}
+
+.figure_10 {
+  background: #58D382;
+}
+
+.figure_11 {
+  background: #3F53D9;
+  border-radius: 160px 160px 160px 0;
+}
+
+.figure_12 {
+  background: #C653B9;
+}
+
+@media only screen and (max-width: $breakpoint-1600) {
+  .figures, .box {
+    margin-left: -210px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-laptop-1366) {
+  .wrapper {
+
+    ul{
+      margin-top: 40px;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-1280) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-auto-rows: max-content;
+    gap: 40px;
+    ul{
+      margin-top: 40px;
+    }
+  }
+  .figures {
+    flex-wrap: nowrap;
+    margin: 0;
+    position: absolute;
+  }
+  .figure{
+    width: 240px;
+    height: 240px;
+  }
+  .list{
+    max-width: 100%;
+  }
+  .box {
+    margin: 0;
+    padding-top: 300px;
+  }
+
+  .figure_4,  .figure_6, .figure_8, .figure_9, .figure_10, .figure_11, .figure_12 {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-tablet-768) {
+  .box {
+    padding-top: 160px;
+  }
+  .figure{
+    width: 120px;
+    height: 120px;
+  }
+  .figure_6{
+    display: flex;
+  }
+}
+

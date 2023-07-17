@@ -1,0 +1,107 @@
+@import '../../../../../assets/scss/breakPoints.scss';
+
+.container {
+    background-image: url('/images/projects/Sestra/hexagons/bg-about-hexagons.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 274px) calc(100% + 160px);
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+    position: relative;
+    padding: 200px 60px 368px;
+
+    @media only screen and (max-width: $breakpoint-1800) {
+        padding: 200px 30px 368px;
+    }
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+        padding: 160px 40px 299px;
+        background-size: 275px 366px;
+        background-position: calc(100% - 174px) calc(100% + 119px);
+    }
+
+    @media only screen and (max-width: $breakpoint-1280) {
+        padding: 120px 30px 259px;
+    }
+
+    @media only screen and (max-width: $breakpoint-1170) {
+        background-position: calc(100% + 45px) calc(100% + 119px);
+        padding: 120px 30px 259px;
+        flex-direction: column;
+        row-gap: 40px;
+        background-position: calc(100% + 45px) calc(100% + 119px);
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        background-size: 160px 213px;
+        background-position: calc(100% + 40px) calc(100% + 63px);
+        padding: 100px 15px 198px;
+        row-gap: 32px;
+    }
+
+    &::before {
+        content: "";
+        width: 2px;
+        height: 120px;
+        background: #757575;
+        position: absolute;
+        right: 180px;
+        top: 0;
+
+        @media only screen and (max-width: $breakpoint-laptop-1366) {
+            height: 100px;
+            right: 227px;
+        }
+
+        @media only screen and (max-width: $breakpoint-tablet-768) {
+            right: 50%;
+            transform: translateX(-50%);
+        }
+
+        @media only screen and (max-width: $breakpoint-mobile) {
+            height: 75px;
+            width: 1px;
+        }
+    }
+}
+
+.cardsWrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1038px;
+    row-gap: 30px;
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+        max-width: 738px;
+    }
+
+    @media only screen and (max-width: $breakpoint-1170) {
+        order: 2;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+        row-gap: 20px;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+        row-gap: 15px;
+    }
+}
+
+.cardsSubWrapper {
+    display: flex;
+    column-gap: 30px;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+        column-gap: 20px;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+        column-gap: 15px;
+    }
+}

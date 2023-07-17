@@ -1,0 +1,139 @@
+@import "../../../../../assets/scss/imgRender.scss";
+
+.keepersTechnical {
+  max-width: 1680px;
+  position: relative;
+  margin: -120px auto 250px;
+
+  * {
+    font-family: Roboto, sans-serif;
+  }
+
+  img {
+    width: 100%;
+    @include imgRender;
+  }
+
+  .keepersTechnicalWrapper {
+    color: #1A1C1E;
+
+    h2 {
+      margin: 0 auto 30px;
+      font-weight: 500;
+      font-size: 65px;
+      line-height: 84px;
+      text-align: center;
+      letter-spacing: 2.5px;
+    }
+
+    p {
+      font-size: 28px;
+      line-height: 40px;
+      text-align: center;
+      max-width: 1054px;
+      margin: 0 auto;
+    }
+  }
+
+  .technicalSkills {
+    text-align: center;
+    margin: 80px 15px 0;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: end;
+    -webkit-align-items: flex-end;
+    flex-wrap: wrap;
+
+    img {
+      max-width: 180px;
+      max-height: 180px;
+      margin: 0 20px 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1700px) {
+  .keepersTechnical {
+    .keepersTechnicalWrapper {
+      h2 {
+        font-size: 55px;
+        line-height: 64px;
+        letter-spacing: unset;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .keepersTechnical {
+    .keepersTechnicalWrapper {
+      h2 {
+        font-size: 40px;
+        line-height: 44px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .keepersTechnical {
+    .keepersTechnicalWrapper {
+      h2 {
+        font-size: 3vw;
+        line-height: 1.3;
+      }
+
+      p {
+        font-size: 2vw;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .keepersTechnical {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    .keepersTechnicalWrapper {
+      padding: 0;
+
+      .technicalSkills {
+        margin-top: 30px;
+        justify-content: space-around;
+        -webkit-justify-content: space-around;
+
+        img {
+          max-width: 120px;
+          max-height: 120px;
+          margin: 0 5px 30px;
+        }
+      }
+
+      h2 {
+        font-size: 32px;
+        line-height: 35px;
+        text-align: left;
+        padding: 0 15px;
+        letter-spacing: 0.5px;
+      }
+
+      p {
+        font-style: normal;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0.5px;
+        text-align: left;
+        padding: 0 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,513 @@
+@import "../../../../../assets/scss/breakPoints";
+
+.containerAboutProjectBlock {
+  width: 100%;
+  background: #0C111F;
+  z-index: 1;
+  font-family: 'Raleway', sans-serif;
+  margin-top: -1px;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    padding: 172px 30px 0;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    padding: 0;
+  }
+}
+
+.wrapperBlock {
+  display: flex;
+  max-width: 1487px;
+  margin: 0 auto;
+  position: relative;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    max-width: 1068px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    max-width: 100%;
+    flex-direction: column-reverse;
+  }
+}
+
+.backgroundAboutProject {
+  position: absolute;
+  width: 160%;
+  height: 102%;
+  top: -5%;
+  left: -359px;
+  transform: rotate(-5.44deg);
+  background-image: url(/images/projects/Gastehaus/cross-img.svg);
+  background-repeat: repeat;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 160%;
+    height: 50%;
+    top: 5%;
+    left: -158px;
+  }
+}
+
+.wrapperTechStack {
+  width: 575px;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 180px;
+  margin-bottom: 190px;
+  z-index: 1;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    margin-top: 158px;
+    width: 473px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    display: flex;
+    width: 100%;
+    margin-top: 58px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    margin-bottom: 0;
+    margin-top: 334px;
+  }
+
+  @media only screen and (max-width: $breakpoint-320) {
+    margin-top: 415px;
+  }
+
+  .wrapperCards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      justify-content: space-between;
+    }
+  }
+
+  .containerMainCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #444853;
+    width: 575px;
+    height: 384px;
+    margin: 30px 0 30px 0;
+    padding: 0 29px 0 45px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      width: 100%;
+      padding: 14px 39px 44px 42px;
+      height: 287px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      height: 238px;
+      margin: 20px 0 20px 0;
+      padding: 42px 39px 44px 56px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      height: 206px;
+      margin: 11px 0 11px 0;
+      padding: 21px 9px 22px 29px;
+      flex-direction: column;
+    }
+
+    .wrapperMainCardTitle {
+      font-weight: 700;
+      font-size: 60px;
+      line-height: 70px;
+      color: #FFFFFF;
+      margin-right: 50px;
+      letter-spacing: 0.01em;
+
+      @media only screen and (max-width: $breakpoint-1600) {
+        font-size: 50px;
+        line-height: 59px;
+      }
+
+      @media only screen and (max-width: $breakpoint-mobile) {
+        width: 100px;
+        margin: 0 0 15px 0;
+        font-size: 30px;
+        line-height: 35px;
+      }
+    }
+
+    .wrapperMainCardDescription {
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 150%;
+      color: #FFFFFF;
+
+      @media only screen and (max-width: $breakpoint-1600) {
+        font-size: 20px;
+        line-height: 150%;
+      }
+
+      @media only screen and (max-width: $breakpoint-tablet) {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.containerCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #444853;
+  width: 575px;
+  height: 133px;
+  margin-right: 30px;
+  position: relative;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    padding-top: 10px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 49%;
+    height: 108px;
+    margin-right: 0;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-width: 46%;
+    height: 133px;
+    padding: 0 29px 0 30px;
+    margin-right: 11px;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    padding: 0 20px 0 12px;
+  }
+
+  .wrapperTopCard {
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      width: 87%;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      width: 100%;
+      padding: 43px 162px;
+      justify-content: center;
+    }
+
+    @media only screen and (max-width: $breakpoint-ipad) {
+      padding: 43px 107px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 30px 76px;
+    }
+
+    @media only screen and (max-width: $breakpoint-480) {
+      padding: 30px 12px;
+    }
+
+    @media only screen and (max-width: $breakpoint-425) {
+      padding: 33px 0 0 23px;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+      padding: 33px 0 0 14px;
+    }
+  }
+
+  .wrapperBottomCard {
+    width: 75%;
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      width: 86%;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      width: 100%;
+      justify-content: center;
+      padding: 33px 95px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+      padding: 37px 32px 30px 30px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      padding: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 98%;
+    }
+
+    @media only screen and (max-width: $breakpoint-425) {
+      padding-top: 5px;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .numberWrapper {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+    color: #FFFFFF;
+    margin-right: 25px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      margin-right: 7px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      font-size: 28px;
+      padding-bottom: 15px;
+    }
+  }
+
+  .wrapperCardDescriptionDesign,
+  .wrapperCardDescription {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    min-width: 100%;
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      min-width: 154px;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+      min-width: 139px;
+    }
+
+    @media only screen and (max-width: $breakpoint-320) {
+      font-size: 16px;
+      min-width: 121px;
+    }
+  }
+
+  .wrapperCardDescriptionDesign {
+    @media only screen and (max-width: $breakpoint-tablet) {
+      min-width: 0;
+    }
+  }
+}
+
+.wrapperLine {
+  z-index: 1;
+  margin-left: 97px;
+  margin-top: 225px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    margin-left: 36px;
+    margin-top: 201px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    margin: 0;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    display: none;
+  }
+
+  .line {
+    width: 3px;
+    height: 622px;
+    background: rgba(255, 255, 255, 0.6);
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      height: 526px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      transform: rotate(90deg);
+      height: 700px;
+      position: absolute;
+      top: 131px;
+      left: 354px;
+    }
+  }
+}
+
+.wrapperAboutProject {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 285px 0 0 83px;
+  z-index: 1;
+  position: relative;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    margin: 221px 0 0 36px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    margin: 0
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    padding: 0 15px;
+  }
+
+  .wrapperPagination {
+    position: absolute;
+    right: -5px;
+    top: -67px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      right: 0;
+      top: -62px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      right: -1px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+
+  .titleAboutProject {
+    width: 100%;
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 130%;
+    max-width: 426px;
+    min-height: 208px;
+    letter-spacing: 0.03em;
+    color: #EFE314;
+    margin-bottom: 35px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      font-size: 70px;
+      line-height: 120%;
+      min-height: 177px;
+      margin-bottom: 0;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      margin-bottom: 12px;
+      max-width: 100%;
+      min-height: 50px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      width: 80%;
+      font-size: 40px;
+      margin-top: -47px;
+      line-height: 130%;
+    }
+  }
+
+  .question {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      font-size: 50px;
+      line-height: 120%;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      margin-bottom: 10px;
+      font-size: 30px;
+    }
+  }
+
+  .descriptionAboutProject {
+    display: block;
+    width: 652px;
+    height: 230px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      width: 520px;
+    }
+
+    @media only screen and (max-width: $breakpoint-max-width) {
+      width: 430px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      width: 100%;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      line-height: 170%;
+      font-size: 18px;
+    }
+  }
+
+  .locationProject {
+    position: relative;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: #EFE314;
+    margin-top: 20px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      margin-top: 66px;
+    }
+
+    @media only screen and (max-width: $breakpoint-max-width) {
+      margin-top: 139px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      margin-top: 0;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      position: relative;
+      bottom: -304px;
+      font-size: 18px;
+      line-height: 150%;
+      letter-spacing: 0.01em;
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 345px;
+        height: 1px;
+        top: 40px;
+        left: 0;
+        background: rgba(255, 255, 255, 0.6);
+      }
+    }
+
+    @media only screen and (max-width: $breakpoint-320) {
+      bottom: -390px;
+    }
+  }
+}

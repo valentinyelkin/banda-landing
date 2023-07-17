@@ -1,0 +1,32 @@
+@import '../../../../../../assets/scss/breakPoints.scss';
+
+.footerSocials {
+    display: flex;
+    column-gap: 50px;
+    margin-top: 220px;
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+        column-gap: 40px;
+        margin-top: 164px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+        column-gap: 25px;
+        margin-top: 352px;
+    }
+
+    @media only screen and (max-width: $breakpoint-700) {
+        column-gap: 15px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        flex-wrap: wrap;
+        width: 318px;
+        gap: 15px;
+        margin: 219px auto 0 auto;
+    }
+    
+    @media only screen and (max-width: $breakpoint-375) {
+        width: 198px;
+    }
+}

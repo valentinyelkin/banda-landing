@@ -1,0 +1,625 @@
+@import '../../../../assets/scss/breakPoints';
+
+$color-black: #171718;
+
+.arrowScrollBree,
+.arrow {
+  cursor: pointer;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  transform: rotate(-90deg);
+  z-index: 10;
+
+  .line {
+    box-sizing: content-box;
+    position: relative;
+    width: 15px;
+    height: 2px;
+    background: $color-black;
+  }
+
+  ::after {
+    box-sizing: content-box;
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 2px;
+    top: -3px;
+    right: 9px;
+    background: $color-black;
+    transform: rotate(-45deg);
+  }
+
+  ::before {
+    box-sizing: content-box;
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 2px;
+    top: 3px;
+    right: 9px;
+    background: $color-black;
+    transform: rotate(48deg);
+  }
+}
+
+.arrowScrollBtn {
+  opacity: 0.4;
+
+  .line {
+    background: #ffffff;
+
+    &:after {
+      background: #ffffff;
+    }
+
+    &:before {
+      background: #ffffff;
+    }
+  }
+}
+
+.arrowScrollBtn:hover {
+  opacity: 1;
+}
+
+.arrowLeftSpaceBookingTestimonials,
+.arrowRightSpaceBookingTestimonials,
+.arrowLeftSpaceBooking,
+.arrowRightSpaceBooking,
+.arrowLeftRealEstateCard,
+.arrowRightRealEstateCard,
+.arrowScrollRightBreeResults,
+.arrowScrollLeftBreeResults,
+.arrowScrollRightBree,
+.arrowScrollLeftBree {
+  position: absolute;
+  height: 10%;
+  transform: rotate(-180deg);
+
+  .line {
+    width: 34px;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 2px;
+
+    &:after {
+      width: 16px;
+      height: 3px;
+      right: 22px;
+      top: -5px;
+      background: #ffffff;
+      border-radius: 2px;
+    }
+
+    &:before {
+      width: 16px;
+      height: 3px;
+      right: 22px;
+      top: 5px;
+      background: #ffffff;
+      border-radius: 2px;
+    }
+  }
+}
+
+.arrowScrollLeftBree {
+  transform: rotate(0deg);
+  bottom: 15px;
+  left: 31%;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    left: 25%;
+    bottom: 18px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    bottom: 19px;
+    left: 20%;
+  }
+
+  @media only screen and (max-width: $breakpoint-480) {
+    left: 18%;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    left: 9%;
+    bottom: -6px;
+  }
+}
+
+.arrowScrollRightBree {
+  bottom: 14px;
+  right: 32%;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    right: 30%;
+    bottom: 18px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    bottom: 20px;
+    right: 19%;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    right: 13%;
+    bottom: -6px;
+  }
+}
+
+.arrowScrollLeftBreeResults {
+  transform: rotate(0deg);
+  bottom: 3px;
+  left: 40%;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    left: 29%;
+  }
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    left: 26%;
+    bottom: 52px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    left: 35%;
+    bottom: -12px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    bottom: -19px;
+    left: 15%;
+  }
+
+  @media only screen and (max-width: $breakpoint-480) {
+    left: 12%;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    left: 26%;
+    bottom: 0;
+  }
+}
+
+.arrowScrollRightBreeResults {
+  bottom: 3px;
+  right: 41%;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    right: 53%;
+  }
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    right: 55%;
+    bottom: 51px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    bottom: -11px;
+    right: 39%;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet-768) {
+    right: 35%;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    bottom: -19px;
+    right: 37%;
+  }
+
+  @media only screen and (max-width: $breakpoint-480) {
+    right: 29%;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    right: 25%;
+    bottom: 0;
+  }
+}
+
+.arrowScrollRightBreeResults:hover,
+.arrowScrollLeftBreeResults:hover,
+.arrowScrollRightBree:hover,
+.arrowScrollLeftBree:hover {
+  .line {
+    box-shadow: 3px 7px 30px rgba(241, 173, 77, 0.5);
+    background: #ee9820;
+
+    &:after {
+      box-shadow: 3px 7px 30px rgba(241, 173, 77, 0.5);
+      background: #ee9820;
+    }
+
+    &:before {
+      box-shadow: 3px 7px 30px rgba(241, 173, 77, 0.5);
+      background: #ee9820;
+    }
+  }
+}
+
+.arrowScrollRightBreeResults,
+.arrowScrollLeftBreeResults {
+  .line {
+    background: #07556e;
+
+    &:after {
+      background: #07556e;
+    }
+
+    &:before {
+      background: #07556e;
+    }
+  }
+}
+
+.arrowLeftRealEstateCard,
+.arrowRightRealEstateCard {
+  margin: 15px;
+
+  .line {
+    background: #4400a7;
+
+    &:after {
+      background: #4400a7;
+    }
+
+    &:before {
+      background: #4400a7;
+    }
+  }
+}
+
+.arrowNextRealEstate,
+.arrowPrevRealEstate {
+  width: 175px;
+  height: 175px;
+  background: #ffffff;
+  border: 1px solid #828282;
+  transform: rotate(0);
+  border-radius: 2px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    width: 72px;
+    height: 72px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 140px;
+    height: 140px;
+    background: #333333;
+    border: 1px solid #ffffff;
+  }
+
+  .line {
+    width: 24px;
+    border-radius: 2px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      width: 15px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+
+  ::after {
+    width: 12px;
+    top: -4px;
+    right: 13px;
+    border-radius: 2px;
+    transform: rotate(-40deg);
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      width: 10px;
+      top: -3px;
+      right: 7px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+
+  ::before {
+    width: 12px;
+    top: 4px;
+    right: 13px;
+    border-radius: 2px;
+    transform: rotate(40deg);
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      width: 10px;
+      top: 3px;
+      right: 7px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+}
+
+.arrowNextRealEstate {
+  transform: rotate(180deg);
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    transform: rotate(0);
+  }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+  .arrowPrevRealEstate {
+    &:before {
+      content: 'previous project';
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 14px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+  .arrowNextRealEstate {
+    &:before {
+      content: 'next project';
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 14px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.arrowRightSpaceBookingTestimonials,
+.arrowLeftSpaceBookingTestimonials,
+.arrowLeftSpaceBooking,
+.arrowRightSpaceBooking {
+  margin: 15px;
+
+  .line {
+    background: #6800fd;
+
+    &:after {
+      background: #6800fd;
+    }
+
+    &:before {
+      background: #6800fd;
+    }
+  }
+}
+
+.arrowRightSpaceBookingTestimonials:active,
+.arrowLeftSpaceBookingTestimonials:active,
+.arrowLeftSpaceBooking:active,
+.arrowRightSpaceBooking:active {
+  .line {
+    background: #4400a7;
+
+    &:after {
+      background: #4400a7;
+    }
+
+    &:before {
+      background: #4400a7;
+    }
+  }
+}
+
+.arrowSpaceBookingDisabled {
+  .line {
+    background: #9e92ae;
+
+    &:after {
+      background: #9e92ae;
+    }
+
+    &:before {
+      background: #9e92ae;
+    }
+  }
+}
+
+.arrowLeftSpaceBooking,
+.arrowLeftRealEstateCard {
+  transform: rotate(0deg);
+  left: 30%;
+  bottom: -25px;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    bottom: -28px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    left: 6%;
+    bottom: -31px;
+  }
+}
+
+.arrowRightSpaceBooking,
+.arrowRightRealEstateCard {
+  right: 30%;
+  bottom: -24px;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    bottom: -28px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    right: 6%;
+    bottom: -32px;
+  }
+}
+
+.arrowLeftSpaceBooking,
+.arrowRightSpaceBooking {
+  @media only screen and (max-width: $breakpoint-mobile) {
+    bottom: 20px;
+  }
+
+  @media only screen and (max-width: $breakpoint-480) {
+    bottom: -44px;
+  }
+}
+
+.arrowRightSpaceBookingTestimonials {
+  right: 35%;
+  bottom: -15px;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    right: 23%;
+    bottom: -43px;
+  }
+}
+
+.arrowLeftSpaceBookingTestimonials {
+  transform: rotate(0deg);
+  left: 31%;
+  bottom: -15px;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    left: 19%;
+    bottom: -43px;
+  }
+}
+
+.arrowLeftHotelCommunityResults,
+.arrowRightHotelCommunityResults,
+.arrowLeftHotelCommunity,
+.arrowRightHotelCommunity {
+  position: absolute;
+  height: 10%;
+  transform: rotate(-180deg);
+
+  .line {
+    width: 40px;
+    height: 1px;
+    background: #25333a;
+
+    &:after {
+      width: 6px;
+      height: 1px;
+      right: 35px;
+      top: -2px;
+      background: #25333a;
+      border-radius: 2px;
+    }
+
+    &:before {
+      width: 6px;
+      height: 1px;
+      right: 35px;
+      top: 2px;
+      background: #25333a;
+      border-radius: 2px;
+    }
+  }
+}
+
+.arrowRightHotelCommunity {
+  right: 37%;
+  bottom: -7px;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    right: 16%;
+    bottom: -15px;
+  }
+}
+
+.arrowLeftHotelCommunity {
+  transform: rotate(0deg);
+  left: 28%;
+  bottom: -7px;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    left: 12%;
+    bottom: -15px;
+  }
+}
+
+.arrowLeftHotelCommunityResults:active,
+.arrowRightHotelCommunityResults:active,
+.arrowLeftHotelCommunity:active,
+.arrowRightHotelCommunity:active {
+  .line {
+    background: #fe531e;
+
+    &:after {
+      background: #fe531e;
+    }
+
+    &:before {
+      background: #fe531e;
+    }
+  }
+}
+
+.arrowLeftHotelCommunityResults {
+  transform: rotate(0deg);
+  right: 60%;
+  bottom: -13px;
+
+  @media only screen and (max-width: $breakpoint-1800) {
+    right: 62%;
+    bottom: 60px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    right: 58%;
+    bottom: 39px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    right: 63%;
+    bottom: 21px;
+  }
+}
+
+.arrowRightHotelCommunityResults {
+  right: 47%;
+  bottom: -13px;
+
+  @media only screen and (max-width: $breakpoint-1800) {
+    right: 40%;
+    bottom: 59px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    right: 37%;
+    bottom: 39px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    right: 22%;
+    bottom: 21px;
+  }
+}
+
+.arrowHotelCommunityDisabled {
+  .line {
+    background: #e1e7e5;
+
+    &:after {
+      background: #e1e7e5;
+    }
+
+    &:before {
+      background: #e1e7e5;
+    }
+  }
+}

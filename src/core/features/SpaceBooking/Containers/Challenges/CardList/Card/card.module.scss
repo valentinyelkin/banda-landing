@@ -1,0 +1,187 @@
+@import '../../../../../../../assets/scss/breakPoints';
+
+.container {
+  position: relative;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    min-height: 198px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    &:first-child {
+      margin-top: -38px;
+    }
+  }
+
+  .titleProperty,
+  .title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    color: #6800FD;
+    text-shadow: 0 4px 20px rgba(68, 0, 167, 0.2);
+    position: relative;
+    padding-left: 32px;
+    margin-bottom: 16px;
+    width: 71%;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      font-size: 28px;
+      line-height: 36px;
+      width: 100%;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      width: 47%;
+      padding-left: 20px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      font-size: 24px;
+      width: 77%;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -15px;
+      height: 106%;
+      width: 4px;
+      background: #824DCE;
+      opacity: 0.2;
+      border-radius: 5px;
+
+      @media only screen and (max-width: $breakpoint-480) {
+        left: 3px;
+      }
+    }
+  }
+}
+
+.wrapperDescription {
+  position: relative;
+  padding-left: 32px;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    padding-left: 20px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 104%;
+    width: 4px;
+    background: #824DCE;
+    border-radius: 5px;
+
+    @media only screen and (max-width: $breakpoint-480) {
+      left: 3px;
+    }
+  }
+
+  .descriptionOne,
+  .descriptionFour,
+  .descriptionThree,
+  .descriptionTwo,
+  .description {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    color: #250B4A;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      line-height: 32px;
+    }
+  }
+
+  .boltText {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    color: #250B4A;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      line-height: 32px;
+    }
+  }
+}
+
+.wrapperParagraph {
+  margin-top: 30px;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    margin-top: 12px;
+  }
+}
+
+.containerBooking {
+  @media only screen and (max-width: $breakpoint-laptop) {
+    min-height: 480px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    min-height: 548px;
+  }
+}
+
+.containerAvailability {
+  @media only screen and (max-width: $breakpoint-laptop) {
+    min-height: 160px;
+  }
+}
+
+.containerParking {
+  @media only screen and (max-width: $breakpoint-laptop) {
+    min-height: 248px;
+  }
+}
+
+.containerUsers {
+  @media only screen and (max-width: $breakpoint-laptop) {
+    min-height: 144px;
+  }
+}
+
+.containerContactless {
+  @media only screen and (max-width: $breakpoint-laptop) {
+    min-height: 116px;
+  }
+}
+
+.containerProperty {
+  @media only screen and (max-width: $breakpoint-laptop) {
+    min-height: 108px;
+  }
+}
+
+.titleAvailability {
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 41% !important;
+  }
+}
+
+.titleParking {
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 90% !important;
+  }
+}
+
+.titleProperty {
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 56% !important;
+  }
+}
+

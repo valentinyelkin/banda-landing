@@ -1,0 +1,222 @@
+.sunUpTimeline {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 130px;
+  padding-top: 180px;
+  padding-bottom: 200px;
+  overflow: hidden;
+
+  * {
+    font-family: Roboto, sans-serif;
+  }
+}
+
+.sunUpTimelineWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sunUpTimelineInfo {
+  max-width: 910px;
+  width: 100%;
+
+  h2 {
+    font-weight: 500;
+    font-size: 65px;
+    line-height: 84px;
+    color: #1A1C1E;
+  }
+}
+
+.sunUpTimelineStage {
+  padding: 40px 0;
+  border-bottom: 1px solid #E0E0E0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.sunUpTimelineHours {
+  font-weight: 500;
+  font-size: 65px;
+  line-height: 84px;
+  color: #FFA800;
+  font-family: Roboto;
+
+  span {
+    font-size: 20px;
+  }
+}
+
+.sunUpTimelineStageInfo {
+  max-width: 650px;
+  width: 100%;
+}
+
+.sunUpTimelineStageName {
+  font-size: 20px;
+  line-height: 40px;
+  color: #213659;
+  margin-bottom: 10px;
+}
+
+.sunUpTimelineStageItem {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  font-size: 16px;
+  line-height: 40px;
+  letter-spacing: 1px;
+  color: #1B2137;
+  padding: 10px 30px;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.sunUpTimelineTotal {
+  font-weight: 500;
+  font-size: 65px;
+  line-height: 84px;
+  color: #1A1C1E;
+  font-family: 'Roboto';
+
+  span {
+    font-size: 20px;
+  }
+}
+
+.sunUpTimelineSolar {
+  position: relative;
+  z-index: -1;
+}
+
+.sunUpTimelineCircle1,
+.sunUpTimelineCircle2,
+.sunUpTimelineCircle3,
+.sunUpTimelineCircle4 {
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sunUpTimelineCircle1 {
+  width: 770px;
+  height: 770px;
+  border: 1px solid rgba(33, 54, 89, .2);
+}
+
+.sunUpTimelineCircle2 {
+  width: 995px;
+  height: 995px;
+  border: 1px solid rgba(33, 54, 89, .1);
+}
+
+.sunUpTimelineCircle3 {
+  width: 1220px;
+  height: 1220px;
+  border: 1px solid rgba(33, 54, 89, .05);
+}
+
+.sunUpTimelineCircle4 {
+  width: 1440px;
+  height: 1440px;
+  border: 1px solid rgba(33, 54, 89, .04);
+}
+
+@media only screen and (max-width: 1024px) {
+  .sunUpTimeline {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .sunUpTimelineWrapper {
+    flex-flow: column;
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .sunUpTimeline {
+    padding: 60px 0 100px;
+  }
+
+  .sunUpTimelineInfo {
+    padding: 0 20px;
+
+    h2 {
+      font-size: 30px;
+    }
+  }
+
+  .sunUpTimelineStageName {
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 20px 0 0;
+  }
+
+  .sunUpTimelineStage {
+    padding: 20px 0;
+    flex-flow: column-reverse;
+    align-items: flex-start;
+
+    &:last-child {
+      //p {
+      //  font-size: 30px;
+      //}
+
+      > .sunUpTimelineTotal {
+        font-size: 65px;
+      }
+    }
+  }
+
+  .sunUpTimelineHours {
+    //margin-top: 20px;
+  }
+
+  .sunUpTimelineStageInfo {
+    font-size: 14px;
+  }
+
+  .sunUpTimelineSolar {
+    width: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .sunUpTimelineCircle1 {
+    width: 380px;
+    height: 380px;
+  }
+
+  .sunUpTimelineCircle2 {
+    width: 490px;
+    height: 490px;
+  }
+
+  .sunUpTimelineCircle3 {
+    width: 600px;
+    height: 600px;
+  }
+
+  .sunUpTimelineCircle4 {
+    width: 700px;
+    height: 700px;
+  }
+
+  .sunUpTimelineCircle5 {
+    display: none;
+  }
+}

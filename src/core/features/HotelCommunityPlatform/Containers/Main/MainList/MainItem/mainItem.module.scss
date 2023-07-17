@@ -1,0 +1,84 @@
+@import '../../../../../../../assets/scss/breakPoints';
+
+.wrapper {
+  font-family: 'Raleway', sans-serif;
+  padding-bottom: 10px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    padding-bottom: 20px;
+  }
+
+  .titleNum6and8,
+  .titleNum10,
+  .title {
+    font-weight: 700;
+    font-size: 110px;
+    line-height: 110px;
+    color: rgba(255, 255, 255, 0.4);
+    text-align: right;
+
+    @media only screen and (max-width: $breakpoint-1800) {
+      font-size: 60px;
+      line-height: 60px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      font-size: 70px;
+      line-height: 70px;
+      text-align: center;
+    }
+  }
+
+  .titleNum6and8,
+  .titleNum10,
+  .title {
+    -webkit-text-stroke: 1px #fff;
+  }
+
+  .subTitle {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: right;
+    color: #FFFFFF;
+
+    @media only screen and (max-width: $breakpoint-1800) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      text-align: center;
+    }
+  }
+
+  .titleNum10 {
+    font-size: 140px;
+    line-height: 140px;
+
+    @media only screen and (max-width: $breakpoint-1800) {
+      font-size: 90px;
+      line-height: 90px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      font-size: 90px;
+      line-height: 70px;
+      margin: 0 30px 5px 20px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      margin: 0 -15px 6px 7px;;
+    }
+  }
+
+  .titleNum6and8 {
+    font-size: 120px;
+    line-height: 120px;
+
+    @media only screen and (max-width: $breakpoint-1800) {
+      font-size: 70px;
+      line-height: 70px;
+    }
+  }
+}

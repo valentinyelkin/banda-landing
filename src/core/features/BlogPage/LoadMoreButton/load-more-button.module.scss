@@ -1,0 +1,14 @@
+@import '../../../../assets/scss/breakPoints.scss';
+
+.sliderBtnWrapper {
+    justify-content: center;
+    display: flex;
+    margin-top: 30px;
+
+    .loadMoreBtn {
+        height: 81px;
+        width: 295px;
+        font-size: 18px;
+        font-family: 'Raleway';
+    }
+}

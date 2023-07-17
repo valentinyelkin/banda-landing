@@ -1,0 +1,48 @@
+@import "../../../../assets/scss/breakPoints.scss";
+
+.modalOverlayThanks {
+  background: rgba(23, 23, 24, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: fadeIn .3s ease-in forwards;
+  z-index: 100;
+}
+
+.modalWrapThanks {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 50px 40px;
+  max-width: 410px;
+  width: 100%;
+
+  p {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 130%;
+    color: #171718;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .modalOverlayThanks {
+    position: absolute;
+  }
+
+  .modalWrapThanks {
+    padding: 50px 30px;
+    width: calc(100% - 30px);
+
+    p {
+      font-size: 16px;
+    }
+  }
+}

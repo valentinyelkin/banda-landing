@@ -1,0 +1,151 @@
+@import '../../../../../../assets/scss/breakPoints';
+
+.figures {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.item {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+}
+
+.item_1 {
+  background: #58D382;
+  border-radius: 0 120px 120px 0;
+  bottom: 192px;
+  left: 0;
+}
+
+.item_2 {
+  background: #FBD347;
+  border-radius: 0 0 120px 120px;
+  height: 90px !important;
+  bottom: 100px;
+  left: 164px;
+}
+
+.item_3 {
+  background: transparent;
+  border-radius: 0 120px 120px 120px;
+  border: 40px solid #C653B9;
+  bottom: 0;
+  left: 384px;
+}
+
+.item_4 {
+  background: #3F53D9;
+  bottom: 192px;
+  left: 384px;
+  border-radius: 120px 120px 120px 0;
+}
+
+.item_5 {
+  background: #FBD347;
+  border-radius: 120px 120px 0 0;
+  height: 90px !important;
+  bottom: 0;
+  left: 576px;
+}
+
+.item_6 {
+  background: #C653B9;
+  bottom: 192px;
+  left: 768px;
+  border-radius: 120px 120px 0 120px;
+}
+
+.item_7 {
+  background: transparent;
+  border-radius: 120px 0 120px 120px;
+  border: 40px solid #FBD347;
+  bottom: 0;
+  left: 768px;
+}
+
+.item_8 {
+  background: #3F53D9;
+  bottom: 192px;
+  left: 990px;
+  border-radius: 120px 120px 120px 0;
+}
+
+.item_9 {
+  background: #58D382;
+  border-radius: 120px 120px 120px 0 !important;
+  bottom: 0;
+  left: 1180px;
+}
+
+.item_10 {
+  background: transparent;
+  border-radius: 120px 0 120px 120px;
+  border: 40px solid #58D382;
+  bottom: 192px;
+  left: 1600px;
+}
+
+.item_11 {
+  background: #FBD347;
+  border-radius: 0 120px 120px 120px;
+  bottom: 192px;
+  left: 1380px;
+}
+
+.item_12 {
+  background: #3F53D9;
+  border-radius: 120px 120px 0 0;
+  height: 90px !important;
+  bottom: 0;
+  left: 1580px;
+}
+
+@media only screen and (max-width: $breakpoint-laptop-1366) {
+  .item_1, .item_4, .item_6, .item_8 {
+    bottom: 140px;
+  }
+
+  .item_4, .item_3 {
+    left: 340px;
+  }
+
+  .item_5 {
+    left: 480px;
+  }
+
+  .item_6 {
+    left: 564px;
+  }
+
+  .item_8 {
+    left: 964px;
+  }
+
+  .item_9 {
+    left: 1064px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-tablet-768) {
+  .item_1, .item_4, .item_6, .item_8 {
+    bottom: 130px;
+  }
+
+  .item_4, .item_3 {
+    left: 320px;
+  }
+
+  .item_5 {
+    left: 480px;
+  }
+
+  .item_6 {
+    left: 564px;
+  }
+}
+

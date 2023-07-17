@@ -1,0 +1,453 @@
+@import "../../../../assets/scss/imgRender.scss";
+
+.testimonialsMain {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 70px 0 150px;
+
+  h2{
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 70px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FFF;
+    margin-bottom: 100px;
+    position: relative;
+    text-transform: uppercase;
+
+    &:after {
+      content: 'Testimonials';
+      font-weight: bold;
+      font-size: 75px;
+      line-height: 100px;
+      letter-spacing: 0.03em;
+      color: #fff;
+      opacity: 0.1;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -5px;
+      text-transform: uppercase;
+    }
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    @include imgRender;
+  }
+
+  .testimonialsMobileBg {
+    display: none;
+  }
+
+  * {
+    font-family: Roboto, sans-serif;
+  }
+}
+
+.testimonialsBg, .testimonialsMobileBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+
+.testimonialsInfo {
+  max-width: 1580px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.testimonialsWrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 45px;
+}
+
+.testimonialsList {
+  &First {
+    .testimonialsItem {
+      .testimonialsItemName {
+        text-align: left;
+        margin-left: 55px;
+      }
+
+      &:first-child, &:last-child {
+        margin-left: 100px;
+      }
+
+      &:first-child {
+        .testimonialsItemBox {
+          &:before {
+            content: '';
+            background: url(/images/projects/arxonas/corner.png) no-repeat center;
+            width: 139px;
+            height: 113px;
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+          }
+
+
+          &:after {
+            content: '';
+            background: url(/images/projects/arxonas/vertical-line.png) no-repeat center;
+            width: 70px;
+            height: 122px;
+            position: absolute;
+            transform: rotateX(180deg) translate(91%, -96%);
+            bottom: 0;
+            right: 0;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        .testimonialsItemBox {
+          &:before {
+            content: '';
+            background: url(/images/projects/arxonas/corner.png) no-repeat center;
+            width: 139px;
+            height: 113px;
+            position: absolute;
+            right: -30px;
+            bottom: -30px;
+            transform: rotateY(180deg);
+          }
+
+          &:after {
+            content: '';
+            background: url(/images/projects/arxonas/horizontal-line.png) no-repeat center;
+            width: 129px;
+            height: 71px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(100%, -50%);
+          }
+        }
+      }
+
+      &:last-child {
+        .testimonialsItemBox {
+          &:after {
+            content: '';
+            background: url(/images/projects/arxonas/vertical-line.png) no-repeat center;
+            width: 70px;
+            height: 122px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(92%, -95%);
+          }
+        }
+      }
+    }
+  }
+
+  &Second {
+    .testimonialsItem {
+      .testimonialsItemName {
+        text-align: right;
+        margin-right: 55px;
+      }
+
+      &:nth-child(2) {
+        margin-left: 100px;
+      }
+
+      &:first-child {
+        .testimonialsItemBox {
+          &:before {
+            content: '';
+            background: url(/images/projects/arxonas/corner.png) no-repeat center;
+            width: 139px;
+            height: 113px;
+            position: absolute;
+            right: -30px;
+            bottom: -30px;
+            transform: rotateY(180deg);
+          }
+
+          &:after {
+            content: '';
+            background: url(/images/projects/arxonas/vertical-line.png) no-repeat center;
+            width: 70px;
+            height: 122px;
+            position: absolute;
+            transform: rotateX(180deg) rotateY(180deg) translate(91%, -96%);
+            bottom: 0;
+            left: 0;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        .testimonialsItemBox {
+          &:before {
+            content: '';
+            background: url(/images/projects/arxonas/corner.png) no-repeat center;
+            width: 139px;
+            height: 113px;
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+          }
+
+          &:after {
+            content: '';
+            background: url(/images/projects/arxonas/horizontal-line.png) no-repeat center;
+            width: 129px;
+            height: 71px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(-100%, -50%) rotateY(180deg);
+          }
+        }
+      }
+
+      &:last-child {
+        .testimonialsItemBox {
+          &:after {
+            content: '';
+            background: url(/images/projects/arxonas/vertical-line.png) no-repeat center;
+            width: 70px;
+            height: 122px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-92%, -95%) rotateY(180deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+.testimonialsItem {
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 90px;
+  }
+
+  .testimonialsItemName {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 170%;
+    color: #FFF;
+    margin-bottom: 10px;
+  }
+
+  &Box {
+    max-width: 550px;
+    width: 100%;
+    background: #FFF;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    padding: 20px 45px;
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: .3s;
+
+    &:hover {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    p {
+      font-style: italic;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 150%;
+      color: #4A5FFA;
+    }
+  }
+}
+
+@media only screen and (max-width: 1700px) {
+  .testimonialsItem {
+    max-width: 400px;
+  }
+}
+
+@media only screen and (min-width: 669px) and (max-width: 1280px) {
+  .testimonialsMain {
+    padding-top: 920px;
+  }
+
+  .testimonialsWrapper {
+    justify-content: center;
+
+    .arxonasWhiteLogo {
+      display: none;
+    }
+
+    .testimonialsItemBox {
+      padding: 20px;
+    }
+
+    .testimonialsItem {
+      margin-bottom: 20px;
+      max-width: 100%;
+
+      .testimonialsItemName {
+        font-size: 18px;
+        margin-left: 15px;
+        margin-right: 0;
+        text-align: left;
+      }
+    }
+
+    .testimonialsList {
+      &First {
+        margin-right: 20px;
+
+        .testimonialsItem {
+          &:first-child, &:last-child {
+            margin-left: 0;
+          }
+
+          .testimonialsItemBox::after, .testimonialsItemBox::before {
+            background: none;
+          }
+        }
+      }
+
+      &Second {
+        margin-left: 20px;
+
+        .testimonialsItem:nth-child(2) {
+          margin-left: 0;
+        }
+
+        .testimonialsItem .testimonialsItemBox::after {
+          background: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .testimonialsCenter {
+    display: none;
+  }
+
+  .testimonialsItem {
+    max-width: 100%;
+  }
+
+  .testimonialsMain {
+    padding-bottom: 0;
+
+    h2{
+      margin-bottom: 15px;
+    }
+
+    &::after {
+      bottom: 3px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: clip;
+    }
+
+    .testimonialsBg {
+      display: none;
+    }
+
+    .testimonialsMobileBg {
+      display: block;
+    }
+
+    .testimonialsWrapper {
+      padding: 0 15px;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .testimonialsItem {
+        margin-left: 0;
+        margin-bottom: 20px;
+
+        .testimonialsItemName {
+          margin-left: 10px;
+          text-align: left;
+          font-size: 14px;
+        }
+
+        .testimonialsItemBox {
+          width: 100%;
+          max-width: 100%;
+          padding: 12px;
+          min-height: auto;
+
+          &::before, &::after {
+            content: none;
+            background: none;
+          }
+
+          p {
+            font-size: 14px;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+  }
+  .testimonialsInfo {
+    margin-top: 40px;
+
+    h2{
+      span {
+        font-size: 26px;
+        line-height: 30px;
+      }
+
+      &::after {
+        width: 95%;
+        font-size: 40px;
+        line-height: 52px;
+        bottom: 5px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: clip;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 668px) {
+  .testimonialsMain {
+    .testimonialsWrapper {
+      .testimonialsItem {
+        .testimonialsItemName {
+          font-size: 18px;
+        }
+
+        .testimonialsItemBox {
+          p {
+            font-size: 16px;
+            line-height: 21px;
+          }
+        }
+      }
+    }
+  }
+}

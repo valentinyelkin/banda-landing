@@ -1,0 +1,79 @@
+@import '../../../../../../../assets/scss/breakPoints.scss';
+
+.graphItem {
+    font-family: 'Nunito Sans';
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 68px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    position: relative;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    span {
+        position: absolute;
+        top: -51px;
+        left: 0;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        height: 44px;
+        width: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media only screen and (max-width: $breakpoint-tablet) {
+            top: calc(56px / 2);
+            left: calc(-60px - 32px / 2);
+            height: 32px;
+            width: 32px;
+        }
+
+        @media only screen and (max-width: $breakpoint-tablet-768) {
+            left: calc(-40px - 32px / 2);
+        }
+
+        @media only screen and (max-width: $breakpoint-375) {
+            top: calc(36px / 2);
+        }
+
+        &.withShadow {
+            box-shadow: 4px 4px 20px rgba(43, 50, 26, 0.2);
+        }
+
+
+    }
+
+    h3 {
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+}
+
+.graphItemText {
+    font-family: 'Lato';
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    text-transform: none;
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}

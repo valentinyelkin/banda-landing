@@ -1,0 +1,18 @@
+@import '../../../../assets/scss/breakPoints.scss';
+
+.tabsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    border-left: 1px solid #BDBDBD;
+    position: relative;
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    li:last-child {
+        border-right: 1px solid #BDBDBD;
+    }
+}

@@ -1,0 +1,147 @@
+@import '../../../../../../assets/scss/breakPoints';
+
+.containerTime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 80px;
+  height: 72px;
+  background: #6800FD;
+  border-radius: 40px;
+  position: absolute;
+  z-index: 1;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    height: 64px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    height: 56px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    height: 48px;
+    padding: 8px 40px;
+  }
+}
+
+.title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    font-size: 24px;
+    line-height: 40px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+.titleInProgress {
+  color: #824DCE
+}
+
+.containerDesign {
+  width: 24%;
+  left: 0;
+  bottom: 225px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    bottom: 265px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 249px;
+    bottom: -88px;
+    left: 16px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 153px;
+    bottom: -72px;
+    left: 13px;
+  }
+}
+
+.containerDevelopment {
+  width: 83%;
+  right: 0;
+  bottom: 129px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    bottom: 179px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 338px;
+    bottom: -175px;
+    right: 183px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 225px;
+    bottom: -144px;
+    right: 215px;
+  }
+}
+
+.containerProduction {
+  width: 72%;
+  bottom: 33px;
+  right: 342px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    bottom: 90px;
+    right: 237px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 319px;
+    bottom: 128px;
+    right: 202px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 210px;
+    bottom: 101px;
+    right: 230px;
+  }
+}
+
+.containerInProgress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 12px;
+  border: 1px solid #E3D9F0;
+  background: #FFFFFF;
+  width: 78%;
+  left: 0;
+  bottom: 225px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    bottom: 267px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 334px;
+    bottom: -87px;
+    left: 16px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 222px;
+    bottom: -71px;
+  }
+}

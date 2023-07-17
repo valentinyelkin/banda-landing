@@ -1,0 +1,85 @@
+.shedMain {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.shedMainWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 240px;
+}
+
+.title {
+  opacity: 0;
+  margin-top: -18px;
+}
+
+.shedMainLogo {
+  max-width: 290px;
+  width: 100%;
+
+  img {
+    margin: 0 auto 60px;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #8A8A8A;
+    font-family: 'Open Sans', sans-serif;
+  }
+}
+
+.shedMainBig {
+  flex-shrink: 1;
+}
+
+@media only screen and (max-width: 1200px) {
+  .shedMainWrapper {
+    padding-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .shedMain {
+    margin: 100px auto 40px;
+  }
+
+  .shedMainWrapper {
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .shedMainLogo {
+    margin: 0 auto 25px;
+
+    img {
+      max-width: 170px;
+      margin: 0 auto;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 30px;
+      margin-top: 30px;
+    }
+  }
+
+  .shedMainBig {
+    width: 100%;
+
+    img {
+      margin: 0 0 0 auto;
+    }
+  }
+}

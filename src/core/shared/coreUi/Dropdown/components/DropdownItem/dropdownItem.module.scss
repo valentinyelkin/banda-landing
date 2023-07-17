@@ -1,0 +1,82 @@
+@import '../../../../../../assets/scss/breakPoints.scss';
+
+.icon {
+  margin-right: 8px;
+}
+
+.link {
+  color: #171718;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 3px;
+    background: transparent;
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 10px);
+    transform: translateX(-50%);
+    transition: background-color 0.3s, width 0.3s;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      top: calc(100% + 5px);
+    }
+  }
+}
+
+.item {
+  width: 100%;
+  margin-bottom: 31px !important;
+  margin-right: 0 !important;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px !important;
+  }
+
+  &:hover {
+    .link {
+      &::after {
+        transition: background-color 0s, width 0.3s;
+        width: 100%;
+        background-color: #171718;
+      }
+    }
+  }
+
+  &:active {
+    .icon {
+      filter: brightness(0) invert(1);
+    }
+
+    .link {
+      color: #ffffff;
+
+      &::after {
+        background-color: #ffffff;
+      }
+    }
+  }
+}
+
+.itemBlock {
+  display: flex;
+  width: max-content;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.lastItem {
+  margin-bottom: 0;
+}

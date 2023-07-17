@@ -1,0 +1,755 @@
+@import '../../../assets/scss/breakPoints.scss';
+
+$contacts-title-font-sizes: (
+  null: 48px,
+  1024px: 48px,
+  1280px: 48px,
+  1600px: 48px,
+  1900px: 60px,
+);
+
+$contacts-text-font-sizes: (
+  null: 18px,
+  1024px: 18px,
+  1280px: 18px,
+  1600px: 18px,
+  1900px: 24px,
+);
+
+@mixin font-size($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    } @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}
+
+.gradient-vertical {
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100vh;
+  background: rgba(167, 167, 167, 0.1);
+  position: absolute;
+  pointer-events: none;
+}
+
+.gradient-horizontal {
+  width: 100vw;
+  height: 1px;
+  background: rgba(167, 167, 167, 0.1);
+  position: absolute;
+  pointer-events: none;
+}
+
+.contactsWrapper {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    justify-content: space-around;
+  }
+}
+
+.contactsTitle {
+  font-style: normal;
+  font-weight: bold;
+  line-height: 130%;
+  color: #171718;
+  margin: 0 0 30px;
+  @include font-size($contacts-title-font-sizes);
+
+  @media screen and (max-width: $breakpoint-tablet) and (max-height: 700px) {
+    margin: 0 0 10px;
+  }
+}
+
+.contactsText {
+  font-weight: normal;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: #171718;
+  margin: 0 0 30px;
+  @include font-size($contacts-text-font-sizes);
+
+  @media screen and (max-width: $breakpoint-tablet) and (max-height: 700px) {
+    margin: 0 0 10px;
+  }
+}
+
+.contactsContent {
+  z-index: 4;
+  max-width: 1250px;
+  width: 100%;
+  padding: 0 100px 0 60px;
+  margin: 25vh 0 0;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    margin: 110px 0 0;
+    padding: 0 30px;
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) and (max-height: 700px) {
+    margin: 15vh 0 0;
+  }
+
+  .mailBtn {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: #efe314;
+    text-decoration: none;
+    text-align: center;
+
+    max-width: 336px;
+    padding: 22px 28px 21px 29px;
+    margin: 50px 0 0;
+    background: #333;
+
+    transition: 0.3s;
+
+    &:hover {
+      background: #171718;
+      color: #efe314;
+    }
+
+    &:active,
+    &:focus {
+      color: #fff;
+      background: #333;
+    }
+
+    @media screen and (max-width: $breakpoint-laptop) {
+      font-size: 20px;
+    }
+
+    @media screen and (max-width: $breakpoint-tablet) and (max-height: 700px) {
+      margin: 0 50px 0 0;
+    }
+  }
+}
+
+.contactsMap {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+
+  width: 1250px;
+  height: 100%;
+
+  @media screen and (max-width: $breakpoint-laptop) {
+    width: 887px;
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    width: 708px;
+    height: 665px;
+  }
+}
+
+.contactsMapPin {
+  position: absolute;
+  bottom: 50vh;
+  right: 340px;
+  transform: translate(-50%, -50%);
+
+  width: 40px;
+  height: 40px;
+
+  z-index: 3;
+
+  @media screen and (max-width: $breakpoint-laptop) {
+    right: 185px;
+
+    width: 32px;
+    height: 32px;
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    right: 100px;
+    bottom: 34vh;
+
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.contactsAddress {
+  font-size: 24px;
+  margin-bottom: 60px;
+
+  @media screen and (max-width: $breakpoint-laptop) {
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: 14px;
+    margin-bottom: unset;
+  }
+
+  .lineTitleWrapper {
+    display: flex;
+    align-items: flex-start;
+    height: 46px;
+  }
+
+  .contactsAddressTitle {
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: #171718;
+    margin-bottom: 10px;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      color: #bdbdbd;
+    }
+  }
+
+  .contactsAddressText {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+
+    color: #171718;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      color: #bdbdbd;
+    }
+
+    .mapPin {
+      width: 32px;
+      height: 32px;
+
+      @media screen and (max-width: $breakpoint-laptop) {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+}
+
+.contactsSocial {
+  .socialWrapper {
+    margin: 0;
+  }
+
+  .socialItem {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+
+  .socialIcon {
+    width: 120px;
+    height: 120px;
+
+    span {
+      width: 28px;
+      height: 28px;
+    }
+  }
+}
+
+.right,
+.left {
+  z-index: 3;
+}
+
+.right {
+  margin: 0 100px 60px 0;
+  align-self: flex-end;
+
+  @media screen and (max-width: $breakpoint-tablet) and (max-height: 700px) {
+    margin: 0 100px 10px 0;
+  }
+}
+
+.left {
+  margin: 0 0 60px 100px;
+  align-self: flex-start;
+}
+
+.mailBtnMobGastehaus,
+.mailBtnMob {
+  display: none;
+}
+
+.blogPage {
+  background-color: #333;
+  padding: 220px 60px 80px;
+  align-items: unset;
+  justify-content: unset;
+  height: unset;
+
+  .contactsContent {
+    max-width: unset;
+    margin: unset;
+    padding: unset;
+    margin-bottom: 100px;
+  }
+
+  .contactsTitle {
+    font-size: 80px;
+    color: #fff;
+  }
+
+  .contactsText {
+    font-size: 30px;
+    color: #fff;
+  }
+
+  .mailBtn {
+    background: #efe314;
+    font-size: 26px;
+    color: #171718;
+    width: unset;
+    max-width: 420px;
+    height: 80px;
+    line-height: 80px;
+  }
+
+  .contactsSocial {
+    margin: unset;
+
+    ul > li {
+      &:hover {
+        background-color: #fff;
+      }
+
+      a {
+        width: 120px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #fff;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .contactsWrapper,
+  .contactsWrapperGastehaus {
+    height: auto;
+    padding: 60px 15px 30px;
+    background-color: #333;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.1), transparent 1px);
+    background-size: 15px 15px;
+    background-position: center center;
+
+    &.contactsPage {
+      height: 100vh;
+
+      .contactsSocial {
+        flex-basis: 150px;
+      }
+
+      .contactsContent {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+      }
+    }
+  }
+
+  .blog {
+    background: unset;
+  }
+
+  .gradient-vertical {
+    display: none;
+  }
+
+  .gradient-horizontal {
+    display: none;
+  }
+
+  .contactsContent {
+    padding: 0;
+    margin: 0;
+
+    .mailBtn {
+      display: none;
+    }
+  }
+
+  .contactsTitle {
+    font-size: 26px;
+    color: #fff;
+    margin: 0 0 10px;
+  }
+
+  .contactsText {
+    font-size: 14px;
+    color: #bdbdbd;
+    margin: 0 0 20px;
+  }
+
+  .contactsSocial {
+    margin: 0 auto;
+    align-self: center;
+    width: 100%;
+
+    .socialItem {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    .socialIcon {
+      width: 65px;
+      height: 65px;
+      border-color: #fff;
+
+      span {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .socialBehance {
+      background: url(/images/icons/behance-white.svg) no-repeat center;
+    }
+
+    .socialFacebook {
+      background: url(/images/icons/facebook-white.svg) no-repeat center;
+    }
+
+    .socialDribbble {
+      background: url(/images/icons/dribbble-white.svg) no-repeat center;
+    }
+
+    .socialLinkedin {
+      background: url(/images/icons/linkedin-white.svg) no-repeat center;
+    }
+  }
+
+  .mailBtnMobGastehaus,
+  .mailBtnMob {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0.03em;
+    color: #171718;
+    width: 100%;
+    max-width: 380px;
+    height: 65px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    line-height: 65px;
+    margin: 20px auto 0;
+    background: #efe314;
+
+    &.servicesBtn {
+      background: #efe314;
+      color: #171718;
+    }
+
+    &:hover {
+      background: #171718;
+      color: #efe314;
+    }
+  }
+
+  .blogPage {
+    .contactsContent {
+      margin-bottom: 20px;
+    }
+
+    .contactsTitle {
+      font-size: 26px;
+      margin: 0 0 10px;
+    }
+
+    .contactsText {
+      font-size: 14px;
+      margin: 0 0 20px;
+    }
+
+    .contactsSocial {
+      margin: unset;
+
+      ul > li {
+        a {
+          width: 65px;
+          height: 65px;
+        }
+      }
+    }
+  }
+}
+
+.contactsWrapperGastehaus {
+  width: 100%;
+  height: 100%;
+  background: #0c111f;
+  padding-top: 223px;
+  position: relative;
+  margin-top: -1px;
+
+  @media screen and (max-width: $breakpoint-laptop) {
+    padding-top: 180px;
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    padding-top: 150px;
+  }
+
+  .contactsGastehaus {
+    margin: 0 auto;
+    max-width: 1920px;
+
+    @media screen and (max-width: $breakpoint-laptop) {
+      padding: 142px 100px 0 40px;
+    }
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      padding: 85px 100px 0 30px;
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      padding: 0;
+    }
+
+    .gradient-vertical {
+      display: none !important;
+    }
+
+    .gradient-horizontal {
+      display: none !important;
+    }
+
+    .contactsTitleGastehaus {
+      font-family: 'Raleway', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 80px;
+      line-height: 130%;
+      color: #ffffff;
+      margin-bottom: 30px;
+
+      @media screen and (max-width: $breakpoint-laptop) {
+        font-size: 60px;
+      }
+
+      @media screen and (max-width: $breakpoint-tablet) {
+        font-size: 50px;
+      }
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        font-size: 35px;
+      }
+    }
+
+    .contactsTextGastehaus {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 150%;
+      letter-spacing: 0.03em;
+      color: #ffffff;
+      @include font-size($contacts-text-font-sizes);
+    }
+
+    .mailBtnGastehaus {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      background: #efe314;
+      width: 417px;
+      height: 82px;
+      letter-spacing: 0.03em;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 150%;
+      color: #171718;
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        display: none;
+      }
+    }
+  }
+}
+
+.wrapperSpaceBooking {
+  width: 100%;
+  height: 100vh;
+  background: #f6f7ff;
+  position: relative;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    justify-content: normal;
+  }
+
+  .titleSpaceBooking {
+    width: 81%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 86px;
+    color: #4400a7;
+
+    @media screen and (max-width: $breakpoint-laptop) {
+      font-size: 64px;
+      line-height: 76px;
+    }
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      width: 100%;
+      font-size: 52px;
+      line-height: 68px;
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      font-size: 36px;
+      line-height: 48px;
+      margin: 0 0 20px;
+    }
+  }
+
+  .textSpaceBooking {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #2c006e;
+
+    @media screen and (max-width: $breakpoint-laptop) {
+      font-size: 22px;
+      line-height: 32px;
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  .contentSpaceBooking {
+    margin: 22vh 0 0;
+
+    @media screen and (max-width: $breakpoint-laptop) {
+      margin: 20vh -20px 0px;
+    }
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      padding: 15px 0 0 50px;
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      padding: 0;
+      margin: 12vh 0 0;
+    }
+  }
+
+  .left {
+    margin: 0 0 80px 60px;
+
+    @media screen and (max-width: $breakpoint-laptop) {
+      margin: 0 0 66px 40px;
+    }
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      margin: 0 0 61px 33px;
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 167px;
+      margin: 0 15px 50px 15px;
+    }
+  }
+
+  .mailSpaceBooking {
+    width: 598px;
+    height: 96px;
+    background: #6800fd;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 56px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+    color: #ffffff;
+    max-width: unset;
+
+    &:hover {
+      background: #832dff;
+      color: #ffffff;
+      box-shadow: 0 10px 20px rgba(119, 30, 247, 0.2);
+    }
+
+    &:active {
+      background: #4400a7;
+      color: #ffffff;
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+
+  .mailBtnSpaceBooking {
+    display: none;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px 56px;
+      width: 345px;
+      height: 64px;
+      background: #6800fd;
+      border-radius: 12px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 32px;
+      text-align: center;
+      text-transform: lowercase;
+      color: #ffffff;
+
+      &:hover {
+        background: #832dff;
+        color: #ffffff;
+        box-shadow: 0 10px 20px rgba(119, 30, 247, 0.2);
+      }
+    }
+
+    @media screen and (max-width: $breakpoint-375) {
+      width: 100%;
+    }
+  }
+}
+
+.mailSpaceBooking:disabled,
+.mailSpaceBooking[disabled] {
+  background: #9e92ae;
+  color: #ffffff;
+}

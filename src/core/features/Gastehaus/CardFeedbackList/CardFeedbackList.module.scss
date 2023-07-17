@@ -1,0 +1,16 @@
+@import '../../../../assets/scss/breakPoints';
+
+.wrapperList {
+  width: 100%;
+
+  .carousel.carousel-slider {
+    .control-arrow {
+      padding: 5px 15px;
+      opacity: 1;
+    }
+  }
+}
+
+.wrapperList::-webkit-scrollbar {
+  width: 0;
+}

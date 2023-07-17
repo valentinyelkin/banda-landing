@@ -1,0 +1,15 @@
+@import '../../../../../assets/scss/breakPoints.scss';
+
+.testimonialIcon {
+    position: absolute;
+    bottom: 20px;
+    right: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+        bottom: 5px;
+        right: 24px;
+    }
+}

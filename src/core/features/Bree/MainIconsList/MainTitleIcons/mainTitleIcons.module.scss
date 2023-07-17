@@ -1,0 +1,82 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.wrapperIcon {
+  display: flex;
+  align-items: center;
+  margin-right: 48px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    margin-right: 36px;
+  }
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    margin-right: 20px;
+  }
+
+  @media only screen and (max-width: $breakpoint-laptop-1366) {
+    margin-right: 35px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 256px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet-768) {
+    width: fit-content;
+    margin-right: 32px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 220px;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    width: 169px;
+  }
+
+  .wrapperImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(54.12deg, #ee9820 14.48%, #f1ad4d 86.37%);
+    box-shadow: 3px 7px 20px rgba(241, 173, 77, 0.3);
+    border-radius: 100%;
+    margin-right: 16px;
+
+    @media only screen and (max-width: $breakpoint-425) {
+      width: 36px;
+      height: 36px;
+      margin-right: 10px;
+    }
+  }
+
+  .titleIcon {
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 44px;
+    color: #ffffff;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: $breakpoint-1800) {
+      font-size: 26px;
+    }
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 34px;
+    }
+
+    @media only screen and (max-width: $breakpoint-425) {
+      margin-left: 0;
+    }
+  }
+}

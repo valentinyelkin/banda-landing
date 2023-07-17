@@ -1,0 +1,327 @@
+@use "sass:math";
+@import "../../../../../assets/scss/breakPoints.scss";
+
+$big-circle-size: 120vh;
+$small-circle-size: 74vh;
+
+$welcome-title-font-sizes: (
+  null: 34px,
+  1024px: 54px,
+  1280px: 54px,
+  1600px: 80px,
+  1900px: 80px
+);
+
+$welcome-text-font-sizes: (
+  null: 18px,
+  1024px: 24px,
+  1280px: 24px,
+  1600px: 30px,
+  1900px: 30px
+);
+
+@mixin font-size($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    }
+    @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}
+
+@mixin header-style($font-size: 10, $size: 0, $animation: rotateTitleRight, $top: 0, $left: 0, $animationTime: 50s) {
+  font-size: $font-size;
+  text-transform: uppercase;
+  width: $size;
+  height: $size;
+  position: relative;
+  animation: $animation $animationTime linear infinite;
+  transform-origin: center;
+  margin: 0 auto;
+  position: absolute;
+  top: $top;
+  left: $left;
+  color: #fff;
+  text-shadow: 0 0 1px #000;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin rotated-text($num-letters: 90, $angle-span: 360deg, $angle-offset: 0deg, $height: 0, $width: 0, $left: 0, $top: 0) {
+  $angle-per-char: math.div($angle-span, $num-letters);
+
+  @for $i from 0 through $num-letters {
+    .char#{$i} {
+      transform: rotate($angle-offset + $angle-per-char * $i);
+      height: $height;
+      position: absolute;
+      width: $width;
+      left: $left;
+      top: $top;
+      transform-origin: bottom center;
+    }
+  }
+}
+
+.gradient-vertical {
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100vh;
+  background: rgba(23,23,24,.1);
+  position: absolute;
+  pointer-events: none;
+}
+
+.gradient-horizontal {
+  width: 100vw;
+  height: 1px;
+  background: rgba(23,23,24,.1);
+  position: absolute;
+  pointer-events: none;
+}
+
+.welcomeWrapper {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  .titlesWrapper {
+    position: absolute;
+    height: 120vh;
+    width: 120vh;
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+    transform: translate(33%, 38.2%);
+  }
+
+  .roundedTitle {
+    @include header-style(20px, $big-circle-size, rotateTitleRight, calc(50% - 60vh), 0, 100s);
+    @include rotated-text(90, 360deg, 0deg, calc(115vh / 2), 70px, calc(115vh / 2), 0);
+  }
+
+  .smallRoundedTitle {
+    @include header-style(10px, $small-circle-size, rotateTitleLeft, calc(50% - 37vh), calc(50% - 37vh));
+    @include rotated-text(90, 360deg, 0deg, 37vh, 17px, 37vh, 0);
+  }
+
+  img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 20vw;
+    max-width: 30vh;
+  }
+}
+
+.welcomeTitle {
+  font-style: normal;
+  font-weight: bold;
+  line-height: 130%;
+  color: #171718;
+  margin: 0 0 30px;
+  @include font-size($welcome-title-font-sizes);
+}
+
+.welcomeText {
+  font-weight: normal;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: #171718;
+  margin: 0 0 50px;
+  @include font-size($welcome-text-font-sizes);
+  max-width: 44vw;
+}
+
+.welcomeContent {
+  z-index: 2;
+  max-width: 1250px;
+  width: 100%;
+  padding: 0 100px 0 60px;
+  margin: 25vh 0 0;
+
+  .welcomeBtnsWrapper {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .welcomeBtn {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    color: #EFE314;
+    width: 245px;
+    height: 65px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    line-height: 65px;
+    margin: 0 30px 0 0;
+    background: #333;
+    transition: .3s;
+
+    &:hover {
+      color: #EFE314;
+      background:#171718;
+    }
+
+    &:active,
+    &:focus {
+      color: #fff;
+      background: #333;
+    }
+  }
+
+  .welcomeLink {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    color: #EFE314;
+    height: 65px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    line-height: 65px;
+    background: transparent;
+    transition: .3s;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 5px;
+      background: #EFE314;
+      position: absolute;
+      left: 0;
+      bottom: 10px;
+      transition: .3s;
+    }
+
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@keyframes rotateTitleRight {
+  0% {
+    transform: rotate(0)
+  }
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes rotateTitleLeft {
+  0% {
+    transform: rotate(0)
+  }
+  100% {
+    transform: rotate(-360deg)
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .welcomeWrapper {
+    img {
+      max-width: 30vw;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+  @media screen and (max-width: 1440px) {
+    .welcomeWrapper {
+      img {
+        max-width: 35vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .welcomeWrapper {
+    height: auto;
+    padding: 100px 15px 20px;
+    justify-content: center;
+    align-items: flex-start;
+
+    img {
+      display: none;
+    }
+
+    .titlesWrapper {
+      display: none;
+    }
+  }
+
+  .gradient-vertical {
+    display: none;
+  }
+
+  .gradient-horizontal {
+    display: none;
+  }
+
+  .welcomeContent {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+
+    .welcomeInfo {
+      flex: 0 1 100%;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+    }
+
+    .welcomeBtnsWrapper {
+      flex: 0 0 150px;
+      width: 100%;
+    }
+
+    .welcomeBtn {
+      width: 100%;
+      color: #171718;
+      background: #EFE314;
+      margin: 0 auto 20px;
+    }
+
+    .welcomeLink {
+      width: 100%;
+    }
+  }
+
+  .welcomeTitle {
+    font-size: 26px;
+    color: #FFF;
+    margin: 0 0 10px;
+  }
+
+  .welcomeText {
+    font-size: 14px;
+    color: #BDBDBD;
+    margin: 0 0 20px;
+    max-width: none;
+  }
+}

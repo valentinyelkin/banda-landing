@@ -1,0 +1,306 @@
+@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap);
+
+
+@import './breakPoints.scss';
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato/Lato-Medium.eot');
+  src: url('../fonts/Lato/Lato-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Lato/Lato-Medium.woff2') format('woff2'),
+       url('../fonts/Lato/Lato-Medium.woff') format('woff'),
+       url('../fonts/Lato/Lato-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato/Lato-Semibold.eot');
+  src: url('../fonts/Lato/Lato-Semibold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Lato/Lato-Semibold.woff2') format('woff2'),
+       url('../fonts/Lato/Lato-Semibold.woff') format('woff'),
+       url('../fonts/Lato/Lato-Semibold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 600;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato/Lato-SemiboldItalic.eot');
+  src: url('../fonts/Lato/Lato-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Lato/Lato-SemiboldItalic.woff2') format('woff2'),
+       url('../fonts/Lato/Lato-SemiboldItalic.woff') format('woff'),
+       url('../fonts/Lato/Lato-SemiboldItalic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 600;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'Sestra';
+  src: url('../fonts/Sestra/sestra.woff');
+  src: url('../fonts/Sestra/sestra.woff') format('woff'),
+    url('../fonts/Sestra/sestra.woff2') format('woff2'),
+    url('../fonts/Sestra/sestra.ttf') format('truetype'),
+    url('../fonts/Sestra/sestra.svg#sestra') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html body iframe#LeadboosterContainer {
+  display: none !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  cursor: url(/images/cursors/cursor.png), auto;
+  &.noScroll {
+    overflow: hidden;
+    height: 100vh;
+  }
+}
+
+button,
+a,
+input,
+textarea {
+  cursor: url(/images/cursors/hover.png), auto !important;
+
+  * {
+    cursor: url(/images/cursors/hover.png), auto !important;
+  }
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button,
+input,
+textarea {
+  cursor: pointer;
+  font-family: inherit;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.gradient-vertical {
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100vh;
+  background: rgba(167, 167, 167, 0.1);
+  position: absolute;
+  pointer-events: none;
+}
+
+.gradient-horizontal {
+  width: 100vw;
+  height: 1px;
+  background: rgba(167, 167, 167, 0.1);
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+}
+
+.line-large {
+  position: relative;
+  margin-left: 18px;
+
+  &:before {
+    content: '';
+    width: 3px;
+    height: 100%;
+    background: #efe314;
+    position: absolute;
+    left: -15px;
+  }
+}
+
+.line-small {
+  position: relative;
+  margin-left: 33px;
+
+  &:before {
+    content: '';
+    width: 3px;
+    height: 20px;
+    background: #efe314;
+    position: absolute;
+    left: -15px;
+    margin-top: 6px;
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      height: 15px;
+      margin-top: 6px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+      height: 15px;
+      margin-top: 6px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      height: 15px;
+      margin-top: 2px;
+    }
+  }
+}
+
+.square {
+  position: relative;
+  margin-left: 33px;
+
+  &:before {
+    content: '';
+    width: 11px;
+    height: 11px;
+    background: #efe314;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    left: -20px;
+  }
+}

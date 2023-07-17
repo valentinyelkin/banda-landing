@@ -1,0 +1,244 @@
+.dcrDesignWrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+
+  &:before {
+    content: '';
+    width: 100%;
+    height: 50%;
+    background: #000;
+    position: absolute;
+    z-index: -1;
+  }
+
+  & > div {
+    max-width: 1920px;
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      background: #131516;
+    }
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 90px;
+    line-height: 130%;
+    color: #fff;
+    margin-bottom: 50px;
+
+    &:first-letter {
+      color: #ECE014;
+    }
+  }
+
+  .titleDescription {
+    font-size: 30px;
+    line-height: 41px;
+    letter-spacing: 0.04em;
+    color: #fff;
+    margin-bottom: 25px;
+    font-weight: normal;
+    font-family: 'Open Sans', sans-serif;
+
+    span {
+      color: #ECE014;
+      font-weight: bold;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 165%;
+    letter-spacing: 0.01em;
+    color: #E0E0E0;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+}
+
+.dcrDesignMain {
+  justify-content: flex-end;
+}
+
+.dcrDesignMainLeft {
+  max-width: 680px;
+  margin: 0 60px 0 auto;
+  padding-left: 20px;
+}
+
+.dcrDesignIcons {
+  justify-content: flex-start;
+  margin: 0 auto;
+  padding-top: 250px;
+}
+
+.dcrDesignIconsRight {
+  padding-right: 20px;
+  max-width: 595px;
+  margin: 0 auto 0 15px;
+}
+
+.dcrDesignIconsLeft {
+  padding-left: 50px;
+}
+
+.dcrDesignDesigners {
+  justify-content: flex-end;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.dcrDesignDesignersLeft {
+  max-width: 595px;
+  margin: 0 30px 0 auto;
+  padding-left: 20px;
+}
+
+.dcrDesignAccents {
+  justify-content: flex-start;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+
+.dcrDesignAccentsLeft {
+  padding-left: 50px;
+}
+
+.dcrDesignAccentsRight {
+  max-width: 595px;
+  margin: 0 auto 0 100px;
+  padding-right: 20px;
+}
+
+.dcrDesignNavigation {
+  margin: 0 auto;
+  justify-content: flex-end;
+}
+
+.dcrDesignNavigationLeft {
+  max-width: 595px;
+  margin: 0 110px 0 auto;
+  padding-left: 20px;
+}
+
+.dcrDesignNavigationRight {
+  padding-right: 50px;
+}
+
+.dcrDesignPopup {
+  height: 500px;
+  background: url("/images/projects/dcr/corner.png") no-repeat bottom;
+  background-size: cover;
+  padding-left: 140px;
+
+  img {
+    transform: translateY(-70px);
+  }
+}
+
+.dcrDesignMapRight,
+.dcrDesignMapLeft {
+  position: absolute;
+}
+
+.dcrDesignMapRight {
+  right: 0;
+  top: 35%;
+}
+
+.dcrDesignMapLeft {
+  bottom: 0;
+  left: 0;
+}
+
+
+.dcrDesignCorner {
+  max-width: none;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .dcrDesignWrapper {
+    & > div {
+      &:nth-child(even):not(.dcrDesignPopup) {
+        flex-direction: column;
+      }
+
+      &:nth-child(odd):not(.dcrDesignPopup) {
+        flex-direction: column-reverse;
+      }
+
+      & > * {
+        max-width: 100%;
+        margin: {
+          left: auto;
+          right: auto;
+        };
+        padding: 0 20px;
+      }
+
+      &:not(:first-child) {
+        padding-top: 150px;
+      }
+    }
+  }
+
+  .dcrDesignMainLeft,
+  .dcrDesignIconsRight,
+  .dcrDesignDesignersLeft,
+  .dcrDesignAccentsRight,
+  .dcrDesignNavigationLeft {
+    margin-bottom: 30px;
+  }
+
+  .dcrDesignPopup {
+    height: 1000px;
+    padding-left: 0;
+    align-items: flex-start!important;
+  }
+}
+
+@media only screen and (max-width: 669px) {
+  .dcrDesignWrapper {
+    & > div {
+      &:not(:first-child) {
+        padding-top: 45px;
+      }
+    }
+
+    h2 {
+      font-size: 40px;
+      line-height: 115%;
+      margin-bottom: 30px;
+    }
+
+    .titleDescription {
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .dcrDesignMapRight {
+    display: none;
+  }
+
+  .dcrDesignPopup {
+    height: 550px;
+
+    img {
+      transform: none;
+    }
+  }
+}

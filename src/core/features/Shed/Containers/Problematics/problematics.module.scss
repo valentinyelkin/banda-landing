@@ -1,0 +1,131 @@
+.shedProblematics {
+  max-width: 1950px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto 180px;
+  position: relative;
+}
+
+.shedProblematicsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1470px;
+  margin: 0 auto;
+
+  h2 {
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #8CD50B;
+    margin-bottom: 55px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    color: #8A8A8A;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+  }
+
+  span {
+    color: #8CD50B;
+  }
+}
+
+.shedProblematicsImg {
+  flex-shrink: 1;
+  min-width: 300px;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.shedProblematicsContent {
+  max-width: 700px;
+  margin-left: 0;
+  z-index: 1;
+
+  &Second {
+    margin-left: 50px;
+    margin-right: 0;
+    max-width: 700px;
+
+    p {
+      text-indent: 0;
+    }
+  }
+}
+
+.shedProblematicsDecor {
+  margin-top: -50px;
+  margin-bottom: -50px;
+  z-index: 0;
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.circleHalf {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateY(50%);
+  z-index: -1;
+}
+
+@media only screen and (max-width: 1200px) {
+  .shedProblematicsWrapper {
+    h2 {
+      font-size: 48px;
+    }
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .shedProblematics {
+    margin: 40px auto;
+  }
+
+  .shedProblematicsWrapper {
+    flex-flow: column;
+
+    &:nth-child(3) {
+      flex-flow: column-reverse;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 32px;
+    }
+  }
+
+  .shedProblematicsDecor {
+    display: none;
+  }
+
+  .shedProblematicsImg {
+    min-width: auto;
+  }
+
+  .shedProblematicsContentSecond {
+    margin: 0 auto;
+  }
+
+  .circleHalf {
+    display: none;
+  }
+}

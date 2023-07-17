@@ -1,0 +1,107 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.containerTimeline {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 1920px;
+
+  .wrapperTimeline {
+    width: 89%;
+    margin-left: 63px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      margin-left: 40px;
+    }
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+      padding-bottom: 100px;
+    }
+
+    @media only screen and (max-width: $breakpoint-max-width) {
+      margin-left: 20px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      margin-left: 30px;
+      padding-bottom: 0;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      margin-left: 15px;
+    }
+
+    .containerRings {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 259px 0 300px 0;
+      position: relative;
+
+      .lineWrapper {
+        position: absolute;
+        top: 46%;
+        left: -65px;
+        width: calc(100% - 60px);
+        transform: translateY(-50%);
+
+        @media only screen and (max-width: $breakpoint-laptop) {
+          top: 50%;
+        }
+
+        @media only screen and (max-width: $breakpoint-max-width) {
+          top: 46%;
+        }
+
+        @media only screen and (max-width: $breakpoint-tablet) {
+          left: 58px;
+        }
+
+        @media only screen and (max-width: $breakpoint-mobile) {
+          left: 48px;
+        }
+      }
+
+      @media only screen and (max-width: $breakpoint-laptop) {
+        padding: 207px 0 200px 0;
+      }
+
+      @media only screen and (max-width: $breakpoint-max-width) {
+        padding: 207px 0 250px 0;
+      }
+
+      @media only screen and (max-width: $breakpoint-tablet) {
+        flex-direction: column;
+        padding: 55px 0 80px 0;
+      }
+
+      @media only screen and (max-width: $breakpoint-mobile) {
+        padding: 48px 0 54px 0;
+      }
+    }
+  }
+}
+
+.timelineTitle {
+  padding-top: 200px;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 86px;
+  color: #07556e;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    padding-top: 168px;
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    padding-top: 193px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-size: 40px;
+    line-height: 48px;
+    padding-top: 135px;
+  }
+}

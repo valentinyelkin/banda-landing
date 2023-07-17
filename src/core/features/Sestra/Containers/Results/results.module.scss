@@ -1,0 +1,91 @@
+@import '../../../../../assets/scss/breakPoints.scss';
+
+.results {
+    background-color: #FAFCFB;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 182px;
+    padding: 100px 173px 200px 60px;
+    align-items: center;
+    background-image: url('/images/projects/Sestra/bg-dots/bg-results-dots.svg');
+    background-repeat: no-repeat;
+    background-position: right 207px;
+    position: relative;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+        padding: 100px 60px 200px 60px;
+    }
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+        background-position: calc(100% + 180px) 169px;
+        column-gap: 80px;
+        padding: 80px 40px 160px 40px;
+    }
+
+    @media only screen and (max-width: $breakpoint-1170) {
+        padding: 100px 40px 160px 40px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+        background-position: 191px 478px;
+        flex-direction: column;
+        row-gap: 40px;
+        padding: 118px 30px 160px;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+        background-image: url('/images/projects/Sestra/bg-dots/bg-results-mobile-dots.svg');
+        background-position: 102px calc(100% - 93px);
+        padding: 80px 15px 120px;
+        row-gap: 32px;
+    }
+
+    &::before {
+        content: "";
+        width: 2px;
+        height: 120px;
+        background: #757575;
+        position: absolute;
+        left: 213px;
+        bottom: 0;
+
+        @media only screen and (max-width: $breakpoint-laptop-1366) {
+            height: 100px;
+            left: 150px;
+        }
+
+        @media only screen and (max-width: $breakpoint-tablet-768) {
+            left: 50%;
+        }
+
+        @media only screen and (max-width: $breakpoint-375) {
+            height: 75px;
+            width: 1px;
+        }
+    }
+}
+
+.resultsInfo {
+    max-width: 733px;
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+        max-width: 518px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+        max-width: 100%;
+    }
+
+    ul {
+        margin-top: 32px;
+
+        @media only screen and (max-width: $breakpoint-375) {
+            margin-top: 24px;
+        }
+    }
+}

@@ -1,0 +1,147 @@
+.shedImplementation {
+  max-width: 1950px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto 180px;
+
+  p, li {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+  }
+}
+
+.shedImplementationWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  h2 {
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #8CD50B;
+    margin-bottom: 55px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    color: #8A8A8A;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .shedGreenText {
+    color: #8CD50B;
+  }
+}
+
+.shedImplementationImg {
+  flex-shrink: 1;
+  min-width: 300px;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.shedImplementationContent {
+  max-width: 700px;
+  margin-left: 50px;
+  z-index: 1;
+
+  &Second {
+    margin-left: 0;
+    margin-right: 50px;
+    max-width: 700px;
+  }
+}
+
+.shedImplementationDecor {
+  margin-top: -50px;
+  margin-bottom: -50px;
+  z-index: 0;
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.shedImplementationVideo {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .shedImplementationWrapper {
+    h2 {
+      font-size: 48px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .shedImplementationWrapper {
+    flex-flow: column;
+
+    &:first-child {
+      flex-flow: column-reverse;
+    }
+  }
+
+  .shedImplementationContent {
+    margin-left: 0;
+
+    &Second {
+      margin-right: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .shedImplementation {
+    margin: 40px auto;
+    padding: 0;
+  }
+
+  .shedImplementationWrapper {
+    padding: 0 15px;
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 32px;
+
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  .shedImplementationImg {
+    min-width: auto;
+  }
+
+  .shedImplementationDecor {
+    display: none;
+  }
+}

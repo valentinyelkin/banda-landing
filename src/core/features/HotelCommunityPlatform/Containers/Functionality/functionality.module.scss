@@ -1,0 +1,114 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  font-family: 'Raleway', sans-serif;
+
+  .wrapper {
+    display: flex;
+    height: 610px;
+    position: relative;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      height: 510px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      height: 412px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      height: 641px;
+    }
+
+    .lineWrapper {
+      display: flex;
+      position: absolute;
+      left: 61px;
+      width: 1px;
+      height: 100%;
+      overflow: hidden;
+
+      @media only screen and (max-width: $breakpoint-1600) {
+        left: 40px;
+      }
+
+      @media only screen and (max-width: $breakpoint-tablet) {
+        left: 30px;
+      }
+
+      @media only screen and (max-width: $breakpoint-mobile) {
+        left: 15px;
+      }
+    }
+  }
+}
+
+.wrapperText {
+  padding: 50px 0 0 141px;
+  width: 80%;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    padding: 40px 0 0 91px;
+    width: 100%;
+  }
+
+  @media only screen and (max-width: $breakpoint-max-width) {
+    padding: 40px 0 0 61px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 96%;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    padding: 40px 0 0 31px;
+  }
+
+  .boldDescription,
+  .description {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #25333a;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  .boldDescription {
+    font-weight: 600;
+  }
+
+  .secondParagraph {
+    padding-top: 32px;
+
+    @media only screen and (max-width: $breakpoint-max-width) {
+      padding-top: 20px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      padding-top: 28px;
+    }
+  }
+}
+
+.img {
+  width: 158%;
+  position: relative;
+  top: -151px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    width: 196%;
+    position: relative;
+    top: -110px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    display: none;
+  }
+}

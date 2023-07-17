@@ -1,0 +1,52 @@
+@import '../../../../../../assets/scss/breakPoints';
+
+.container {
+  display: flex;
+  align-items: baseline;
+  padding-bottom: 24px;
+  gap: 16px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    padding-bottom: 16px;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.boldDescription,
+.description {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #25333A;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.boldDescription {
+  font-weight: 600;
+}
+
+.dot {
+  min-width: 12px;
+  height: 12px;
+  background: #FE531E;
+  border-radius: 50%;
+}
+
+.containerBenefits {
+  padding-bottom: 16px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    padding-bottom: 13px;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}

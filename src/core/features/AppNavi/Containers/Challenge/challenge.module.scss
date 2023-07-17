@@ -1,0 +1,154 @@
+.challengeWrapper {
+  padding: 0 15px 30px;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin: -400px auto 120px;
+  position: relative;
+  max-width: 1920px;
+}
+
+.challengeImgWrapper {
+  max-width: 1920px;
+  margin-top: 40px;
+  margin-bottom: 160px;
+  display: flex;
+  justify-content: center;
+}
+
+.challengeImgWrapper img {
+  max-width: 100%;
+  min-height: 200px;
+  display: block;
+}
+
+.challengeContainer {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  position: relative;
+}
+
+.challengeContent {
+  flex: 0 0 50%;
+}
+
+.decorChallenge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-27%);
+  z-index: -1;
+  max-width: 100%;
+  display: block;
+}
+
+.decorO {
+  position: absolute;
+  top: -40vw;
+  z-index: -1;
+  left: -8vw;
+  width: 25vw;
+  max-width: 450px;
+}
+
+.decorArrow {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  max-width: 400px;
+  width: 30vw;
+  transform: translateY(-20%);
+}
+
+.appNaviBottomParagraph {
+  margin-top: 30px;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 170%;
+  letter-spacing: 0.03em;
+  color: #4f4f4f;
+}
+
+.appNaviTopParagraph {
+  margin-top: 20px !important;
+}
+
+@media only screen and (max-width: 960px) {
+  .challengeWrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 1260px) and (min-width: 904px) {
+  .challengeWrapper {
+    margin: -300px auto 120px;
+  }
+
+  .challengeImgWrapper {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 904px) and (min-width: 767px) {
+  .challengeWrapper {
+    margin: -250px auto 120px;
+  }
+}
+@media (max-width: 768px) {
+  .challengeWrapper {
+    margin: -210px auto 120px;
+  }
+
+  .challengeImgWrapper {
+    margin-bottom: 0px;
+  }
+}
+
+@media (max-width: 668px) {
+  .decorArrow {
+    margin-top: -200px;
+  }
+  .challengeWrapper {
+    margin: -45px auto 40px;
+    padding: 0 15px 0;
+  }
+  .challengeImgWrapper {
+    margin-bottom: 0px;
+  }
+  .challengeContent {
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 455px) {
+  .challengeContent {
+    margin-top: 40px;
+    flex: 1;
+  }
+  .decorArrow {
+    margin-top: -100px;
+  }
+}
+
+@media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+  .challengeImgWrapper img {
+    max-height: 300px;
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .challengeWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media only screen and (max-width: 455px) {
+  .challengeWrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

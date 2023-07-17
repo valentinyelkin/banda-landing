@@ -1,0 +1,119 @@
+@import '../../../../../assets/scss/breakPoints.scss';
+
+.container {
+    background-repeat: no-repeat;
+    background-image: url('/images/projects/Sestra/bg-dots/bg-functionality-dots.svg');
+    background-position: left bottom;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 200px 60px 65px 0px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 120px;
+    align-items: center;
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+        padding: 160px 40px 55px 0px;
+        background-position: -260px bottom;
+        column-gap: 80px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+        background-position: -213px bottom;
+        padding: 120px 30px 55px 0px;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+        background-image: url('/images/projects/Sestra/bg-dots/bg-functionality-mobile-dots.svg');
+        background-position: left bottom;
+        padding: 100px 15px 27px 0px;
+        row-gap: 32px;
+    }
+
+    &::before {
+        content: "";
+        width: 2px;
+        height: 100px;
+        background: #757575;
+        position: absolute;
+        right: 333px;
+        top: 0;
+
+        @media only screen and (max-width: $breakpoint-laptop-1366) {
+            right: 50%;
+            height: 70px;
+        }
+
+        @media only screen and (max-width: $breakpoint-375) {
+            height: 50px;
+        }
+    }
+}
+
+.functionalityMain {
+    display: flex;
+    flex-direction: column;
+    max-width: 732px;
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+        max-width: 518px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+        max-width: 100%;
+        padding-left: 30px;
+        order: -1;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+        padding-left: 15px;
+    }
+}
+
+.mediaWrapper {
+    height: 780px;
+    width: 100%;
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+        height: 628px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+        padding-right: 60px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+        height: 540px;
+        padding-right: 30px;
+    }
+
+    @media only screen and (max-width: $breakpoint-480) {
+        padding-right: 15px;
+        height: 335px;
+    }
+    
+    &>div {
+        height: 100%;
+    }
+
+    img {
+        height: calc(100% + 35px) !important;
+        min-height: calc(100% + 35px) !important;
+        max-height: calc(100% + 35px) !important;
+
+        @media only screen and (max-width: $breakpoint-laptop-1366) {
+            height: calc(100% + 30px) !important;
+            min-height: calc(100% + 30px) !important;
+            max-height: calc(100% + 30px) !important;
+        }
+
+        @media only screen and (max-width: $breakpoint-375) {
+            height: calc(100% + 20px) !important;
+            min-height: calc(100% + 20px) !important;
+            max-height: calc(100% + 20px) !important;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+User-agent: *
+
+Allow: /
+Disallow: /careers/
+Disallow: /form/
+Disallow: /sestra
+Sitemap: https://bandapixels.com/sitemap.xml

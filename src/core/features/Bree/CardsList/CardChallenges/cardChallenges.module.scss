@@ -1,0 +1,151 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.containerCard {
+  width: 100%;
+  height: 616px;
+  background: #FFFFFF;
+  box-shadow: 3px 7px 20px rgba(4, 49, 64, 0.2);
+  border-radius: 24px;
+  margin-bottom: 40px;
+  padding: 45px 52px 72px 36px;
+
+  @media only screen and (max-width: $breakpoint-1800) {
+    padding: 20px 40px 72px 36px;
+  }
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    padding: 44px 40px;
+  }
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    padding: 21px 37px;
+  }
+
+  @media only screen and (max-width: $breakpoint-1170) {
+    padding: 5px 30px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 94%;
+    padding: 25px 35px;
+    margin-bottom: 115px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 82%;
+    height: 436px;
+    padding: 21px 29px 31px 32px;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    width: 96%;
+    height: 437px;
+    margin-top: 50px;
+  }
+
+  @media only screen and (max-width: $breakpoint-320) {
+    padding: 16px;
+  }
+
+  &:first-child {
+    height: 616px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      height: 568px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      height: 540px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      height: 436px;
+    }
+  }
+
+  &:nth-child(2) {
+    height: 520px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      height: 460px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      height: 540px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      height: 436px;
+    }
+  }
+
+  &:last-child {
+    height: 440px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      height: 420px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      height: 540px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      height: 436px;
+    }
+  }
+
+  .image {
+    position: relative;
+    width: 156px;
+    height: 156px;
+    margin-left: -15px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      margin-left: -25px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      width: 90px;
+      height: 90px;
+      margin-left: -15px;
+      top: -4px;
+    }
+  }
+
+  .titleCard {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    color: #02202A;
+    padding-bottom: 24px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      font-size: 28px;
+      line-height: 40px;
+      padding-bottom: 16px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      font-size: 20px;
+      line-height: 28px;
+      padding-bottom: 12px;
+    }
+  }
+
+  .description {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #02202A;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      font-size: 16px;
+    }
+  }
+}

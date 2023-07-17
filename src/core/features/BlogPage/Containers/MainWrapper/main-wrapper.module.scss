@@ -1,0 +1,10 @@
+@import '../../../../../assets/scss/breakPoints.scss';
+
+.mainWrapper {
+    @media only screen and (max-width: $breakpoint-mobile) {
+        background-color: #333;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.1), transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1), transparent 1px);
+        background-size: 15px 15px;
+        background-position: center center;
+    }
+}

@@ -1,0 +1,445 @@
+.analysisWrapper {
+  margin: 120px auto 130px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.tabletWrapper {
+  width: 100%;
+}
+.analysisContainer {
+  max-width: 1500px;
+  margin: 0 auto;
+  position: relative;
+}
+.appNaviFunctionalityHeaderWrapper {
+  display: flex;
+  padding-bottom: 10px;
+}
+.appNaviFunctionalityTitle {
+  text-align: left;
+}
+.analysisSteps {
+  margin: 60px auto 0;
+  position: relative;
+  padding: 0 15px;
+}
+.solutionsLogoWrapper {
+  display: flex;
+  justify-content: left;
+  margin-top: 60px;
+  padding-left: 60px;
+}
+.solutionsLogoWrapper img {
+  width: 30vw;
+  min-width: 180px;
+  max-width: 370px;
+}
+.analysisStep {
+  background: #fff;
+  box-shadow: 0 10.48px 44.54px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  padding: 25px 25px 25px 150px;
+  position: relative;
+
+  &.analysisStep1 {
+    max-width: 460px;
+    margin: 0 10% 40px auto;
+  }
+
+  &.analysisStep2 {
+    max-width: 770px;
+    margin: 0 auto 70px 120px;
+  }
+
+  &.analysisStep3 {
+    max-width: 480px;
+    margin: 0 5% 110px auto;
+  }
+
+  &.analysisStep4 {
+    max-width: 870px;
+    margin: 0 200px 50px auto;
+  }
+
+  &.analysisStep5 {
+    max-width: 720px;
+    margin-left: auto;
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  .mobSteps {
+    display: none;
+  }
+
+  p {
+    font-size: 24px;
+    line-height: 150%;
+    margin: 0;
+    color: #696363;
+  }
+}
+
+.topLine {
+  position: absolute;
+  top: 60px;
+  z-index: -1;
+  left: 18%;
+}
+
+.bottomLine {
+  position: absolute;
+  bottom: 340px;
+  z-index: -1;
+  right: 16%;
+}
+
+.showInMob,
+.mobLine {
+  display: none;
+}
+
+.analysisStepsText {
+  position: absolute;
+  max-width: 600px;
+  top: 810px;
+  left: 30px;
+
+  p {
+    color: #696363;
+    font-size: 28px;
+  }
+}
+
+.tabletLine {
+  display: none;
+}
+@media only screen and (max-width: 1600px) {
+  .appNaviFunctionalityHeaderWrapper {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+ }
+@media only screen and (max-width: 1280px) and (min-width: 960px) {
+  .solutionsLogoWrapper{
+    padding-left: 0;
+  }
+  .appNaviFunctionalityHeader {
+    padding-left: 20px;
+  }
+  .appNaviFunctionalitySubitle {
+    font-size: 24px;
+  }
+  .tabletLine,
+  .showInMob {
+    display: block;
+  }
+  .appNaviFunctionalityHeaderWrapper{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .solutionsLogoWrapper {
+    justify-content: center;
+  }
+  .solutionsLogo {
+    width: 85%;
+    max-width: 370px;
+  }
+  .tabletLine {
+    max-width: 100%;
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .bottomLine,
+  .topLine,
+  .hideInMob,
+  .analysisStepsText {
+    display: none;
+  }
+
+  .analysisSteps {
+    padding: 0 40px;
+    max-width: 960px;
+    margin: 60px auto 0;
+  }
+
+  .analysisStep {
+    padding: 25px 25px 25px 130px;
+
+    &.analysisStep1 {
+      max-width: 450px;
+      margin: 0 auto 0 100px;
+    }
+
+    &.analysisStep2 {
+      max-width: 650px;
+      margin: 0 auto 0 200px;
+      margin-bottom: 180px !important;
+    }
+
+    &.analysisStep3 {
+      padding: 38px 38px 38px 130px;
+      max-width: 530px;
+      margin: 0 auto 0 120px;
+      margin-bottom: 220px !important;
+    }
+
+    &.analysisStep4 {
+      max-width: 670px;
+      margin: 0 auto 0 200px;
+    }
+
+    &.analysisStep5 {
+      max-width: 650px;
+      margin-left: auto;
+      margin-bottom: 0 !important;
+    }
+
+    &:not(.analysisStep5) {
+      margin-bottom: 150px;
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) and (min-width: 668px) {
+  .solutionsLogoWrapper{
+    padding-left: 0;
+  }
+  .appNaviFunctionalityHeaderWrapper {
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+  .appNaviFunctionalityHeader {
+    padding-right: 0px;
+  }
+  .appNaviFunctionalitySubitle {
+    font-size: 24px;
+  }
+  .analysisWrapper {
+    margin-top: 0;
+  }
+  .analysisWrapper {
+    margin-bottom: 50px;
+  }
+  .topLine {
+    display: none;
+  }
+  .solutionsLogoWrapper {
+    justify-content: center;
+  }
+  .tabletLine {
+    display: block;
+    position: absolute;
+    object-fit: fill;
+    left: 50%;
+    transform: translateX(-52%);
+    width: 500px;
+    height: 90%;
+  }
+  .analysisStep p {
+    font-size: 18px;
+  }
+  .analysisStep img {
+    height: 170px;
+  }
+  .analysisStep {
+    margin-bottom: 20px;
+    padding: 25px 25px 25px 130px;
+
+    &.analysisStep1 {
+      max-width: 450px;
+      margin: 0 auto 0 100px;
+    }
+
+    &.analysisStep2 {
+      max-width: 650px;
+      margin: 0 auto 0 200px;
+    }
+
+    &.analysisStep3 {
+      padding: 38px 38px 38px 130px;
+      max-width: 530px;
+      margin: 0 auto 0 120px;
+    }
+
+    &.analysisStep4 {
+      max-width: 670px;
+      margin: 0 auto 0 200px;
+    }
+
+    &.analysisStep5 {
+      max-width: 650px;
+      margin-left: auto;
+    }
+
+    &:not(.analysisStep5) {
+      margin-bottom: 130px;
+    }
+  }
+  .analysisStep {
+    @for $i from 1 through 6 {
+      &.analysisStep#{$i} {
+        margin-left: 100px;
+        max-width: none;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 667px) {
+  .solutionsLogoWrapper{
+    padding-left: 0;
+  }
+  .appNaviFunctionalityHeaderWrapper{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .appNaviFunctionalitySubitle {
+    font-size: 21px;
+  }
+  .appNaviFunctionalityTitle {
+    text-align: left;
+  }
+  .analysisWrapper {
+    margin: 0;
+  }
+  .analysisSteps {
+    margin-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .mobLine {
+    display: block;
+    position: absolute;
+    object-fit: fill;
+    height: 50%;
+    top: 10px;
+    left: 50%;
+    width: 50vw;
+    transform: translateX(-50%);
+    height: 85%;
+  }
+  .solutionsLogoWrapper {
+    justify-content: center;
+  }
+  .topLine {
+    display: none;
+  }
+  .tabletLine {
+    display: none;
+  }
+  .analysisStep {
+    margin: 0;
+    img {
+      width: 20vw;
+      max-width: 120px;
+      left: 5%;
+    }
+    p {
+      font-size: 14px;
+    }
+    &.analysisStep1 {
+      max-width: 450px;
+      margin: 0 auto 0 100px;
+      padding-left: 16vw !important;
+      padding-right: 10px !important;
+    }
+
+    &.analysisStep2 {
+      max-width: 650px;
+      margin: 0 auto 0 200px;
+      padding: 0;
+      padding-left: 10px !important;
+      padding-right: 16vw !important;
+      img {
+        right: 0;
+        left: 95%;
+      }
+      p {
+        text-align: right;
+      }
+    }
+
+    &.analysisStep3 {
+      max-width: 530px;
+      margin: 0 auto 0 120px;
+      padding-left: 16vw !important;
+      padding-right: 10px !important;
+    }
+
+    &.analysisStep4 {
+      max-width: 670px;
+      margin: 0 auto 0 200px;
+      img {
+        right: 0;
+        left: 95%;
+      }
+      padding-left: 10px !important;
+      padding-right: 16vw !important;
+      p {
+        text-align: right;
+      }
+    }
+
+    &.analysisStep5 {
+      max-width: 650px;
+      margin: 0;
+      padding-left: 16vw !important;
+      padding-right: 10px !important;
+    }
+    &:not(.analysisStep5) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .analysisStep {
+    @for $i from 1 through 6 {
+      &.analysisStep#{$i} {
+        margin-left: 0;
+        max-width: none;
+        padding: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 455px) {
+  .appNaviFunctionalityHeaderWrapper{
+    padding: 0;
+  }
+  .analysisSteps {
+    margin-top: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .appNaviFunctionalitySubitle {
+    text-align: left;
+  }
+}
+@media (max-width: 400px) {
+  .solutionsLogoWrapper {
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .analysisStep {
+    p {
+      line-height: 14px;
+      font-size: 12px;
+    }
+  }
+}
+@media (max-width: 300px) {
+  .analysisStep {
+    p {
+      line-height: 12px;
+      font-size: 10px;
+    }
+  }
+}

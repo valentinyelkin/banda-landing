@@ -1,0 +1,30 @@
+@import '../../../../../../assets/scss/breakPoints';
+
+.customDotList {
+  bottom: 5px;
+  left: -9%;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    bottom: 1px;
+    left: -4%;
+  }
+}
+
+.customContainer {
+  min-height: 390px;
+  overflow: inherit;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    min-height: 450px;
+  }
+}
+
+.container {
+  min-height: 500px;
+  margin-top: -15px;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    margin-top: -14px;
+    min-height: 558px;
+  }
+}

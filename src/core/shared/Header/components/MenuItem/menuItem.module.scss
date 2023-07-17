@@ -1,0 +1,148 @@
+@import '../../../../../assets/scss/breakPoints.scss';
+
+.subMenu {
+  pointer-events: none;
+  padding-top: 14px;
+  position: relative;
+  width: 100%;
+  margin-bottom: -14px;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    margin-bottom: -10px;
+    padding-top: 10px;
+  }
+}
+
+.menuItem {
+  margin: 0 40px 0 0;
+
+  &:hover {
+    .subMenu {
+      pointer-events: all;
+    }
+  }
+
+  .menuItemLink {
+    color: #fff;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    transition: transform 1s;
+    position: relative;
+
+    &.contactsHeader {
+      color: #171718;
+
+      &:not(.activeLink) {
+        &:hover {
+          &:after {
+            background: #171718;
+          }
+        }
+      }
+    }
+
+    &:after {
+      content: '';
+      pointer-events: none;
+      display: block;
+      width: 5px;
+      height: 5px;
+      background: transparent;
+      position: absolute;
+      left: 50%;
+      top: calc(100% + 10px);
+      transform: translateX(-50%);
+      transition: 0.3s;
+    }
+
+    &:hover {
+      &:after {
+        pointer-events: all;
+        background: #fff;
+        width: 100%;
+      }
+    }
+
+    &.activeLink {
+      color: #efe314 !important;
+
+      &:after {
+        background: #efe314 !important;
+      }
+
+      &:hover {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-max-width) {
+  .menuItem {
+    margin: 0 30px 0 0;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+  .menuItem {
+    margin: 0 auto 30px;
+    font-size: 20px;
+
+    &:last-child {
+      margin: 0 auto;
+    }
+
+    .menuItemLink {
+      color: #171718;
+      font-size: 28px;
+
+      &:not(.activeLink) {
+        &:hover {
+          &:after {
+            background: #efe314;
+          }
+        }
+      }
+
+      &.contactsHeader {
+        &:not(.activeLink) {
+          &:hover {
+            &:after {
+              background: #efe314;
+            }
+          }
+        }
+      }
+
+      &:after {
+        top: calc(100% + 5px);
+        height: 5px;
+      }
+
+      &:hover {
+        color: #efe314;
+
+        &::after {
+          background-color: #efe314;
+        }
+      }
+
+      &.activeLink {
+        &:after {
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menuItem {
+    margin-bottom: 20px;
+  }
+}

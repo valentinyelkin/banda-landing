@@ -1,0 +1,114 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background: #333;
+  margin: 0 auto;
+  padding: 140px 41px 93px 60px;
+  position: relative;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    padding: 130px 41px 93px 40px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    padding: 120px 30px 0 30px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1), transparent 1px);
+    background-size: 15px 15px;
+    height: 100%;
+    padding: 40px 15px 0 15px;
+  }
+
+  * {
+    font-family: 'Raleway', sans-serif;
+  }
+}
+
+.wrapperBackground {
+  background: url(/images/icons/realEstate/finance.svg) no-repeat center;
+  width: 364px;
+  height: 314px;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 162px;
+  margin-bottom: 63px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    width: 300px;
+    height: 286px;
+    margin-right: 119px;
+    margin-bottom: 35px
+  }
+
+  @media only screen and (max-width: $breakpoint-max-width) {
+    width: 232px;
+    height: 200px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet-768) {
+    margin-right: 60px;
+    margin-bottom: 60px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    display: none;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 100%;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+  margin-bottom: 50px;
+
+  @media only screen and (max-width: $breakpoint-1680) {
+    font-size: 70px;
+  }
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    font-size: 60px;
+    margin-bottom: 39px;
+  }
+
+  @media only screen and (max-width: $breakpoint-max-width) {
+    font-size: 48px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-size: 26px;
+    line-height: 130%;
+    margin-bottom: 30px;
+  }
+}
+
+.containerSelects {
+  display: flex;
+  width: 100%;
+
+  .wrapperColumn {
+    width: 32%;
+    margin-right: 28px;
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      width: 49%;
+      margin-right: 21px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      width: 100%;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,844 @@
+@import '../../../../../assets/scss/breakPoints.scss';
+
+$filter-white: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)
+  brightness(100%) contrast(97%);
+$filter-orange: invert(100%) sepia(13%) saturate(891%) hue-rotate(324deg)
+  brightness(104%) contrast(102%);
+$filter-violet: invert(17%) sepia(100%) saturate(3261%) hue-rotate(260deg)
+  brightness(103%) contrast(103%);
+$filter-hotel-community: invert(74%) sepia(39%) saturate(6906%)
+  hue-rotate(328deg) brightness(103%) contrast(101%);
+
+.socialBehance {
+  background: url(/images/icons/behance.svg) no-repeat center;
+}
+
+.socialFacebook {
+  background: url(/images/icons/facebook.svg) no-repeat center;
+}
+
+.socialDribble {
+  background: url(/images/icons/dribbble.svg) no-repeat center;
+}
+
+.socialLinkedin {
+  background: url(/images/icons/linkedin.svg) no-repeat center;
+}
+
+.socialSkype {
+  background: url(/images/icons/skype.svg) no-repeat center;
+}
+
+.socialWhatsApp {
+  background: url(/images/icons/whatsapp.svg) no-repeat center;
+}
+
+.socialBehanceBlog {
+  background: url(/images/icons/behance-white.svg) no-repeat center;
+}
+
+.socialFacebookBlog {
+  background: url(/images/icons/facebook-white.svg) no-repeat center;
+}
+
+.socialDribbleBlog {
+  background: url(/images/icons/dribbble-white.svg) no-repeat center;
+}
+
+.socialLinkedinBlog {
+  background: url(/images/icons/linkedin-white.svg) no-repeat center;
+}
+
+.socialSkypeBlog {
+  background: url(/images/icons/skype.svg) no-repeat center;
+  filter: $filter-white;
+}
+
+.socialWhatsAppBlog {
+  background: url(/images/icons/whatsapp.svg) no-repeat center;
+  filter: $filter-white;
+}
+
+.socialFacebookOrange {
+  background: url(/images/icons/facebook-orange.svg) no-repeat center;
+}
+
+.socialLinkedinOrange {
+  background: url(/images/icons/linkedin-orange.svg) no-repeat center;
+}
+
+.socialSkypeOrange {
+  background: url(/images/icons/skype-orange.svg) no-repeat center;
+}
+
+.socialWhatsAppOrange {
+  background: url(/images/icons/whatsapp-orange.svg) no-repeat center;
+}
+
+.socialBehanceBlogOrange {
+  background: url(/images/icons/behance.svg) no-repeat center;
+  filter: $filter-orange;
+}
+
+.socialDribbleBlogOrange {
+  background: url(/images/icons/dribbble.svg) no-repeat center;
+  filter: $filter-orange;
+}
+
+.socialFacebookViolet {
+  background: url(/images/icons/facebook-violet.svg) no-repeat center;
+}
+
+.socialLinkedinViolet {
+  background: url(/images/icons/linkedin-violet.svg) no-repeat center;
+}
+
+.socialSkypeViolet {
+  background: url(/images/icons/skype-violet.svg) no-repeat center;
+}
+
+.socialWhatsAppViolet {
+  background: url(/images/icons/whatsapp-violet.svg) no-repeat center;
+}
+
+.socialBehanceBlogViolet {
+  background: url(/images/icons/behance-violet.svg) no-repeat center;
+}
+
+.socialDribbleBlogViolet {
+  background: url(/images/icons/dribbble-violet.svg) no-repeat center;
+}
+
+.socialItem {
+  &:hover {
+    a {
+      transform: translateY(-20px);
+      background: #333;
+    }
+
+    .socialBehance {
+      background: url(/images/icons/behance-yellow.svg) no-repeat;
+    }
+
+    .socialFacebook {
+      background: url(/images/icons/facebook-yellow.svg) no-repeat;
+    }
+
+    .socialDribble {
+      background: url(/images/icons/dribbble-yellow.svg) no-repeat;
+    }
+
+    .socialLinkedin {
+      background: url(/images/icons/linkedin-yellow.svg) no-repeat;
+    }
+
+    .socialSkype {
+      background: url(/images/icons/skype-yellow.svg) no-repeat;
+      filter: none;
+    }
+
+    .socialWhatsApp {
+      background: url(/images/icons/whatsapp-yellow.svg) no-repeat;
+      filter: none;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    margin-top: 10px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 20px;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      margin-right: 10px;
+    }
+
+    &:active,
+    &:focus {
+      span {
+        filter: grayscale(1);
+      }
+    }
+  }
+}
+
+.socialItemBurgerMenu {
+  @media screen and (max-width: $breakpoint-tablet) {
+    margin-right: 10px;
+    margin-top: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .socialIconActive {
+      width: 65px;
+      height: 65px;
+    }
+  }
+}
+
+.socialIcon {
+  width: 120px;
+  height: 120px;
+  border: 1px solid #171718;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+
+  span {
+    width: 28px;
+    height: 28px;
+    display: block;
+    background-size: contain !important;
+    transition: 0.3s;
+  }
+}
+
+.socialIconActive {
+  width: 65px;
+  height: 65px;
+  border: 1px solid #171718;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-size: contain !important;
+    transition: 0.3s;
+  }
+}
+
+.socialIconGastehaus {
+  width: 120px;
+  height: 120px;
+  border: 1px solid #ffffff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+
+  @media screen and (max-width: $breakpoint-laptop) {
+    width: 105px;
+    height: 105px;
+  }
+
+  span {
+    width: 28px;
+    height: 28px;
+  }
+
+  .socialBehance {
+    background: url(/images/icons/behance-white.svg) no-repeat center;
+  }
+
+  .socialFacebook {
+    background: url(/images/icons/facebook-white.svg) no-repeat center;
+  }
+
+  .socialDribble {
+    background: url(/images/icons/dribbble-white.svg) no-repeat center;
+  }
+
+  .socialLinkedin {
+    background: url(/images/icons/linkedin-white.svg) no-repeat center;
+  }
+
+  .socialSkype {
+    background: url(/images/icons/skype.svg) no-repeat center;
+    filter: $filter-white;
+  }
+
+  .socialWhatsApp {
+    background: url(/images/icons/whatsapp.svg) no-repeat center;
+    filter: $filter-white;
+  }
+}
+
+.openedBurgerGastehaus {
+  width: 120px;
+  height: 120px;
+  border: 1px solid #171718;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    width: 28px;
+    height: 28px;
+    display: block;
+    background-size: contain !important;
+    transition: 0.3s;
+  }
+
+  .socialBehance {
+    background: url(/images/icons/behance.svg) no-repeat center;
+  }
+
+  .socialFacebook {
+    background: url(/images/icons/facebook.svg) no-repeat center;
+  }
+
+  .socialDribble {
+    background: url(/images/icons/dribbble.svg) no-repeat center;
+  }
+
+  .socialLinkedin {
+    background: url(/images/icons/linkedin.svg) no-repeat center;
+  }
+
+  .socialSkype {
+    background: url(/images/icons/skype.svg) no-repeat center;
+    filter: none;
+  }
+
+  .socialWhatsApp {
+    background: url(/images/icons/whatsapp.svg) no-repeat center;
+    filter: none;
+  }
+}
+
+.socialIconHotelCommunity {
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+
+  @media screen and (max-width: $breakpoint-1600) {
+    width: 80px;
+    height: 80px;
+  }
+
+  span {
+    width: 40px;
+    height: 40px;
+
+    @media screen and (max-width: $breakpoint-1600) {
+      width: 27px;
+      height: 27px;
+    }
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      width: 32px;
+      height: 32px;
+    }
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      width: 19px;
+      height: 19px;
+    }
+  }
+
+  .socialBehance {
+    background: url(/images/icons/behance-white.svg) no-repeat center;
+  }
+
+  .socialFacebook {
+    background: url(/images/icons/facebook-white.svg) no-repeat center;
+  }
+
+  .socialDribble {
+    background: url(/images/icons/dribbble-white.svg) no-repeat center;
+  }
+
+  .socialLinkedin {
+    background: url(/images/icons/linkedin-white.svg) no-repeat center;
+  }
+
+  .socialSkype {
+    background: url(/images/icons/skype.svg) no-repeat center;
+    filter: $filter-white;
+  }
+
+  .socialWhatsApp {
+    background: url(/images/icons/whatsapp.svg) no-repeat center;
+    filter: $filter-white;
+  }
+
+  &:hover {
+    border: 1px solid #ff774c;
+  }
+}
+
+.socialItemHotelCommunity {
+  transition: 0.3s;
+
+  a span {
+    transition: none;
+  }
+
+  &:hover {
+    .socialBehance {
+      background: url(/images/icons/behance.svg) no-repeat center;
+      filter: $filter-hotel-community;
+    }
+
+    .socialFacebook {
+      background: url(/images/icons/facebook.svg) no-repeat center;
+      filter: $filter-hotel-community;
+    }
+
+    .socialDribble {
+      background: url(/images/icons/dribbble.svg) no-repeat center;
+      filter: $filter-hotel-community;
+    }
+
+    .socialLinkedin {
+      background: url(/images/icons/linkedin.svg) no-repeat center;
+      filter: $filter-hotel-community;
+    }
+
+    .socialSkype {
+      background: url(/images/icons/skype.svg) no-repeat center;
+      filter: $filter-hotel-community;
+    }
+
+    .socialWhatsApp {
+      background: url(/images/icons/whatsapp.svg) no-repeat center;
+      filter: $filter-hotel-community;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 50px;
+
+    @media screen and (max-width: $breakpoint-1600) {
+      margin-right: 40px;
+    }
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      margin-right: 25px;
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      margin-right: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-laptop) {
+  .socialIcon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .socialIconActive {
+    width: 80px;
+    height: 80px;
+  }
+
+  .socialIconGastehaus {
+    width: 96px;
+    height: 96px;
+  }
+
+  .socialIconHotelCommunity {
+    width: 96px;
+    height: 96px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .socialIcon {
+    width: 65px;
+    height: 65px;
+    border-color: #fff;
+
+    span {
+      width: 20px;
+      height: 20px;
+    }
+
+    .socialBehance {
+      background: url(/images/icons/behance-white.svg) no-repeat center;
+    }
+
+    .socialFacebook {
+      background: url(/images/icons/facebook-white.svg) no-repeat center;
+    }
+
+    .socialDribble {
+      background: url(/images/icons/dribbble-white.svg) no-repeat center;
+    }
+
+    .socialLinkedin {
+      background: url(/images/icons/linkedin-white.svg) no-repeat center;
+    }
+
+    .socialSkype {
+      background: url(/images/icons/skype.svg) no-repeat center;
+      filter: $filter-white;
+    }
+
+    .socialWhatsApp {
+      background: url(/images/icons/whatsapp.svg) no-repeat center;
+      filter: $filter-white;
+    }
+  }
+
+  .socialIconHotelCommunity {
+    width: 56px;
+    height: 56px;
+  }
+
+  .socialIconActive {
+    width: 65px;
+    height: 65px;
+
+    span {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.socialIconBree {
+  border-radius: 300px;
+  border: 3px solid rgba(255, 220, 171, 1);
+  box-sizing: border-box;
+  margin-right: 30px;
+
+  @media screen and (max-width: $breakpoint-laptop) {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    width: 96px;
+    height: 96px;
+    margin-right: 5px;
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    border: 2px solid rgba(255, 220, 171, 1);
+    width: 65px;
+    height: 65px;
+  }
+
+  &:hover {
+    background: transparent;
+    border: 3px solid #ffffff;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      border: 2px solid #ffffff;
+    }
+
+    &:disabled {
+      border: 3px solid #bdbdbd;
+    }
+  }
+
+  span {
+    width: 40px;
+    height: 40px;
+
+    .socialFacebook {
+      background: url(/images/icons/facebook-white.svg) no-repeat;
+    }
+
+    .socialLinkedin {
+      background: url(/images/icons/linkedin-white.svg) no-repeat;
+    }
+
+    .socialSkype {
+      background: url(/images/icons/skype.svg) no-repeat;
+      filter: $filter-white;
+    }
+
+    .socialWhatsApp {
+      background: url(/images/icons/whatsapp.svg) no-repeat;
+      filter: $filter-white;
+    }
+
+    @media screen and (max-width: $breakpoint-laptop) {
+      width: 27px;
+      height: 27px;
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      width: 19px;
+      height: 19px;
+    }
+  }
+}
+
+.openBurgerSpaceBooking,
+.openedBurgerBree {
+  border: 1px solid #171718;
+  border-radius: 0;
+  margin-right: 0;
+
+  &:hover {
+    background: #171718;
+  }
+}
+
+.socialItemBree {
+  transition: 0.3s;
+
+  &:hover {
+    background: transparent;
+
+    .socialFacebookOrange {
+      background: url(/images/icons/facebook-white.svg) no-repeat;
+    }
+
+    .socialLinkedinOrange {
+      background: url(/images/icons/linkedin-white.svg) no-repeat;
+    }
+
+    .socialSkypeOrange {
+      background: url(/images/icons/skype.svg) no-repeat;
+      filter: $filter-white;
+    }
+
+    .socialWhatsAppOrange {
+      background: url(/images/icons/whatsapp.svg) no-repeat;
+      filter: $filter-white;
+    }
+
+    .socialBehanceBlogOrange {
+      background: url(/images/icons/behance.svg) no-repeat center;
+      filter: $filter-white;
+    }
+
+    .socialDribbleBlogOrange {
+      background: url(/images/icons/dribbble.svg) no-repeat center;
+      filter: $filter-white;
+    }
+  }
+}
+
+.socialIconSpaceBooking {
+  width: 120px;
+  height: 120px;
+  border: 2px solid #6800fd;
+  border-radius: 12px;
+
+  @media screen and (max-width: $breakpoint-laptop) {
+    width: 80px;
+    height: 80px;
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    width: 96px;
+    height: 96px;
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 56px;
+    height: 56px;
+  }
+
+  &:hover {
+    background: transparent;
+    border: 2px solid #832dff;
+    filter: drop-shadow(0px 10px 20px rgba(119, 30, 247, 0.2));
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      border: 2px solid $filter-violet;
+    }
+
+    &:active {
+      border: 2px solid #4400a7;
+    }
+  }
+
+  &:disabled {
+    border: 3px solid #bdbdbd;
+  }
+}
+
+.socialItemSpaceBooking {
+  transition: 0.3s;
+
+  a span {
+    transition: none;
+  }
+
+  &:hover {
+    background: transparent;
+
+    .socialFacebookViolet {
+      background: url(/images/icons/facebook.svg) no-repeat;
+      filter: $filter-violet;
+    }
+
+    .socialLinkedinViolet {
+      background: url(/images/icons/linkedin.svg) no-repeat;
+      filter: $filter-violet;
+    }
+
+    .socialSkypeViolet {
+      background: url(/images/icons/skype.svg) no-repeat;
+      filter: $filter-violet;
+    }
+
+    .socialWhatsAppViolet {
+      background: url(/images/icons/whatsapp.svg) no-repeat;
+      filter: $filter-violet;
+    }
+
+    .socialBehanceBlogViolet {
+      background: url(/images/icons/behance.svg) no-repeat center;
+      filter: $filter-violet;
+    }
+
+    .socialDribbleBlogViolet {
+      background: url(/images/icons/dribbble.svg) no-repeat center;
+      filter: $filter-violet;
+    }
+  }
+
+  &:active {
+    span {
+      background: #4400a7;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 50px;
+
+    @media screen and (max-width: $breakpoint-laptop) {
+      margin-right: 40px;
+    }
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      margin-right: 25px;
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      margin-right: 15px;
+      margin-top: 12px;
+    }
+  }
+
+  &:last-child {
+    @media screen and (max-width: $breakpoint-mobile) {
+      margin-right: 15px;
+    }
+  }
+}
+
+.openBurgerSpaceBooking {
+  border: 1px solid #171718;
+  border-radius: 0;
+  margin-right: 0;
+
+  &:hover {
+    background: #171718;
+  }
+}
+
+.socialItemInsidely {
+  &:hover {
+    background: transparent;
+
+    .socialLinkedin {
+      background: url(/images/icons/linkedin-pink.svg) no-repeat center;
+    }
+
+    .socialFacebook {
+      background: url(/images/icons/facebook-pink.svg) no-repeat center;
+    }
+
+    .socialWhatsApp {
+      background: url(/images/icons/whatsapp-pink.svg) no-repeat center;
+    }
+
+    .socialBehance {
+      background: url(/images/icons/behance-pink.svg) no-repeat center;
+    }
+
+    .socialDribble {
+      background: url(/images/icons/dribbble-pink.svg) no-repeat center;
+    }
+  }
+}
+
+.socialIconInsidely {
+  width: 120px;
+  height: 120px;
+  border: 4px solid #FFFFFF;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: transparent;
+
+
+  @media only screen and (max-width: $breakpoint-1680) {
+    width: 80px;
+    height: 80px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet-768) {
+    padding: 15px;
+  }
+
+  @media only screen and (max-width: $breakpoint-480) {
+    width: 56px;
+    height: 56px;
+  }
+
+  &:hover {
+    border-color: #C653B9;
+    background: transparent !important;
+
+    a {
+      background: transparent !important;
+    }
+
+    .socialLinkedin {
+      background: url(/images/icons/linkedin-pink.svg) no-repeat center;
+    }
+
+    .socialFacebook {
+      background: url(/images/icons/facebook-pink.svg) no-repeat center;
+    }
+
+    .socialWhatsApp {
+      background: url(/images/icons/whatsapp-pink.svg) no-repeat center;
+    }
+
+    .socialBehance {
+      background: url(/images/icons/behance-pink.svg) no-repeat center;
+    }
+
+    .socialDribble {
+      background: url(/images/icons/dribbble-pink.svg) no-repeat center;
+    }
+  }
+
+  .socialLinkedin {
+    background: url(/images/icons/linkedin-white.svg) no-repeat center;
+  }
+
+  .socialFacebook {
+    background: url(/images/icons/facebook-white.svg) no-repeat center;
+  }
+
+  .socialWhatsApp {
+    background: url(/images/icons/whatsapp.svg) no-repeat center;
+    filter: $filter-white;
+  }
+
+  .socialBehance {
+    background: url(/images/icons/behance-white.svg) no-repeat center;
+  }
+
+  .socialDribble {
+    background: url(/images/icons/dribbble-white.svg) no-repeat center;
+  }
+}

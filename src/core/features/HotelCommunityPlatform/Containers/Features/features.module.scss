@@ -1,0 +1,111 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  height: 730px;
+  position: relative;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    height: 580px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    height: 1642px;
+    flex-direction: column;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    height: 1423px;
+  }
+
+  .lineWrapper {
+    display: flex;
+    position: absolute;
+    left: 61px;
+    width: 1px;
+    height: 100%;
+    overflow: hidden;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      left: 40px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      left: 30px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      left: 15px;
+    }
+  }
+
+  .wrapperFeaturesList {
+    display: flex;
+    padding-top: 50px;
+    padding-left: 141px;
+    gap: 70px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      padding-top: 40px;
+      padding-left: 91px;
+      gap: 30px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      gap: 122px;
+      padding-left: 61px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      gap: 0;
+      padding-left: 31px;
+    }
+  }
+
+  .img {
+    position: relative;
+    left: 106px;
+    top: -247px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      width: 61%;
+      left: 18px;
+      top: -223px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+
+  .mobileImg {
+    display: none;
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      display: block;
+      position: absolute;
+      bottom: -60px;
+      right: 0;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      width: 67%;
+      bottom: 349px;
+    }
+
+    @media only screen and (max-width: $breakpoint-425) {
+      width: 85%;
+      bottom: 375px;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+      width: 93%;
+    }
+  }
+}

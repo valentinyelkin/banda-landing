@@ -1,0 +1,63 @@
+@import '../../../../../assets/scss/breakPoints.scss';
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 200px 0 0 60px;
+    background-repeat: no-repeat;
+    background-image:
+        url('/images/projects/Sestra/bg-dots/bg-features-dots.svg');
+    background-position: 780px 697px;
+    position: relative;
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+        background-position: 530px 510px;
+        padding: 160px 0 0 40px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+        background-image:
+            url('/images/projects/Sestra/bg-dots/bg-features-tablet-dots.svg');
+        background-position: -2px 1030px;
+        padding: 120px 0 0 30px;
+    }
+    
+    @media only screen and (max-width: $breakpoint-375) {
+        background-image:
+            url('/images/projects/Sestra/bg-dots/bg-features-mobile-dots.svg');
+        background-position: left 973px;
+        padding: 100px 0 0 15px;
+    }
+
+    &::before {
+        content: '';
+        background-image: url('/images/projects/Sestra/hexagons/bg-functionality-features-hexagons.svg');
+        background-size: contain;
+        position: absolute;
+        width: 265px;
+        height: 1962px;
+        right: 264px;
+        top: -82px;
+
+        @media only screen and (max-width: $breakpoint-laptop-1366) {
+            width: 175px;
+            height: 1572px;
+            top: -10px;
+        }
+
+        @media only screen and (max-width: $breakpoint-tablet-768) {
+            background-image: url('/images/projects/Sestra/hexagons/bg-features-tablet-hexagons.svg');
+            width: 465px;
+            height: 1360px;
+            top: 580px;
+            right: 30px;
+        }
+
+        @media only screen and (max-width: $breakpoint-375) {
+            width: 248px;
+            height: 665px;
+            top: 744px;
+            right: -30px;
+        }
+    }
+}

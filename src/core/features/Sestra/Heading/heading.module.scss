@@ -1,0 +1,59 @@
+@import '../../../../assets/scss/breakPoints.scss';
+
+.heading {
+    font-family: 'Nunito Sans';
+    font-weight: 900;
+    font-size: 88px;
+    line-height: 88px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 2px #7F9E2F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 8px;
+    margin-bottom: 56px;
+
+    @media only screen and (max-width: $breakpoint-1680) {
+        font-size: 62px;
+        line-height: 62px;
+        margin-bottom: 48px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 32px;
+        -webkit-text-stroke: 1px #7F9E2F;
+    }
+
+    &.rightAlign {
+        align-items: flex-end;
+    }
+
+    &.leftAlign {
+        align-items: flex-start;
+    }
+
+    &.topAboveUpperBorder {
+        position: absolute;
+        top: 0;
+        transform: translateY(-50%);
+        left: 60px;
+
+        @media only screen and (max-width: $breakpoint-tablet-768) {
+            left: 30px;
+        }
+
+        @media only screen and (max-width: $breakpoint-375) {
+            left: 15px;
+        }
+    }
+
+    span {
+        color: #173864;
+        text-shadow: none;
+        -webkit-text-stroke: 0;
+    }
+}

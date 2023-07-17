@@ -1,0 +1,212 @@
+@import "../../../../assets/scss/imgRender.scss";
+
+.arxonasMobile {
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  padding: 0 15px 80px;
+
+  img {
+    max-width: 100%;
+    @include imgRender;
+  }
+
+  * {
+    font-family: Roboto, sans-serif;
+  }
+
+  .mobileBg, .mobileBgMobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+  }
+
+  .mobileBgMobile {
+    display: none;
+  }
+
+  &Wrapper {
+    max-width: 1680px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.arxonasMobileInfo {
+  position: relative;
+  margin-bottom: 200px;
+  flex-shrink: 0;
+
+  &:before {
+    content: '';
+    background: url(/images/projects/arxonas/corner.png) no-repeat center;
+    width: 139px;
+    height: 113px;
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 70px;
+    text-align: left;
+    letter-spacing: 0.03em;
+    color: #FFF;
+    margin-bottom: 25px;
+    position: relative;
+    text-transform: uppercase;
+
+    &:after {
+      content: 'Mobile interface';
+      font-weight: bold;
+      font-size: 100px;
+      line-height: 100px;
+      letter-spacing: 0.03em;
+      color: #fff;
+      opacity: 0.1;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+  }
+
+  p {
+    max-width: 450px;
+    font-size: 25px;
+    line-height: 40px;
+    letter-spacing: 0.03em;
+    color: #FFF;
+  }
+}
+
+.mobilesMobile {
+  width: 100%;
+  display: none;
+}
+
+.mobilesTablet {
+  width: 80%;
+  margin: 0 auto;
+  display: none;
+}
+
+.mobileInterface {
+  flex-shrink: 1;
+}
+
+@media only screen and (min-width: 669px) and (max-width: 1280px) {
+  .arxonasMobile {
+    padding: 0;
+
+    .mobilesTablet {
+      display: block;
+    }
+
+    .mobiles {
+      display: none;
+    }
+
+    &Info {
+      margin-bottom: 0;
+      padding: 0 15px;
+
+      h2::after {
+        width: 95%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: clip;
+      }
+
+      p {
+        max-width: 100%;
+      }
+    }
+
+    &Wrapper {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 668px) {
+  .arxonasMobile {
+    .arxonasMobileInfo {
+      p {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .mobilesMobile {
+    display: block;
+    padding-top: 50px;
+  }
+
+  .mobiles {
+    display: none;
+  }
+
+  .arxonasMobile {
+    padding: 60px 0 0 0;
+
+    .mobileBg {
+      display: none;
+    }
+
+    .mobileBgMobile {
+      display: block;
+    }
+  }
+
+  .arxonasMobileWrapper {
+    display: block;
+  }
+
+  .arxonasMobileInfo {
+    margin-bottom: 0;
+
+    &:before {
+      content: "";
+      background: none;
+    }
+
+    h2 {
+      font-size: 26px;
+      line-height: 30px;
+      padding-left: 15px;
+
+      &:after {
+        width: 95%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: clip;
+        padding-left: 15px;
+        letter-spacing: 1px;
+        font-size: 44px;
+        line-height: 52px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 23px;
+      padding: 0 15px;
+      max-width: 100%;
+    }
+  }
+}

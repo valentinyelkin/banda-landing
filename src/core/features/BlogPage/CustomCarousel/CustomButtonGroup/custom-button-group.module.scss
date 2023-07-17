@@ -1,0 +1,83 @@
+@import '../../../../../assets/scss/breakPoints.scss';
+
+.sliderBtnWrapper {
+    position: absolute;
+    right: 60px;
+    bottom: 50px;
+    display: flex;
+    column-gap: 15px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+        right: 40px;
+        bottom: 30px;
+        column-gap: 10px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+        right: 30px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        right: unset;
+        bottom: 0;
+        justify-content: center;
+        column-gap: 15px;
+    }
+
+    svg {
+        width: 15px;
+    }
+
+    svg,
+    path {
+        fill: #FFFFFF;
+    }
+
+    button {
+        width: 120px;
+        height: 120px;
+        background: #333333;
+        border: 1px solid #E0E0E0;
+        margin: 0 !important;
+
+        @media only screen and (max-width: $breakpoint-1600) {
+            width: 80px;
+            height: 80px;
+        }
+
+        @media only screen and (max-width: $breakpoint-mobile) {
+            padding: 0;
+            width: 140px;
+            height: 140px;
+            margin: 0 !important;
+
+            &::before {
+                display: none;
+            }
+
+            svg {
+                display: block;
+            }
+        }
+
+        &:hover {
+            border: 1px solid #EFE314;
+            background: #333333;
+
+            svg,
+            path {
+                fill: #EFE314;
+            }
+        }
+
+        &:active {
+            background: #333333;
+            border: 1px solid #E0E0E0;
+
+            svg,
+            path {
+                fill: #FFFFFF;
+            }
+        }
+    }
+}

@@ -1,0 +1,116 @@
+.technologiesWrapper {
+  padding: 0;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1920px;
+  overflow: hidden;
+}
+.technologiesContainer {
+  padding-left: 60px;
+  padding-right: 60px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.technologiesSubtitle {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.appNaviTechnologiesSubtitle {
+  width: 45%;
+}
+
+.technologiesLayout {
+  display: block;
+  width: 100%;
+}
+.technologiesIconWrapper {
+  margin-top: 50px;
+  margin-bottom: 110px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.technologiesIconWrapper > img {
+  max-width: 177px;
+  height: 15%;
+  width: 30%;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+@media only screen and (max-width: 960px) {
+  .technologiesContainer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .twoStepsRow {
+    flex-flow: column nowrap;
+  }
+
+  .oneStepRow {
+    margin: 30px auto;
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .technologiesLayout {
+    width: 260%;
+  }
+  .appNaviResultsContainer {
+    padding: 0 15px;
+    margin: 0 auto 40px;
+  }
+
+  .resultsSteps {
+    margin: 50px auto 0;
+  }
+
+  .twoStepsRow {
+    > div:first-child {
+      flex: 0 0 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  .stepItemNumber {
+    font-size: 48px;
+    line-height: 150%;
+    right: -8px;
+    top: -10px;
+  }
+
+  .stepItem {
+    min-height: auto;
+    align-items: flex-start;
+
+    p {
+      padding: 0 0 0 10px;
+      min-height: 55px;
+    }
+  }
+  .technologiesIconWrapper {
+    margin-bottom: 50px;
+  }
+  .technologiesContainer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media only screen and (max-width: 455px) {
+  .technologiesContainer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media only screen and (max-width: 401px) {
+  .technologiesIconWrapper > img {
+  }
+}
+@media only screen and (max-width: 293px) {
+  .technologiesIconWrapper > img {
+  }
+}

@@ -1,0 +1,87 @@
+@import "../../../../../../../assets/scss/breakPoints";
+
+.containerItemBottom,
+.containerItem {
+  position: relative;
+  width: 220px;
+  height: 150px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    width: 170px;
+    height: 113px;
+    margin-right: 11px;
+  }
+
+  @media only screen and (max-width: $breakpoint-max-width) {
+    margin-right: 10px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    margin-right: 0;
+    width: 184px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 137px;
+    height: 72px;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    width: 64px;
+    margin-right: 24px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 190px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      height: 145px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      height: 142px;
+    }
+
+    @media only screen and (max-width: $breakpoint-480) {
+      height: 110px;
+    }
+  }
+
+  .nameTop,
+  .name {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    color: #FFFFFF;
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+}
+
+.containerItemBottom {
+  margin-top: 40px;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    margin-right: 40px;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    margin-top: 0;
+    margin-right: 25px;
+  }
+}
+
+.nameTop {
+  margin-bottom: 40px;
+}

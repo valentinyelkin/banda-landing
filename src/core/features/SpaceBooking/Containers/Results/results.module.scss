@@ -1,0 +1,126 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+
+  .wrapperText {
+    padding: 344px 60px 0 60px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      padding: 232px 40px 0 40px
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      padding: 147px 30px 0 30px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      padding: 113px 15px 0 15px;
+    }
+  }
+}
+
+.description {
+  width: 733px;
+  margin-top: 48px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    margin-top: 40px;
+    width: 628px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 70%;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet-768) {
+    width: 95%
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    margin-top: 32px;
+    width: 100%;
+  }
+
+  .boldStr,
+  .str {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #250B4A;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      line-height: 32px;
+    }
+  }
+
+  .boldStr {
+    font-weight: 600;
+  }
+}
+
+.img {
+  position: relative;
+  bottom: 235px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    bottom: 165px;
+  }
+
+  @media only screen and (max-width: $breakpoint-max-width) {
+    bottom: 140px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    bottom: 100px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet-768) {
+    display: none;
+  }
+}
+
+.imgTablet {
+  display: none;
+
+  @media only screen and (max-width: $breakpoint-tablet-768) {
+    display: block;
+    position: relative;
+    bottom: 200px;
+  }
+
+  @media only screen and (max-width: $breakpoint-700) {
+    bottom: 180px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    bottom: 96px;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    bottom: 80px;
+  }
+
+  @media only screen and (max-width: $breakpoint-375) {
+    display: none;
+  }
+}
+
+.imgMobile {
+  display: none;
+
+  @media only screen and (max-width: $breakpoint-375) {
+    display: block;
+    position: relative;
+    bottom: -27px;
+    right: 0;
+  }
+}
+

@@ -1,0 +1,92 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-top: 269px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    padding-top: 140px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 64%;
+    padding-top: 239px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 75%;
+    padding-top: 160px;
+  }
+}
+
+.wrapperTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  .wrapperDescription {
+    width: 35%;
+    text-align: center;
+    margin-top: 48px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      width: 52%;
+      margin-top: 40px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      margin-top: 40px;
+      width: 102%;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      width: 110%;
+      margin-top: 32px;
+    }
+
+    .boldDescription,
+    .description {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 36px;
+      color: #250B4A;
+
+      @media only screen and (max-width: $breakpoint-laptop) {
+        font-size: 22px;
+        line-height: 32px;
+      }
+
+      @media only screen and (max-width: $breakpoint-tablet) {
+        font-size: 18px;
+      }
+    }
+
+    .boldDescription {
+      font-weight: 600;
+    }
+  }
+}
+
+.containerSecondPhase {
+  padding-top: 88px;
+  min-height: 477px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    padding-top: 138px;
+    min-height: 446px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 100%;
+    padding-top: 104px;
+    min-height: 372px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    padding-top: 182px;
+    min-height: 338px;
+  }
+}

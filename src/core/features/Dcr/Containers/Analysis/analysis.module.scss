@@ -1,0 +1,146 @@
+.dcrAnalysisWrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 80px;
+  overflow: hidden;
+
+  h2 {
+    font-weight: bold;
+    font-size: 90px;
+    line-height: 130%;
+    text-align: center;
+    color: #131516;
+    margin-bottom: 80px;
+  }
+}
+
+.dcrAnalysisItem {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 80px;
+  }
+
+  &:nth-child(2) {
+    justify-content: flex-end;
+  }
+
+  img {
+    margin-right: 25px;
+  }
+}
+
+.dcrAnalysisItemNumber {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  font-weight: 600;
+  font-size: 75px;
+  line-height: 130%;
+  text-align: center;
+  color: #FFFFFF;
+  margin-right: 25px;
+
+  span {
+    z-index: 1;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: #DBF1FF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: rotate(45deg);
+  }
+}
+
+.dcrAnalysisItemContent {
+  max-width: 485px;
+  width: 100%;
+
+  .titleCard {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 130%;
+    color: #353535;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 150%;
+    color: #333;
+  }
+}
+
+.dcrAnalysisItemImages {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .dcrAnalysisItemImages {
+    max-width: 150px;
+  }
+
+  .dcrAnalysisItemNumber {
+    display: none;
+  }
+
+  .dcrAnalysisItemImages img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 669px) {
+  .dcrAnalysisWrapper {
+    padding: 0 15px;
+    margin: 70px auto 50px;
+
+    h2 {
+      font-size: 40px;
+      line-height: 115%;
+      text-align: left;
+      margin-bottom: 35px;
+    }
+  }
+
+  .dcrAnalysisItem {
+    align-items: flex-start;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    img {
+      margin: 0;
+    }
+  }
+
+  .dcrAnalysisItemImages {
+    max-width: 60px;
+    margin: 40px 10px 0 auto;
+  }
+
+  .dcrAnalysisItemContent {
+    max-width: 100%;
+
+    .titleCard {
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,149 @@
+@import "../../../../../assets/scss/imgRender.scss";
+
+.keepersTimeline {
+  position: relative;
+  max-width: 1920px;
+  width: 100%;
+  margin: 150px auto 90px;
+  padding: 0 50px 160px;
+
+  img, .keepersTimelineImg {
+    display: block;
+    max-width: 1720px;
+    width: 100%;
+    margin: 0 auto;
+    @include imgRender;
+  }
+
+  .keepersTimelineTablet {
+    display: none;
+  }
+
+  .keepersTimelineDecor1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 160px;
+    height: 230px;
+  }
+
+  .keepersTimelineDecor2 {
+    position: absolute;
+    bottom: 120px;
+    right: 60px;
+    width: 55px;
+    height: 55px;
+  }
+
+  .keepersTimelineDecorMobile1 {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 50px;
+    height: 135px;
+  }
+
+  .keepersTimelineDecorMobile2 {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    width: 70px;
+    height: 70px;
+  }
+
+  * {
+    font-family: Roboto, sans-serif;
+  }
+}
+
+.keepersTimelineWrapper {
+  max-width: 1720px;
+  margin: 0 auto 60px;
+}
+
+.keepersTimelineContent {
+  max-width: 660px;
+
+  h2 {
+    font-weight: 500;
+    font-size: 65px;
+    line-height: 84px;
+    color: #1A1C1E;
+    margin-bottom: 80px;
+  }
+
+  p {
+    font-size: 25px;
+    line-height: 40px;
+    color: #1A1C1E;
+  }
+}
+
+@media only screen and (max-width: 1700px) {
+  .keepersTimelineContent {
+    h2 {
+      font-size: 55px;
+      line-height: 64px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .keepersTimelineContent {
+    h2 {
+      font-size: 40px;
+      line-height: 44px;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .keepersTimeline {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    .keepersTimelineImg {
+      display: none;
+    }
+
+    .keepersTimelineTablet {
+      display: block;
+    }
+  }
+
+  .keepersTimelineContent {
+    h2 {
+      font-size: 3vw;
+      line-height: 1.3;
+    }
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .keepersTimeline {
+    margin: 150px 0 0 0;
+    padding: 0 0 100px 0;
+  }
+
+  .keepersTimelineWrapper {
+    margin-bottom: 30px;
+  }
+
+  .keepersTimelineContent {
+    h2 {
+      font-weight: 500;
+      padding: 0 15px;
+      font-size: 32px;
+      line-height: 35px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .keepersTimeline {
+    margin-top: 0;
+  }
+}

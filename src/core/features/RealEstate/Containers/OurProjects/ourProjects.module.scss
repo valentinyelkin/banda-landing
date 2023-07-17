@@ -1,0 +1,90 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-x: hidden;
+  margin: 0 auto;
+  padding: 130px 0 0 59px;
+  position: relative;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    padding: 129px 0 0 40px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    padding: 189px 0 0 30px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    background-color: #333;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1), transparent 1px);
+    background-size: 15px 15px;
+    padding: 0 15px 0 15px;
+    height: 100vh;
+    min-height: 858px;
+    max-height: 874px;
+  }
+
+  @media only screen and (max-width: $breakpoint-480) {
+    min-height: 783px;
+    height: 100%;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    min-height: 782px;
+  }
+
+  @media only screen and (max-width: $breakpoint-375) {
+    min-height: 779px;
+  }
+
+  @media only screen and (max-width: $breakpoint-320) {
+    min-height: 837px;
+  }
+
+  * {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .wrapperBtn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0 129px 32px 0;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 100%;
+  letter-spacing: 0.03em;
+  color: #171718;
+  margin-bottom: 40px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    font-size: 60px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    font-size: 48px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-size: 26px;
+    line-height: 130%;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    margin-top: 60px;
+  }
+}
+
+.wrapperBtn {
+  display: flex;
+  justify-content: space-between;
+  width: 358px;
+}
+

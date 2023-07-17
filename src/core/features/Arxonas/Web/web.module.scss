@@ -1,0 +1,158 @@
+@import "../../../../assets/scss/imgRender.scss";
+
+.arxonasWeb {
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  padding: 0 0 80px;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    max-width: 100%;
+    @include imgRender;
+  }
+
+  * {
+    font-family: Roboto, sans-serif;
+  }
+
+  .webBg, .webBgMobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+  }
+
+  .webBgMobile {
+    display: none;
+  }
+}
+
+.arxonasWebInfo {
+  max-width: 930px;
+  margin: 0 auto 80px;
+
+  h2 {
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: 0.03em;
+    color: #FFF;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+
+    span {
+      position: relative;
+
+      &:after, &:before {
+        content: '';
+        background: url(/images/projects/arxonas/corner.png) no-repeat center;
+        width: 139px;
+        height: 113px;
+        position: absolute;
+        top: 0;
+      }
+
+      &:after {
+        right: 0;
+        transform: translate(35%, -35%) rotateX(180deg) rotateY(180deg);
+      }
+
+      &:before {
+        left: 0;
+        transform: translate(-35%, -35%) rotateX(180deg);
+      }
+    }
+  }
+
+  p {
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+    color: #FFF;
+    padding: 0 15px;
+  }
+
+  .commonText {
+    text-transform: none;
+  }
+}
+
+.webInterface {
+  margin: 0 auto;
+}
+
+.webInterfaceMobile {
+  width: 100%;
+  display: none;
+}
+
+@media only screen and (max-width: 668px) {
+  .arxonasWeb {
+    .webBg {
+      display: none;
+    }
+
+    .webBgMobile {
+      display: block;
+    }
+  }
+  .arxonasWebInfo {
+    margin-bottom: 30px;
+
+    h2 {
+      font-size: 26px;
+      line-height: 30px;
+      margin-bottom: 20px;
+
+      span {
+        &:after, &:before {
+          background: url(/images/projects/arxonas/corner-mobile.png) no-repeat center;
+          width: 95px;
+          height: 120px;
+        }
+
+        &:after {
+          transform: translate(35%, -15%) rotateY(180deg);
+        }
+
+        &:before {
+          transform: translate(-35%, -15%);
+        }
+      }
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  .webInterface {
+    display: none;
+  }
+
+  .webInterfaceMobile {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 668px) {
+  .arxonasWeb {
+    .arxonasWebInfo {
+      p {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+  }
+}

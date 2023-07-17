@@ -1,0 +1,91 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  min-height: 1282px;
+  margin: 0 auto;
+  padding: 285px 60px 0 60px;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url(/images/projects/SpaceBooking/timeline/bg.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  position: relative;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    background-image: url(/images/projects/SpaceBooking/timeline/bg_l.svg);
+    padding: 249px 40px 0 40px;
+    background-position: 100% 117px;
+    min-height: 946px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    min-height: 1144px;
+    padding: 215px 30px 0 30px;
+    background-image: url(/images/projects/SpaceBooking/timeline/bg_t.svg);
+    background-position: 57% 85%;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    min-height: 926px;
+    padding: 143px 15px 0 15px;
+    background-image: url(/images/projects/SpaceBooking/timeline/bg_m.svg);
+    background-position: 100% 78%;
+  }
+}
+
+.wrapperItems {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 64px;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    flex-direction: column;
+    padding: 58px 85px;
+    width: 711px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 596px;
+    padding: 40px 70px;
+  }
+
+  .firstItem {
+    width: 66%;
+    position: relative;
+    max-height: 464px;
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      width: 100%;
+    }
+
+    .lines {
+      position: relative;
+      left: 200px;
+      bottom: 466px;
+
+      @media only screen and (max-width: $breakpoint-laptop) {
+        left: 36px;
+      }
+
+      @media only screen and (max-width: $breakpoint-tablet) {
+        display: none;
+      }
+    }
+  }
+
+  .secondItem {
+    position: relative;
+    width: 30%;
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      width: 100%;
+      padding-top: 304px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      padding-top: 248px;
+    }
+  }
+}

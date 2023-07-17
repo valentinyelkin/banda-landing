@@ -1,0 +1,107 @@
+@import '../../../../assets/scss/breakPoints.scss';
+
+.line {
+  width: 1px;
+  height: 0;
+  position: relative;
+  bottom: 125px;
+  margin: 40px 0 0 45vw;
+
+  @media screen and (max-width: $breakpoint-1800) {
+    bottom: 80px;
+    margin: 40px 0 0 40vw;
+  }
+
+  @media screen and (max-width: $breakpoint-laptop) {
+    bottom: 118px;
+    margin: 40px 0 0 45vw;
+  }
+
+  & > div {
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+
+  .wrapperLeftLine {
+    right: 0;
+    top: 100%;
+    width: 0;
+    overflow: hidden;
+  }
+
+  .leftLine {
+    width: 100%;
+    height: 2px;
+    background: #efe314;
+    transform: translateX(-100%);
+  }
+
+  .leftLineFinishedAnimation {
+    transform: translateX(0);
+  }
+
+  .leftLineAnimation {
+    animation: lineAppeare 0.3s linear 0.3s forwards;
+  }
+
+  .wrapperMainLine {
+    display: block;
+    height: 100%;
+    width: 2px;
+    overflow: hidden;
+  }
+
+  .mainLine {
+    height: 100%;
+    width: 2px;
+    background: #efe314;
+    bottom: 0;
+    transform: translateY(100%);
+  }
+
+  .mainLineFinishedAnimation {
+    transform: translateY(0);
+  }
+
+  .mainLineAnimation {
+    animation: mainLineAppeare 0.3s linear 0.6s forwards;
+  }
+
+  .wrapperRightLine {
+    left: 0;
+    width: 0;
+    overflow: hidden;
+  }
+
+  .rightLine {
+    width: 100%;
+    height: 2px;
+    background: #efe314;
+    transform: translateX(-100%);
+  }
+
+  .rightLineFinishedAnimation {
+    transform: translateX(0);
+  }
+
+  .rightLineAnimation {
+    animation: lineAppeare 0.3s linear 0.6s forwards;
+  }
+
+  .rightLineSecondAnimation {
+    animation: lineAppeare 0.3s linear 0.9s forwards;
+  }
+}
+
+@keyframes lineAppeare {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes mainLineAppeare {
+  to {
+    transform: translateY(0);
+  }
+}

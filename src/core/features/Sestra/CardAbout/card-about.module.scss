@@ -1,0 +1,187 @@
+@import '../../../../assets/scss/breakPoints.scss';
+
+.cardAbout {
+    flex: 1 0 100%;
+}
+
+.geography,
+.duration {
+    flex: 0 1 504px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+        flex: 0 1 354px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+        flex: 0 1 344px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        flex: 1 1 150px;
+    }
+}
+
+.cardAboutMain {
+    display: flex;
+    background: #9FC63B;
+    padding: 0 90px 0 100px;
+    column-gap: 86px;
+    height: 460px;
+    box-shadow: 4px 4px 20px rgba(43, 50, 26, 0.2);
+    align-items: center;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+        padding: 0 50px 0 40px;
+        column-gap: 42px;
+        height: auto;
+    }
+
+    @media only screen and (max-width: $breakpoint-1280) {
+        padding: 0 38px 0 30px;
+        column-gap: 34px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+        padding: 0 38px 0 30px;
+        column-gap: 34px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        padding: 0 31.5px 0 0;
+        column-gap: 23px;
+    }
+}
+
+.cardList {
+    display: grid;
+    column-gap: 48px;
+    row-gap: 32px;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    justify-items: stretch;
+    padding: 60px 0;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+        column-gap: 32px;
+        padding: 0;
+    }
+
+    @media only screen and (max-width: $breakpoint-1280) {
+        row-gap: 20px;
+        column-gap: 15px;
+    }
+
+    @media only screen and (max-width: $breakpoint-1170) {
+        gap: 32px;
+    }
+
+    @media only screen and (max-width: $breakpoint-740) {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 32px 0;
+        row-gap: 20px;
+        column-gap: 15px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        li:nth-child(6) {
+            order: 3 !important;
+        }
+
+        li:nth-child(4) {
+            order: 4 !important;
+        }
+
+        li:nth-child(5) {
+            order: 5 !important;
+        }
+    }
+}
+
+.geography {
+    .cardAboutMain {
+        @media only screen and (max-width: $breakpoint-laptop) {
+            padding: 0 70px 0 40px;
+        }
+
+        @media only screen and (max-width: $breakpoint-tablet-768) {
+            padding: 0 70px 0 30px;
+        }
+
+        @media only screen and (max-width: $breakpoint-mobile) {
+            padding: 0 15px 0 0;
+        }
+    }
+}
+
+.duration {
+    .cardAboutMain {
+        @media only screen and (max-width: $breakpoint-laptop) {
+            padding: 0 90px 0 40px;
+        }
+
+        @media only screen and (max-width: $breakpoint-tablet-768) {
+            padding: 0 90px 0 30px;
+        }
+
+        @media only screen and (max-width: $breakpoint-mobile) {
+            padding: 0 28px 0 0;
+        }
+    }
+}
+
+.geography,
+.duration {
+    .cardAboutMain {
+        height: 232px;
+        column-gap: 0;
+
+        @media only screen and (max-width: $breakpoint-laptop) {
+            height: 200px;
+        }
+
+        @media only screen and (max-width: $breakpoint-700) {
+            column-gap: 14px;
+        }
+
+        @media only screen and (max-width: $breakpoint-mobile) {
+            height: 150px;
+            column-gap: 14px;
+        }
+    }
+
+    .cardList {
+        grid-template-columns: 100%;
+        justify-items: end;
+    }
+
+    .cardTitle {
+        @media only screen and (max-width: $breakpoint-laptop) {
+            flex: 0 0 32px;
+        }
+
+        @media only screen and (max-width: $breakpoint-mobile) {
+            flex: 0 0 24px;
+        }
+    }
+}
+
+.cardTitle {
+    flex: 0 0 fit-content;
+    align-self: flex-start;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+        flex: 0 0 46px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        flex: 0 0 36px;
+    }
+
+    @media only screen and (max-width: $breakpoint-480) {
+        flex: 0 0 30px;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+        flex: 0 0 28px;
+    }
+}

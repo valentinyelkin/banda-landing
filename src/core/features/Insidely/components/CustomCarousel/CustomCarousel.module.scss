@@ -1,0 +1,38 @@
+.wrapper_carousel {
+  .react-multiple-carousel__arrow {
+    background: #3F53D9 !important;
+  }
+
+  .react-multi-carousel-track {
+    column-gap: 15px;
+  }
+
+  ul {
+    margin-bottom: 30px !important;
+  }
+
+  button {
+    bottom: -5px !important;
+  }
+
+  .react-multi-carousel-dot--active button {
+    background: #3F53D9 !important;
+  }
+
+  .customDotListClass {
+    bottom: -30px !important;
+  }
+
+  .react-multi-carousel-dot--active {
+    background: #3F53D9 !important;
+  }
+
+  .customDotListClass {
+    display: flex;
+  }
+
+  .react-multi-carousel-dot--active {
+    background: #3F53D9 !important;
+  }
+}
+

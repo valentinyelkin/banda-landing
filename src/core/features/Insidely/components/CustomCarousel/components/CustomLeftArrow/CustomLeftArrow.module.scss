@@ -1,0 +1,37 @@
+@import '../../../../../../../assets/scss/breakPoints';
+
+.customLeftArrowCarousel {
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  outline: 0;
+  transition: all .5s;
+  z-index: 1000;
+  background: transparent;
+  min-width: 50px;
+  min-height: 25px;
+  opacity: 1;
+
+  &:after {
+    position: absolute;
+    content: url('/images/icons/arrow-gray.svg');
+    left: 0;
+    top: 0;
+  }
+
+  &:hover {
+    &:after {
+      position: absolute;
+      content: url('/images/icons/arrow-blue.svg');
+      left: 0;
+      top: 0;
+    }
+  }
+
+}
+
+@media only screen and (max-width: $breakpoint-480) {
+  .customLeftArrowCarousel {
+    left: 10%;
+  }
+}

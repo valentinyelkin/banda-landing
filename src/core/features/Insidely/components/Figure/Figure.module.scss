@@ -1,0 +1,22 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.figure {
+  width: 192px;
+  height: 192px;
+  display: block;
+  background: #2ED47A;
+}
+
+@media only screen and (max-width: $breakpoint-laptop-1366) {
+  .figure {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-tablet-768) {
+  .figure {
+    width: 130px;
+    height: 130px;
+  }
+}

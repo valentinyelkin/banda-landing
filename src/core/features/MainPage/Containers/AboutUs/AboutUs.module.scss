@@ -1,0 +1,215 @@
+@import "../../../../../assets/scss/breakPoints.scss";
+
+@mixin font-size($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    }
+    @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}
+
+@mixin bigLetters-offset($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      margin-right: $fs-font-size;
+    }
+    @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        margin-right: $fs-font-size;
+      }
+    }
+  }
+}
+
+$virtues-title-font-sizes: (
+  null: 20px,
+  668px: 28px,
+  1024px: 26px,
+  1280px: 30px,
+  1440px: 34px,
+  1600px: 40px,
+);
+
+$virtues-description-font-sizes: (
+  null: 16px,
+  668px: 20px,
+  1024px: 20px,
+  1440px: 22px,
+  1600px: 24px,
+);
+
+$bigLetters-offset: (
+  null: 6vw,
+  1024px: 10vw,
+  1440px: 16vw,
+);
+
+.aboutWrapper {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.aboutUsBig {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 130%;
+  color: #171718;
+  z-index: 1;
+  margin: 0 0 16vh 60px;
+  @include bigLetters-offset($bigLetters-offset);
+
+  span {
+    display: block;
+
+    &:last-child {
+      background: url(/images/icons/US1.svg) no-repeat center;
+      background-size: contain;
+      width: 120px;
+      height: 84px;
+      margin: 5px 0 0 1px;
+    }
+  }
+}
+
+.virtuesWrapper {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1260px;
+  margin: 12vh 0 0;
+  z-index: 1;
+}
+
+.virtuesTitle {
+  font-family: 'Raleway' !important;
+  font-weight: bold;
+  line-height: 130%;
+  color: #000000;
+  margin: 0 0 10px;
+  @include font-size($virtues-title-font-sizes);
+}
+
+.virtuesDescription {
+  font-weight: normal;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: #828282;
+  @include font-size($virtues-description-font-sizes);
+  display: flex;
+  flex-direction: column;
+}
+
+.virtuesItem {
+  flex: 0 0 50%;
+  min-height: 200px;
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+  .virtuesWrapper {
+    padding-right: 30px;
+  }
+
+  .virtuesItem {
+    min-height: unset;
+    margin-bottom: 20px;
+    flex: 0 0 100%;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .aboutWrapper {
+    background-color: #333;
+    background-image: linear-gradient( rgba(255,255,255,.1), transparent 1px), linear-gradient( 90deg, rgba(255,255,255,.1), transparent 1px);
+    background-size: 15px 15px;
+    background-position: center center;
+    flex-flow: column nowrap;
+    overflow: visible;
+    height: auto;
+    padding: 65px 15px;
+    align-items: flex-start;
+  }
+
+  .aboutUsBig {
+    font-size: 26px;
+    color: #FFFFFF;
+    margin: 0 0 40px;
+    text-align: left;
+
+    span {
+      display: inline;
+
+      &:last-child {
+        display: inline-block;
+        width: 43px;
+        height: 30px;
+        margin: 0 0 0 10px;
+      }
+    }
+  }
+
+  .virtuesWrapper {
+    margin: 0;
+    flex-flow: column nowrap;
+    padding: 0 0 0 50px;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 1px;
+      position: absolute;
+      background: #EFE314;
+      top: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  .virtuesItem {
+    margin-bottom: 30px;
+
+    &:nth-child(even) {
+      margin-left: 50px;
+    }
+  }
+
+  .virtuesTitle {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 130%;
+    color: #FFFFFF;
+  }
+
+  .virtuesDescription {
+    font-size: 14px;
+    color: #828282;
+  }
+
+  .gradient-horizontal,
+  .gradient-vertical {
+      display: none;
+  }
+}
+
+@media (max-height: 720px) {
+  .virtuesItem {
+    min-height: 130px;
+  }
+  .virtuesTitle {
+    font-size: 30px;
+  }
+  .virtuesDescription {
+    font-size: 20px;
+  }
+}

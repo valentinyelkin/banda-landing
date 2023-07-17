@@ -1,0 +1,64 @@
+@import '../../../../../assets/scss/breakPoints.scss';
+
+.openedMobileWrapper {
+  display: none;
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+  .openedMobileWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    background-image: linear-gradient(rgba(23, 23, 24, 0.1), transparent 1px),
+      linear-gradient(90deg, rgba(23, 23, 24, 0.1), transparent 1px);
+    background-size: 15px 15px;
+    background-position: center center;
+    z-index: -1;
+    overflow: auto;
+    padding-bottom: 28px;
+    display: flex;
+    flex-flow: column nowrap;
+    transform: translateY(-100%);
+  }
+
+  .mailBtn {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    letter-spacing: 0.03em;
+    color: #efe314 !important;
+    width: 294px;
+    height: 65px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    line-height: 65px;
+    margin: 20px auto 0;
+    background: #333;
+  }
+
+  .slideUp {
+    transform: translateY(0);
+    animation: slideUp 0.3s ease-in forwards;
+  }
+
+  .slideDown {
+    transform: translateY(-100%);
+    animation: slideDown 0.3s ease-in forwards;
+  }
+}
+
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(-100%);
+  }
+}

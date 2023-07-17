@@ -1,0 +1,103 @@
+@import '../../../../../../../assets/scss/breakPoints';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    margin-bottom: 27px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    margin-bottom: 0;
+  }
+}
+
+.img {
+  position: relative;
+  width: 300px;
+  height: 200px;
+
+  @media only screen and (max-width: $breakpoint-1680) {
+    width: 200px;
+    height: 160px;
+  }
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    width: 160px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 180px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet-768) {
+    width: 190px;
+    height: 150px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 134px;
+    height: 110px;
+  }
+
+  @media only screen and (max-width: $breakpoint-375) {
+    height: 100px;
+  }
+}
+
+.imgPhp {
+  width: 360px;
+  height: 200px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    width: 260px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 220px;
+    height: 160px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 166px;
+    height: 104px;
+  }
+}
+
+.imgBootstrap,
+.imgReact {
+  @media only screen and (max-width: $breakpoint-laptop) {
+    width: 173px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 196px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 140px;
+    height: 110px;
+  }
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: #250B4A;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}

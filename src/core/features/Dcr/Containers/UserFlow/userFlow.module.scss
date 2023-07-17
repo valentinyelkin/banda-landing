@@ -1,0 +1,101 @@
+.dcrUserFlow {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  & > img {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+.dcrUserFlowBack {
+  background: #131516;
+}
+
+.dcrUserFlowWrapper {
+  max-width: 1480px;
+  padding: 0 20px;
+  margin: 0 auto;
+  position: relative;
+
+  h2 {
+    font-weight: bold;
+    font-size: 90px;
+    line-height: 130%;
+    color: #fff;
+    margin-bottom: 25px;
+
+    &:first-letter {
+      color: #ECE014;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: 0.01em;
+    color: #E0E0E0;
+    max-width: 700px;
+    font-family: 'Open Sans', sans-serif;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.dcrUserFlowText {
+  margin-bottom: 140px;
+  position: relative;
+}
+
+.dcrUserFlowImage {
+  img {
+    margin: 0 auto;
+  }
+}
+
+.dcrUserFlowItinerary {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.dcrUserFlowMap {
+  position: absolute;
+  top: 30%;
+  right: 0;
+}
+
+@media only screen and (max-width: 669px) {
+  .dcrUserFlowWrapper {
+    padding: 40px 15px 0;
+
+    h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 14px;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .dcrUserFlowText {
+    margin-bottom: 35px;
+  }
+
+  .dcrUserFlowMap {
+    top: 0;
+  }
+}

@@ -1,0 +1,217 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 304px 60px 0 60px;
+  background-image: url(/images/projects/SpaceBooking/functionality/bg.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    background-image: url(/images/projects/SpaceBooking/functionality/bg_laptop.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 255px 40px 0 40px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    background-image: url(/images/projects/SpaceBooking/functionality/bg_top_t.svg);
+    background-repeat: no-repeat;
+    background-position: 105% 39%;
+    padding: 213px 30px 0 30px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    background-image: url(/images/projects/SpaceBooking/functionality/bg_m.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 141px 15px 0 15px;
+    opacity: 0.99;
+  }
+}
+
+.wrapperFirst {
+  display: flex;
+  gap: 40px;
+  padding-top: 64px;
+  width: 100%;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    margin-left: -34px;
+    gap: 47px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    flex-direction: column-reverse;
+    width: 100%;
+    margin-left: 0;
+    padding-top: 38px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    padding-top: 32px;
+    width: 400px;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    width: 339px;
+  }
+
+  .img {
+    width: 62%;
+    z-index: 1;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      width: 70%;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+
+  .list {
+    display: flex;
+    align-items: center;
+    width: 794px;
+    margin-top: 25px;
+    position: relative;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      width: 518px;
+      margin-top: 11px;
+      margin-left: -14px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 3px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      width: 96%;
+      margin-top: 1px;
+    }
+  }
+}
+
+.imgTablet {
+  display: none;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    display: block;
+    width: 110%;
+    position: relative;
+    left: -28px;
+    bottom: 76px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    display: none;
+  }
+}
+
+.imgMobile {
+  display: none;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    display: block;
+    position: relative;
+    width: 108%;
+    top: -54px;
+    left: 14px;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    left: -14px;
+    top: -49px;
+  }
+}
+
+.wrapperSecond {
+  display: flex;
+  width: 100%;
+  margin-left: 7px;
+  position: relative;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    margin-left: 0;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    min-height: 862px;
+    background-image: url(/images/projects/SpaceBooking/functionality/bg_bottom_t.svg);
+    background-repeat: no-repeat;
+    background-position: -200% 198px;
+    background-size: 661px 661px;
+    flex-direction: column;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 100%;
+    margin-top: 17px;
+  }
+
+  .secondList {
+    display: flex;
+    align-items: center;
+    width: 44%;
+    margin-top: 31px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      margin-top: 18px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      width: 95%;
+      margin-top: -94px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      margin-top: -13px;
+    }
+  }
+
+  .imgSecond {
+    width: 64%;
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+}
+
+.imgSecondTablet {
+  display: none;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    display: block;
+    width: 110%;
+    left: -31px;
+    bottom: 38px;
+    position: relative;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    display: none;
+  }
+}
+
+.imgSecondMobile {
+  display: none;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    background-image: url(/images/projects/SpaceBooking/functionality/line_bottom_m.svg);
+    background-repeat: no-repeat;
+    background-position: -13px 457px;
+    display: block;
+    position: relative;
+    width: 120%;
+    top: 16px;
+    left: -16px;
+    z-index: -1;
+  }
+}

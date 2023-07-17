@@ -1,0 +1,58 @@
+@import '../../../../../assets/scss/breakPoints.scss';
+
+.customArrow {
+    position: absolute;
+    bottom: 0;
+    background: transparent;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    &:active {
+        svg,
+        path {
+            fill: #5F7723;
+        }
+    }
+
+}
+
+.arrowRight {
+    transform: translateX(100%);
+    right: calc(50% - 84px / 2 - 38px);
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        right: 0;
+        transform: translateX(0);
+    }
+
+    svg {
+        transform: rotate(180deg);
+    }
+}
+
+.arrowLeft {
+    transform: translateX(-100%);
+    left: calc(50% - 84px / 2 - 38px);
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        left: 0;
+        transform: translateX(0);
+    }
+}
+
+.disabled {
+    svg,
+    path {
+        fill: #A3A3A3;
+    }
+
+    &:active {
+        svg,
+        path {
+            fill: #A3A3A3;
+        }
+    }
+}

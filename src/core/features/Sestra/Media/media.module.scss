@@ -1,0 +1,64 @@
+@import '../../../../assets/scss/breakPoints.scss';
+
+.mediaWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 20px solid #FFFFFF;
+    border-bottom: 20px solid #FFFFFF;
+    filter: drop-shadow(4px 4px 30px rgba(117, 119, 113, 0.1));
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+        border-top: 15px solid #FFFFFF;
+        border-bottom: 15px solid #FFFFFF;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+        border-top: 10px solid #FFFFFF;
+        border-bottom: 10px solid #FFFFFF;
+    }
+}
+
+.leftMedia {
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-right: 20px solid #FFFFFF;
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+        border-right: 15px solid #FFFFFF;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-right: 10px solid #FFFFFF;
+    }
+}
+
+.rightMedia {
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-left: 20px solid #FFFFFF;
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+        border-left: 15px solid #FFFFFF;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border-left: 10px solid #FFFFFF;
+    }
+}
+
+.fullyBordered {
+    border-radius: 16px;
+    border: 20px solid #FFFFFF;
+}

@@ -1,0 +1,203 @@
+@import "../../../../assets/scss/imgRender.scss";
+
+.arxonasMain {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+
+  img, .mainBg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    @include imgRender;
+  }
+
+  .arxonasNameMobile {
+    display: none;
+    transform: translateY(-60%);
+    margin-right: 0;
+  }
+
+  .mainMobileBg {
+    display: none;
+  }
+
+  * {
+    font-family: Roboto, sans-serif;
+  }
+}
+
+.arxonasMainWrapper {
+  position: absolute;
+  top: 140px;
+  right: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.arxonasMainInfo {
+  max-width: 500px;
+  margin: 50px 6vw 0 30px;
+
+  img {
+    margin: 0 auto 30px;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: 0.03em;
+    color: #FFF;
+    text-align: center;
+    margin: 30px auto 45px;
+  }
+
+  p {
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFF;
+  }
+}
+
+.arxonasDevices {
+  position: relative;
+  margin: 0 100px 0 auto;
+  max-width: 1050px;
+}
+
+.arxonasName {
+  transform: translateY(-70%);
+  margin: 0 0 0 auto;
+  width: 41vw;
+  max-width: 880px !important;
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1520px) {
+  .arxonasMain {
+    .arxonasMainInfo {
+      p {
+        line-height: 36px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 669px) and (max-width: 1280px) {
+  .arxonasMainWrapper {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    width: 100%;
+
+    .arxonasMainInfo {
+      margin: 0 auto 200px;
+      max-width: 100%;
+      padding: 0 40px;
+    }
+
+    .arxonasMainImages {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 668px) {
+  .arxonasMain {
+    .arxonasMainInfo {
+      h1 {
+        margin-top: 40px;
+        font-size: 32px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 34px;
+        padding: 0 20px;
+        margin-top: 40px;
+      }
+
+      & img:first-child {
+        width: 80px;
+        height: 80px;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .arxonasMain {
+    .mainBg {
+      display: none;
+    }
+
+    .mainMobileBg {
+      width: 100%;
+      display: block;
+    }
+
+    .arxonasName {
+      display: none;
+    }
+
+    .arxonasNameMobile {
+      display: block;
+    }
+  }
+
+  .arxonasMobileBg {
+    display: block;
+    position: absolute;
+    width: 100%;
+  }
+
+  .arxonasMainWrapper {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    top: 95px;
+    width: 100%;
+  }
+
+  .arxonasMainInfo {
+    margin: 0;
+    max-width: 100%;
+
+    h1 {
+      font-size: 26px;
+      line-height: 30px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+    }
+
+    p {
+      margin: 0 15px;
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    img:first-child {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .arxonasMainImages {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 100%;
+
+    img:first-child {
+      width: 90%;
+      margin-right: 0;
+    }
+
+    img:last-child {
+      width: 50%;
+      margin-left: -10px;
+    }
+  }
+}

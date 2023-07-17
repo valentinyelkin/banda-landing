@@ -1,0 +1,119 @@
+@import "../../../../../assets/scss/imgRender.scss";
+
+.keepersFooter {
+  position: relative;
+  margin: -200px auto 0;
+  max-width: 1920px;
+
+  img {
+    display: block;
+    max-width: 100%;
+    @include imgRender;
+  }
+
+  * {
+    font-family: Roboto, sans-serif;
+  }
+}
+
+.keepersFooterContent {
+  max-width: 28%;
+  position: absolute;
+  top: 30%;
+  right: 15%;
+  z-index: 1;
+
+  h2 {
+    font-weight: 500;
+    font-size: 65px;
+    line-height: 84px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 25px;
+    line-height: 40px;
+    color: #FFFFFF;
+
+    a {
+      color: #FFFFFF;
+    }
+  }
+}
+
+.keepersFooterDecor {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media only screen and (max-width: 1500px) {
+  .keepersFooterContent {
+    h2 {
+      margin-bottom: 10px;
+      font-size: 45px;
+      line-height: 64px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .keepersFooterContent {
+    top: 22%;
+    max-width: 36%;
+    right: 10%;
+
+    p {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .keepersFooter {
+    margin: 0 auto;
+
+    img {
+      max-width: none;
+      width: 100%;
+    }
+  }
+
+  .keepersFooterDecor {
+    display: none!important;
+  }
+
+  .keepersFooterContent {
+    position: static;
+    width: 100%;
+    max-width: none;
+    padding: 0 20px;
+    margin: 100px auto 15px;
+
+    h2 {
+      color: #1A1C1E;
+      font-size: 32px;
+      line-height: 35px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0.5px;
+      color: #1A1C1E;
+
+      a {
+        color: #1A1C1E;
+      }
+    }
+  }
+}
+

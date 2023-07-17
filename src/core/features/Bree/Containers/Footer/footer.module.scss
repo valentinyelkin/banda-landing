@@ -1,0 +1,191 @@
+@import '../../../../../assets/scss/breakPoints.scss';
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  background: url(/images/projects/Bree/background_footer.svg) center / cover no-repeat;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    margin-top: -760px;
+  }
+
+  @media screen and (max-width: $breakpoint-tablet-768) {
+    background: url(/images/projects/Bree/background_footer_tablet.svg) top / cover no-repeat;
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    margin-top: -700px;
+    height: 100vh;
+  }
+
+  @media screen and (max-width: $breakpoint-425) {
+    margin-top: -390px;
+  }
+
+  @media screen and (max-width: $breakpoint-375) {
+    background: url(/images/projects/Bree/background_footer_375.svg) center / cover no-repeat;
+  }
+}
+
+.wrapperText {
+  padding: 220px 0 50px 60px;
+
+  @media screen and (max-width: $breakpoint-laptop) {
+    padding: 160px 0 50px 40px;
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    padding: 220px 30px 50px 30px;
+  }
+
+  @media screen and (max-width: $breakpoint-tablet-768) {
+    padding: 220px 30px 50px 29px;
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    padding: 160px 15px 20px 15px;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 86px;
+    color: #FFFFFF;
+    padding-bottom: 30px;
+
+    @media screen and (max-width: $breakpoint-laptop) {
+      font-size: 48px;
+      line-height: 56px;
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      width: 67%;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 36px;
+    }
+
+    @media screen and (max-width: $breakpoint-480) {
+      width: 85%;
+    }
+
+    @media screen and (max-width: $breakpoint-425) {
+      width: 94%;
+      padding-bottom: 20px;
+    }
+  }
+
+  .contact {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 44px;
+    color: #FFFFFF;
+
+    @media screen and (max-width: $breakpoint-laptop) {
+      font-size: 24px;
+      line-height: 40px;
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+}
+
+.containerLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    height: 58%;
+  }
+
+  @media screen and (max-width: $breakpoint-320) {
+    height: 54%;
+  }
+}
+
+.wrapperLink {
+  display: flex;
+  padding: 0 0 192px 60px;
+
+  @media screen and (max-width: $breakpoint-laptop) {
+    padding: 0 0 144px 40px;
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: $breakpoint-tablet-768) {
+    padding: 0 0 324px 30px;
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    padding: 0 0 20px 0;
+    margin: 20px auto 0;
+  }
+}
+
+.nameLinkDisabled,
+.nameLink {
+  width: 520px;
+  height: 92px;
+  background: linear-gradient(54.12deg, #EE9820 14.48%, #F1AD4D 86.37%);
+  box-shadow: 3px 7px 30px rgba(241, 173, 77, 0.5);
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #054155;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 44px;
+  text-decoration: none;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 345px;
+    height: 76px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  @media screen and (max-width: $breakpoint-320) {
+    width: 290px;
+  }
+
+  &:hover {
+    color: #FFFFFF;
+  }
+}
+
+.nameLinkDisabled {
+  color: #4F4F4F;
+  background: #BDBDBD;
+  box-shadow: none;
+}
+
+.wrapperSocialList {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 60px 60px;
+
+  @media screen and (max-width: $breakpoint-laptop) {
+    padding: 0 0 60px 40px;
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    padding: 0 40px 60px 34px;
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    padding: 0 45px 0 70px;
+    margin-bottom: 69px;
+    justify-content: center;
+  }
+}

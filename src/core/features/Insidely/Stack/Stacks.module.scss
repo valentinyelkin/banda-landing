@@ -1,0 +1,156 @@
+@import '../../../../assets/scss/breakPoints';
+
+.wrapper {
+  background: #FBFBFB;
+  border-radius: 0 400px 400px 400px;
+  padding: 80px 300px;
+  display: grid;
+  justify-content: center;
+}
+
+.stacks {
+  width: 1320px;
+  max-width: 1320px;
+
+  ul {
+    column-gap: 30px;
+  }
+
+  button{
+    bottom: -4px;
+  }
+}
+
+.item {
+  width: 240px !important;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+}
+
+.stack {
+  width: 240px;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  flex-shrink: 0;
+
+  border-radius: 120px 120px 0 120px;
+  gap: 16px;
+  color: #FFFFFF;
+
+  img {
+    width: max-content !important;
+    height: 120px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-1680) {
+  .wrapper {
+    border-radius: 0 120px 120px 120px;
+    padding: 60px 40px;
+  }
+
+  .stacks {
+    margin-top: 48px;
+    gap: 20px;
+  }
+}
+
+
+@media only screen and (max-width: $breakpoint-laptop) {
+  .stacks {
+    width: 1280px;
+    max-width: 1280px;
+    padding-bottom: 40px;
+
+    ul {
+      column-gap: 20px;
+    }
+  }
+  .item {
+    div {
+      row-gap: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-1280) {
+  .wrapper {
+    padding: 40px 15px;
+    border-radius: 0 80px 80px 80px;
+  }
+  .stacks {
+    width: 1024px;
+    max-width: 1024px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-1170) {
+  .stacks {
+    width: 768px;
+    max-width: 768px;
+    column-gap: 20px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-tablet-768) {
+  .stacks {
+    width: 740px;
+    max-width: 740px;
+    column-gap: 20px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-740) {
+  .stacks {
+    width: 600px;
+    max-width: 600px;
+    column-gap: 20px;
+  }
+
+  .item {
+    width: 200px !important;
+  }
+
+  .stack {
+    width: 200px;
+    height: 200px;
+
+    img {
+      width: max-content !important;
+      height: 60px !important;
+    }
+  }
+}
+@media only screen and (max-width: $breakpoint-480) {
+  .stacks {
+    width: 342px;
+    max-width: 342px;
+  }
+
+  .item {
+    width: 150px !important;
+  }
+
+  .stack {
+    width: 150px;
+    height: 150px;
+
+    img {
+      width: max-content !important;
+      height: 60px !important;
+    }
+  }
+}
+

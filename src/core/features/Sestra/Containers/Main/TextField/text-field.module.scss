@@ -1,0 +1,28 @@
+@import '../../../../../../assets/scss/breakPoints.scss';
+
+.textField {
+    font-family: "Lato";
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    color: #FFFFFF;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        width: 217px;
+        text-align: right;
+        bottom: -10px;
+    } 
+
+    @media only screen and (max-width: $breakpoint-375) {
+        bottom: -58%;
+        transform: translateY(-50%);
+    } 
+}

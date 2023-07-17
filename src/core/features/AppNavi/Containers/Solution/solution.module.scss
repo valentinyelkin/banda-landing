@@ -1,0 +1,70 @@
+.solutionWrapper {
+  padding: 0 60px 30px;
+  margin: -330px auto 120px;
+  position: relative;
+  max-width: 1920px;
+}
+
+.solutionContainer {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  position: relative;
+}
+
+.solutionSubtitle {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.appNaviSolutionSubtitle {
+  width: 45%;
+}
+
+@media only screen and (max-width: 1260px) {
+  .solutionWrapper {
+    margin: -250px auto 120px;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .solutionWrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .solutionWrapper {
+    margin: -130px auto 120px;
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .solutionWrapper {
+    margin: -45px auto 40px;
+    padding: 0 30px;
+  }
+  .solutionSubtitle {
+    flex-direction: column;
+  }
+  .appNaviSolutionSubtitle {
+    width: 100%;
+  }
+  .solutionContent {
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 455px) {
+  .solutionSubtitle {
+    flex-direction: column;
+  }
+  .appNaviSolutionSubtitle {
+    width: 100%;
+  }
+  .solutionWrapper {
+    margin: -45px auto 40px;
+    padding: 0 15px;
+  }
+}

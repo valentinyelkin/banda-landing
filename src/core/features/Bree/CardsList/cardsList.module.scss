@@ -1,0 +1,25 @@
+@import '../../../../assets/scss/breakPoints';
+
+.customDotList {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    bottom: 43px;
+    left: 48%;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    bottom: 38px;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    bottom: 15px;
+  }
+
+  @media only screen and (max-width: $breakpoint-375) {
+    bottom: 11px;
+  }
+}

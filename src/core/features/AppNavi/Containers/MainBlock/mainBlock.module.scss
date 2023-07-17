@@ -1,0 +1,319 @@
+.appNaviMain {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  .mainContent {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.mainFigure {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+
+.mainTransparentLogo {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10vh);
+  width: 70vw;
+  z-index: -2;
+  max-width: 1200px;
+}
+
+.appNaviMainLeft {
+  margin: 0 0 0 9vw;
+
+  .title {
+    opacity: 0;
+    margin-top: -18px;
+  }
+
+  .naviLogoWrapper {
+    margin: 0 0 10vh;
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 80px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+  }
+}
+
+.appNaviMainRight {
+  position: relative;
+  max-width: 60vw;
+  margin-bottom: 185px;
+  height: 100%;
+  width: 100%;
+
+  img {
+    display: block;
+  }
+}
+
+.appNaviH2 {
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 130%;
+  color: #171718;
+  margin: 0 0 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.appNaviParagraph {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 170%;
+  letter-spacing: 0.03em;
+  color: #4f4f4f;
+}
+
+.blueText {
+  color: #04d5d9;
+}
+
+.appNaviQuote {
+  font-size: 24px;
+  line-height: 150%;
+  color: #696363;
+  border: 1px solid #04d5d9;
+  padding: 30px 45px;
+  display: block;
+  margin: 25px 0 0;
+  border-radius: 8px;
+}
+
+.mb30 {
+  margin-bottom: 30px;
+}
+
+.appNaviH3 {
+  font-size: 40px;
+  line-height: 150%;
+  text-align: center;
+  color: #828282;
+  font-weight: normal;
+}
+
+.appNaviBlockquote {
+  width: 100%;
+  padding: 90px 90px 50px 100px;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 170%;
+  letter-spacing: 0.03em;
+  color: #4f4f4f;
+  position: relative;
+  background: #fff;
+  border-radius: 32px;
+  margin: 80px auto 0;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, #5edabb -137.04%, #04d5d9 203.7%);
+    border-radius: 32px;
+    margin: -3px;
+  }
+
+  &:after {
+    content: "";
+    width: 82px;
+    height: 100px;
+    display: block;
+    background: url(/images/projects/AppNavi/quotes.jpg);
+    position: absolute;
+    top: -5px;
+    left: -37px;
+  }
+
+  em {
+    max-width: 750px;
+    display: block;
+  }
+
+  cite {
+    display: table;
+    margin: 0 0 0 auto;
+    font-style: normal;
+    color: #000;
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+  .appNaviMainLeft {
+    margin: 0 0 0 150px;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .appNaviMainLeft {
+    margin: 10vw 0 0 5vw;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .appNaviMainLeft {
+    .naviLogoWrapper {
+      margin-bottom: 50px;
+
+      img {
+        display: block;
+        max-width: 200px;
+      }
+    }
+
+    p {
+      font-size: 44px;
+      line-height: 60px;
+    }
+  }
+
+  .appNaviH2 {
+    font-size: 52px;
+  }
+
+  .appNaviParagraph {
+    font-size: 18px;
+    line-height: 150%;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .appNaviMainRight {
+    margin-top: -55px;
+  }
+
+  .appNaviMainLeft {
+    .naviLogoWrapper {
+      margin-bottom: 40px;
+
+      img {
+        display: block;
+        max-width: 200px;
+      }
+    }
+
+    p {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+
+  .appNaviH2 {
+    font-size: 38px;
+  }
+
+  .appNaviH3 {
+    font-size: 32px;
+  }
+
+  .appNaviBlockquote {
+    cite {
+      margin: 10px 0 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .mainContent {
+    flex-flow: column-reverse;
+    align-items: flex-start;
+  }
+
+  .appNaviMainLeft {
+    margin: 0;
+    padding: 0 15px;
+  }
+
+  .appNaviMainLeft {
+    .naviLogoWrapper {
+      img {
+        max-width: 170px;
+      }
+    }
+  }
+
+  .appNaviMainLeft {
+    p {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  .mainContent {
+    > div {
+      width: 100%;
+      margin: 0;
+    }
+
+    .appNaviMainRight {
+      margin-top: -55px;
+      margin-bottom: 0;
+    }
+  }
+
+  .appNaviMainRight {
+    max-width: 100%;
+  }
+
+  .mainFigure {
+    height: 145%;
+    object-fit: cover;
+  }
+
+  .appNaviH2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  .appNaviParagraph {
+    font-size: 14px;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  .appNaviBlockquote {
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 14px;
+    line-height: 150%;
+    margin: 50px auto 0;
+
+    &:before {
+      border-radius: 8px;
+    }
+
+    &:after {
+      top: -16px;
+      left: -6px;
+      width: 32px;
+      height: 32px;
+      background-size: cover;
+    }
+  }
+
+  .appNaviH3 {
+    font-size: 14px;
+    line-height: 150%;
+  }
+}

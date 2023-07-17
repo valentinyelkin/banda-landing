@@ -1,0 +1,95 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 67px 60px 0 60px;
+  background-image: url(/images/projects/SpaceBooking/testimonials/bg.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 240px;
+  min-height: 1273px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    background-image: url(/images/projects/SpaceBooking/testimonials/bg_l.svg);
+    background-repeat: no-repeat;
+    background-position: 100% 320px;
+    padding: 86px 40px 0 40px;
+    min-height: 1124px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    background-image: none;
+    min-height: 100%;
+    padding: 0;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    background-image: url(/images/projects/SpaceBooking/testimonials/bg_m.svg);
+    background-repeat: no-repeat;
+    background-position: 100% 215px;
+    padding: 169px 0 0 0;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    padding: 169px 0 0 0;
+  }
+}
+
+.wrapperCards {
+  padding-top: 64px;
+  position: relative;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    padding-top: 0;
+    margin-top: -29px;
+    height: 700px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    height: 1137px;
+    margin-top: -43px;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    height: unset;
+    margin-top: 40px;
+  }
+}
+
+.customDotList {
+  bottom: 22px;
+  left: -4%;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    bottom: 20px;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    height: 10%;
+    align-items: center;
+    bottom: -43px;
+    margin: 15px;
+  }
+}
+
+.customContainerClass {
+  position: relative;
+  height: 600px;
+  width: 100%;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    padding-left: 15px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    padding-left: 0;
+    height: 1100px;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    height: unset;
+    padding-bottom: 96px;
+  }
+}
+

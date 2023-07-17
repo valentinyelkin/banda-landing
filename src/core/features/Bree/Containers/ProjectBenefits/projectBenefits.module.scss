@@ -1,0 +1,94 @@
+@import "../../../../../assets/scss/breakPoints";
+
+.container {
+  max-width: 1920px;
+  height: 878px;
+  position: relative;
+  padding-top: 204px;
+  background: url(/images/projects/Bree/background_project_benefits.svg) bottom / cover no-repeat;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    background: url(/images/projects/Bree/background_project_benefits_laptop.svg) top / cover no-repeat;
+    padding-top: 136px;
+    height: 686px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    margin-top: -580px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet-768) {
+    padding-top: 153px;
+    background: url(/images/projects/Bree/background_project_benefits_tablet.svg) no-repeat;
+    height: 846px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    height: 1200px;
+    padding-top: 114px;
+    margin-top: -500px;
+    margin-bottom: 100px;
+    background: url(/images/projects/Bree/background_project_benefits_mobile.svg) top / cover no-repeat;
+  }
+
+  @media only screen and (max-width: $breakpoint-480) {
+    height: 1120px;
+    margin-top: 35px;
+    padding-top: 91px;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    margin-top: 170px;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 86px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-bottom: 80px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      font-size: 48px;
+      line-height: 56px;
+      padding: 18px 12px 56px 0;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      padding: 17px 13px 56px 0;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      font-size: 40px;
+      line-height: 48px;
+      padding-bottom: 48px;
+    }
+  }
+
+  .wrapperOnline {
+    margin: 0 80px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      margin: 0 30px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      margin: 0 20px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      margin: 32px 0 32px 0;
+    }
+  }
+}
+
+.wrapperCards {
+  display: flex;
+  justify-content: center;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    align-items: center;
+    flex-direction: column;
+  }
+}

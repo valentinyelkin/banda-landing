@@ -1,0 +1,61 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  .wrapper {
+    display: flex;
+    position: relative;
+    height: 788px;
+    overflow: hidden;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      height: 643px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      height: 830px;
+    }
+
+    @media only screen and (max-width: $breakpoint-ipad) {
+      height: 702px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      height: 1765px;
+    }
+
+    @media only screen and (max-width: $breakpoint-480) {
+      height: 1482px;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+      height: 1209px;
+    }
+  }
+}
+
+.wrapperList {
+  display: flex;
+  flex-direction: column;
+  padding: 43px 141px 0 123px;
+  width: 100%;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    padding: 40px 0 0 69px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    padding: 37px 0 0 51px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    padding: 37px 13px 0 23px;
+  }
+}
+
+.wrapperMobile {
+  display: flex;
+}

@@ -1,0 +1,375 @@
+@import '../../../assets/scss/breakPoints.scss';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+
+.headerStyles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: rgba(23, 23, 24, 0.25);
+
+  .logoWrapper {
+    width: 41px;
+    height: 58px;
+    margin: 5px 0 0 60px;
+
+    .bigBlackLogo {
+      background: url(/images/logo-small-yellow.svg) no-repeat center;
+      background-size: contain;
+    }
+  }
+
+  .headerLeftPart {
+    .headerBtn {
+      height: 80px;
+      width: 180px;
+      padding: 0 30px;
+      margin-left: 100px;
+      div svg {
+        margin-left: 20px;
+      }
+      div span {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+
+    nav {
+      margin: unset;
+      ul li {
+        margin: unset;
+
+        &:not(:last-child) {
+          margin-right: 50px;
+        }
+
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.removeScrolling {
+  .header {
+    display: none;
+  }
+}
+
+.logoWrapper {
+  cursor: url(/images/cursors/hover.png), auto !important;
+  width: 200px;
+  height: 53px;
+  margin: 0 60px;
+}
+
+.bigBlackLogo {
+  background: url(/images/logo-black.svg) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.smallDarkHeader,
+.smallYellowHeader,
+.smallFullYellowHeader {
+  .logoWrapper {
+    width: 40px;
+    height: 58px;
+  }
+
+  .headerBtn {
+    font-size: 14px;
+    line-height: 16px;
+    height: 80px;
+    width: 180px;
+    justify-content: space-between;
+    padding: 16px 30px;
+  }
+}
+
+.smallDarkHeader {
+  .bigBlackLogo {
+    background: url(/images/logo-small-black.svg) no-repeat center;
+  }
+
+  a:not(.activeLink) {
+    color: #171718;
+
+    &:hover {
+      &:after {
+        background: #171718;
+      }
+    }
+  }
+}
+
+.smallYellowHeader {
+  .bigBlackLogo {
+    background: url(/images/logo-small-yellow.svg) no-repeat center;
+  }
+
+  .headerBtn {
+    background: #171718;
+    color: #fff;
+
+    svg {
+      transform: rotate(90deg);
+
+      path {
+        fill: #fff;
+      }
+    }
+
+    &:before {
+      background: #171718;
+    }
+  }
+}
+
+.smallFullYellowHeader {
+  .bigBlackLogo {
+    background: url(/images/logo-small-yellow.svg) no-repeat center;
+  }
+}
+
+.bigYellowHeader {
+  .bigBlackLogo {
+    background: url(/images/logo-yellow.svg) no-repeat center;
+    background-size: contain;
+  }
+
+  a:not(.activeLink) {
+    color: #171718;
+
+    &:hover {
+      &:after {
+        background: #171718;
+      }
+    }
+  }
+}
+
+.blogHeader {
+  a:not(.activeLink) {
+    color: #171718;
+
+    &:hover {
+      &:after {
+        background: #171718;
+      }
+    }
+  }
+}
+
+.headerLeftPart {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.headerBtn {
+  color: #171718;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  height: 140px;
+  width: 220px;
+  padding: 40px;
+  text-align: left;
+  transition: 1s;
+  position: relative;
+  background: #fff;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  * {
+    z-index: 1;
+    position: relative;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: #efe314;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    &:before {
+      left: 100%;
+    }
+  }
+
+  &:active {
+    color: #fff;
+    background: #171718;
+
+    &:before {
+      background: #171718;
+    }
+
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    display: block;
+    margin-left: 30px;
+    flex: 0 0 16px;
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.casesHeader,
+.headerCareer {
+  background: rgba(23, 23, 24, 0.25);
+
+  .bigBlackLogo {
+    background: url(/images/logo-yellow.svg) no-repeat center;
+    background-size: contain;
+  }
+}
+
+.casesHeader {
+  background: rgba(23, 23, 24, 0.75);
+}
+
+.smallCasesHeader {
+  background: rgba(23, 23, 24, 0.7);
+  .bigBlackLogo {
+    background: url(/images/logo-small-yellow.svg) no-repeat center;
+    background-size: contain;
+  }
+
+  .headerBtn {
+    font-size: 14px;
+    line-height: 16px;
+    height: 80px;
+    width: 180px;
+    justify-content: space-between;
+    padding: 16px 30px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-laptop) {
+  .headerBtn {
+    height: 90px;
+    padding: 10px 40px;
+    width: 180px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+  .headerLeftPart {
+    display: none;
+  }
+
+  .header {
+    padding: 10px 15px;
+  }
+
+  .headerStyles {
+    .logoWrapper {
+      margin: 0;
+
+      .bigBlackLogo {
+        width: 41px;
+      }
+    }
+  }
+
+  .logoWrapper {
+    margin: 0;
+    flex: 0 0 150px;
+  }
+
+  .headerBtn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .header {
+    padding: 10px 15px;
+
+    &:after {
+      content: '';
+      display: block;
+      background: rgba(23, 23, 24, 0.5);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .bigBlackLogo {
+      background: url(/images/logo-small-yellow.svg) no-repeat center;
+    }
+
+    &.openedMenuWrapper {
+      &:after {
+        background: transparent;
+      }
+
+      .bigBlackLogo {
+        background: url(/images/logo-small-black.svg) no-repeat center;
+      }
+    }
+  }
+
+  .logoWrapper {
+    width: 30px;
+    height: 40px;
+    margin: 0;
+    flex: 0 0 auto;
+  }
+
+  .headerLeftPart {
+    .headerBtn {
+      display: none;
+    }
+  }
+}

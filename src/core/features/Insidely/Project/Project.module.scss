@@ -1,0 +1,48 @@
+@import '../../../../assets/scss/breakPoints';
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+}
+
+.box {
+  width: 100%;
+  max-width: 733px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 64px;
+}
+
+@media only screen and (max-width: $breakpoint-laptop-1366) {
+  .wrapper {
+    gap: 80px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-laptop-1366) {
+  .box {
+    width: 100%;
+    max-width: 100%;
+    gap: 40px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-max-width) {
+  .wrapper {
+    gap: 30px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-tablet-768) {
+  .box {
+    grid-row: 1;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+  .box {
+    gap: 32px;
+  }
+}

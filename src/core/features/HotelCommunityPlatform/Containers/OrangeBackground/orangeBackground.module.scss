@@ -1,0 +1,43 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.bg {
+  position: absolute;
+  transform: translate(12%, -32%);
+}
+
+.bgChallenges {
+  width: 70%;
+  transform: translate(58%, 11%);
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    transform: translate(66%, 45%);
+  }
+}
+
+.bgTechStack {
+  transform: translate(49%, -1%);
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    transform: translate(30%, 150%);
+  }
+}
+
+.bgOptionalFeatures {
+  transform: translate(32%, -20%);
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    transform: translate(10%, -20%);
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    transform: translate(-22%, 0%);
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    transform: translate(-30%, 25%);
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    transform: translate(-30%, 135%);
+  }
+}

@@ -1,0 +1,226 @@
+@import "../../../../../assets/scss/breakPoints";
+
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 113px 0 300px 0;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    padding: 113px 0 150px 0;
+  }
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    padding: 113px 0 276px 0;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet-768) {
+    padding-bottom: 186px;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    padding-bottom: 80px;
+  }
+}
+
+.mainImg {
+  position: absolute;
+  width: 1010px;
+  height: 958px;
+  left: 0;
+  top: -27px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    width: 892px;
+    height: 859px;
+    top: -61px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    position: sticky;
+    width: 826px;
+    height: 806px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet-768) {
+    display: none;
+  }
+}
+
+.circleBackground {
+  position: absolute;
+  width: 752px;
+  height: 752px;
+  top: 0;
+  left: 10%;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    width: 700px;
+    height: 700px;
+    top: -8%;
+    left: 6%;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 600px;
+    height: 600px;
+    top: 39%;
+    left: 14%;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet-768) {
+    position: sticky;
+    left: 11%;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 500px;
+    height: 500px;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    position: relative;
+    width: 270px;
+    height: 270px;
+    top: 41px;
+    left: 15%;
+  }
+}
+
+.ringYellowTop {
+  position: absolute;
+  top: 9%;
+  right: 15%;
+  width: 120px;
+  height: 120px;
+
+  @media only screen and (max-width: $breakpoint-laptop-1366) {
+    top: -2%;
+    right: 14%;
+    width: 100px;
+    height: 100px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 95px;
+    height: 95px;
+    top: -5%;
+    right: 21%;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 30px;
+    height: 30px;
+    right: 18%;
+    top: -6%;
+  }
+}
+
+.ringYellowBottom {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  bottom: 7%;
+  right: 17%;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    width: 110px;
+    height: 110px;
+    bottom: 12%;
+    right: 19%;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    bottom: 12%;
+    right: 15%;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 40px;
+    height: 40px;
+    bottom: 21%;
+    right: 20%;
+  }
+}
+
+.wrapperImgMobile {
+  display: none;
+
+  @media only screen and (max-width: $breakpoint-tablet-768) {
+    display: block;
+    position: absolute;
+    width: 766px;
+    height: 780px;
+    left: 0;
+    bottom: 9px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 534px;
+    height: 605px;
+    left: 0;
+    bottom: 6%;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    width: 385px;
+    height: 477px;
+    left: -46px;
+    bottom: -10%;
+  }
+}
+
+.wrapperText {
+  padding-top: 95px;
+  width: 41%;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    width: 31%;
+  }
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    width: 37%;
+    padding-top: 67px;
+  }
+
+  @media only screen and (max-width: $breakpoint-laptop-1366) {
+    width: 33%;
+    padding-top: 0;
+    margin-top: -18px;
+  }
+
+  @media only screen and (max-width: $breakpoint-max-width) {
+    width: 31%;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 100%;
+    padding-left: 30px;
+    padding-top: 0;
+    margin-top: -68px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    padding-left: 15px;
+  }
+}
+
+.wrapperManagement {
+  padding: 0 0 40px 0;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    padding: 0 0 32px 0;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    padding: 45px 0 32px 0;
+  }
+}

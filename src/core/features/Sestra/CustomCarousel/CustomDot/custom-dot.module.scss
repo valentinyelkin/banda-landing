@@ -1,0 +1,16 @@
+.customDot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 0.5px solid #7F9E2F;
+    border-radius: 20px;
+}
+
+.active {
+    background: #9FC63B;
+    border: 0.5px solid #9FC63B;
+}
+
+.inactive {
+    background: #FFFFFF;
+}

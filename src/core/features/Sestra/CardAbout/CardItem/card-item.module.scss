@@ -1,0 +1,106 @@
+@import '../../../../../assets/scss/breakPoints.scss';
+
+.cardItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 12px;
+    align-items: center;
+
+    @media only screen and (max-width: $breakpoint-375) {
+        row-gap: 8px;
+    }
+}
+
+.itemIcon {
+    width: 100px;
+    height: 100px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+        width: 80px;
+        height: 80px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+.itemTitle {
+    font-family: 'Lato';
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    color: #404F18;
+    white-space: nowrap; 
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    
+    @media only screen and (max-width: $breakpoint-1170) {
+        white-space: unset;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+        white-space: nowrap;
+    }
+
+    @media only screen and (max-width: $breakpoint-740) {
+        white-space: unset;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+        white-space: nowrap;
+    }
+}
+
+.bigTitle {
+    color: #FFFFFF;
+    font-family: 'Nunito Sans';
+    font-weight: 900;
+    font-size: 120px;
+    line-height: 96px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 4px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+        font-size: 96px;
+        line-height: 96px;
+    }
+
+    @media only screen and (max-width: $breakpoint-480) {
+        font-size: 80px;
+        line-height: 80px;
+    }
+}
+
+.subTitle {
+    font-family: 'Lato';
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    text-transform: none;
+    letter-spacing: normal;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}

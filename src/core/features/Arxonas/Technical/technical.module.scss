@@ -1,0 +1,123 @@
+@import "../../../../assets/scss/imgRender.scss";
+
+.arxonasTechnical {
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  padding: 0 15px;
+
+  img {
+    max-width: 100%;
+    @include imgRender;
+  }
+
+  * {
+    font-family: Roboto, sans-serif;
+  }
+
+  .technicalBg, .technicalBgMobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+  }
+
+  .technicalBgMobile {
+    display: none;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 70px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FFF;
+    margin-bottom: 50px;
+    position: relative;
+    text-transform: uppercase;
+
+    &:after {
+      content: 'technical expertise used';
+      font-weight: bold;
+      font-size: 80px;
+      line-height: 100px;
+      letter-spacing: 0.03em;
+      color: #fff;
+      opacity: 0.1;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+  }
+}
+
+.arxonasTechnicalImg {
+  margin: 0 auto;
+  display: block;
+}
+
+.arxonasTechnicalSkillsImg {
+  padding: 0 15px;
+  margin: 0 auto;
+  display: none;
+}
+
+@media only screen and (min-width: 669px) and (max-width: 1280px) {
+  .arxonasTechnical {
+    padding-bottom: 0;
+
+    h2::after {
+      width: 95%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: clip;
+    }
+
+    .arxonasTechnicalSkillsImg {
+      display: block;
+      max-width: 80%;
+      margin: 100px auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .arxonasTechnical {
+    .technicalBg {
+      display: none;
+    }
+
+    .technicalBgMobile {
+      display: block;
+    }
+
+    h2 {
+      font-size: 26px;
+      line-height: 30px;
+      padding-top: 40px;
+
+      &::after {
+        width: 95%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: clip;
+        font-size: 44px;
+        line-height: 52px;
+      }
+    }
+  }
+
+  .arxonasTechnicalSkillsImg {
+    display: block;
+    margin-bottom: 55px;
+  }
+}

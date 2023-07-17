@@ -1,0 +1,61 @@
+@import '../../../../../../assets/scss/breakPoints.scss';
+
+.timelineGraph {
+    margin-left: 60px;
+    position: relative;
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+        margin-left: 40px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+        margin-left: 15px;
+    }
+}
+
+.graphLine {
+    position: absolute;
+    left: 0;
+    height: 2px;
+    right: -9999px;
+    background-color: #757575;
+    top: 0;
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+        top: calc(56px / 2);
+        width: 2px;
+        bottom: 0;
+        height: auto;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+        width: 1px;
+    }
+}
+
+.graphList {
+    padding-top: 51px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 60px;
+    column-gap: 30px;
+
+    @media only screen and (max-width: $breakpoint-laptop-1366) {
+        padding-right: 40px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+        flex-direction: column;
+        padding: 0 0 36px 60px;
+        height: 512px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+        padding: 0 0 36px 40px;
+    }
+
+    @media only screen and (max-width: $breakpoint-375) {
+        padding: 0 0 32px 40px;
+        height: 368px;
+    }
+}

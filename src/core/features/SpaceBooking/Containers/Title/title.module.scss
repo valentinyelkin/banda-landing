@@ -1,0 +1,207 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.titleTimeline,
+.titleBenefits,
+.titleAbout,
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 86px;
+  color: #4400A7;
+  position: relative;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    font-size: 64px;
+    line-height: 76px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-size: 40px;
+    line-height: 56px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    font-weight: 700;
+    font-size: 258px;
+    line-height: 100px;
+    top: -48px;
+    left: -120px;
+    color: #824DCE;
+    opacity: 0.07;
+    letter-spacing: 0.02em;
+    filter: blur(5px);
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      font-size: 213px;
+      line-height: 100px;
+      top: -57px;
+      left: -118px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      font-size: 179px;
+      line-height: 100px;
+      top: -29px;
+      left: -70px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      font-size: 133px;
+      line-height: 100px;
+      top: -44px;
+      left: -56px;
+    }
+  }
+}
+
+.titleAbout {
+  &:before {
+    content: 'About';
+  }
+}
+
+.titleBenefits {
+  &:before {
+    content: 'Benefits';
+  }
+}
+
+.titleTimeline {
+  &:before {
+    content: 'Timeline';
+  }
+}
+
+.titleChallenges {
+  &:before {
+    content: 'Solutions';
+  }
+}
+
+.titlePhaseTwo,
+.titlePhaseOne {
+  &:before {
+    content: 'Phase 1';
+    top: 17px;
+    left: -150px;
+    width: 150%;
+    font-size: 350px;
+    line-height: 125px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      top: 17px;
+      left: -150px;
+      width: 150%;
+      font-size: 300px;
+      line-height: 100px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      left: -190px;
+      width: 232%;
+      font-size: 219px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      top: -40px;
+      left: -69px;
+      font-size: 107px;
+    }
+  }
+}
+
+.titlePhaseOne {
+  @media only screen and (max-width: $breakpoint-tablet) {
+    text-align: center;
+
+    &:before {
+      text-align: left;
+    }
+  }
+}
+
+.titlePhaseTwo {
+  &:before {
+    content: 'Phase 2';
+    width: 250%;
+    top: -6px;
+    left: -363px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      left: -287px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      left: -148px;
+      top: -24px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      left: -33px;
+      top: -44px;
+    }
+  }
+}
+
+.titleFunctionality {
+  &:before {
+    content: 'Functionality';
+  }
+}
+
+.titleTechStack {
+  margin-left: 55px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    margin-left: 0;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 190%;
+    margin-left: 30px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 190%;
+    margin-left: 0;
+  }
+
+  &:before {
+    content: 'Tech stack';
+  }
+}
+
+.titleResults {
+  &:before {
+    content: 'Results';
+  }
+}
+
+.titleTestimonials {
+  @media only screen and (max-width: $breakpoint-tablet) {
+    padding: 12px 0 0 30px;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    padding-left: 15px;
+  }
+
+  &:before {
+    content: 'Testimonials';
+  }
+}
+
+.titleFeatures {
+  &:before {
+    content: 'Features';
+  }
+}
+
+.titleOptionalFeatures {
+  &:before {
+    content: 'Optional';
+  }
+}

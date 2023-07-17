@@ -1,0 +1,96 @@
+@import '../../../../../../../assets/scss/breakPoints';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 733px;
+  height: 100%;
+  margin-right: 30px;
+  justify-content: space-between;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    width: 699px;
+  }
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    width: 518px;
+  }
+
+  @media only screen and (max-width: $breakpoint-max-width) {
+    width: 447px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 464px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet-768) {
+    margin-right: 20px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 100%;
+  }
+
+
+  * {
+    font-family: 'Raleway', sans-serif;
+  }
+}
+
+.link {
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+  color: #171718;
+  margin-bottom: 10px;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+
+  &:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #EFE314;
+    margin-right: 15px;
+  }
+}
+
+.description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: #828282;
+  margin-bottom: 20px;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    color: #BDBDBD;
+  }
+}
+
+.img {
+  width: 100%;
+  border: 10px solid #4F4F4F;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    border: 7px solid #4F4F4F;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    border: 5px solid #4F4F4F;
+  }
+}
+

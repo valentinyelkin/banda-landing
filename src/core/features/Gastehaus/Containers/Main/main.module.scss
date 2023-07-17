@@ -1,0 +1,386 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.gastehausMain {
+  width: 100%;
+  background: #0c111f;
+  position: relative;
+  z-index: 1;
+  font-family: 'Raleway', sans-serif;
+  padding: 0 0 0 120px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    padding: 0 0 0 81px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    padding: 0 0 0;
+  }
+}
+
+.gastehausMainContainer {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    flex-direction: column-reverse;
+    min-height: 959px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    min-height: 463px;
+  }
+}
+
+.logoWrapper {
+  width: 100%;
+  display: flex;
+  margin-bottom: 49px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    margin-bottom: 37px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    z-index: 2;
+    margin-top: 14px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 90%;
+    position: relative;
+    top: -179px;
+    left: 89px;
+  }
+
+  @media only screen and (max-width: $breakpoint-480) {
+    left: 20px;
+  }
+
+  .bandaLogo {
+    position: relative;
+    width: 31%;
+    margin-right: 88px;
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      width: 62%;
+      margin-right: 70px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      margin-right: 40px;
+      width: 37%;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      width: 237px;
+      height: 34px;
+    }
+  }
+
+  .gastLogo {
+    width: 100%;
+  }
+}
+
+.containerScroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  margin-top: 205px;
+  position: relative;
+  left: -61px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    left: -30px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    display: none;
+  }
+
+  .line {
+    height: 483px;
+    width: 3px;
+    background: rgba(255, 255, 255, 0.6);
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      height: 383px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      height: 430px;
+    }
+  }
+
+  .lineText {
+    margin-top: 58px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba(255, 255, 255, 0.7);
+    transform: rotate(90deg);
+  }
+
+  .scrollBtn {
+    margin-top: 36px;
+  }
+}
+
+.gastehausMainWrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 156px;
+  position: relative;
+  margin-right: 103px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    margin-right: 36px;
+    margin-left: 12px;
+    padding-top: 161px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    padding: 0 30px;
+    position: relative;
+    bottom: -76px;
+    margin: 0;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -36px;
+      left: -12px;
+      width: 56%;
+      height: 500px;
+      border-top-left-radius: 60px;
+      background: #0c111f;
+      z-index: 1;
+
+      @media only screen and (max-width: $breakpoint-mobile) {
+        top: -188px;
+        height: 100px;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: -36px;
+      right: 0;
+      width: 55%;
+      height: 500px;
+      border-top-right-radius: 60px;
+      background: #0c111f;
+      z-index: 1;
+
+      @media only screen and (max-width: $breakpoint-mobile) {
+        top: -188px;
+        height: 100px;
+      }
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet-768) {
+      bottom: -145px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      padding: 0 15px;
+    }
+  }
+
+  .gastehausTitle {
+    position: relative;
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    color: #efe314;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      font-size: 70px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      z-index: 2;
+      font-size: 70px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      font-size: 50px;
+      margin-top: -179px;
+    }
+
+    @media only screen and (max-width: $breakpoint-320) {
+      font-size: 40px;
+    }
+
+    .gastehausSmallTitle {
+      position: absolute;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      color: #efe314;
+      text-transform: uppercase;
+      top: -15px;
+
+      @media only screen and (max-width: $breakpoint-laptop) {
+        right: 20px;
+      }
+
+      @media only screen and (max-width: $breakpoint-tablet) {
+        z-index: 2;
+        right: 499px;
+      }
+
+      @media only screen and (max-width: $breakpoint-tablet-768) {
+        right: 268px;
+      }
+
+      @media only screen and (max-width: $breakpoint-mobile) {
+        left: 301px;
+        font-size: 13px;
+      }
+    }
+  }
+
+  .bottomTitle {
+    width: 67%;
+    height: 156px;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 130%;
+    color: #ffffff;
+    margin-bottom: 30px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      width: 84%;
+      font-size: 50px;
+      line-height: 120%;
+      margin-bottom: -5px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      width: 100%;
+      margin-bottom: 10px;
+      z-index: 2;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      width: 245px;
+      height: 83px;
+      letter-spacing: 0.03em;
+      font-size: 30px;
+      margin-bottom: 78px;
+      margin-top: -14px;
+    }
+  }
+
+  .descriptionMain {
+    width: 100%;
+    height: 91px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #ffffff;
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+
+  .descriptionMainTablet {
+    display: none;
+    position: relative;
+    width: 100%;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #ffffff;
+    z-index: 2;
+    top: -76px;
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      display: block;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      height: 274px;
+      line-height: 170%;
+      font-size: 16px;
+    }
+  }
+}
+
+.mainImage {
+  position: relative;
+  width: 96%;
+  right: -46px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    width: 90%;
+    right: -95px;
+  }
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    right: -78px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    display: none;
+  }
+}
+
+.mainImageTablet {
+  display: none;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    display: block;
+    width: 1024px;
+    height: 918px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet-768) {
+    width: 768px;
+    height: 450px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    display: none;
+  }
+}
+
+.mainMobileImage {
+  display: none;
+  position: relative;
+  top: 0;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    display: block;
+    width: 668px;
+    height: 804px;
+  }
+
+  @media only screen and (max-width: $breakpoint-480) {
+    width: 616px;
+    height: 571px;
+    left: -68px;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    width: 584px;
+    height: 513px;
+    left: -80px;
+  }
+
+  @media only screen and (max-width: $breakpoint-375) {
+    width: 506px;
+    height: 448px;
+    left: -66px;
+  }
+}

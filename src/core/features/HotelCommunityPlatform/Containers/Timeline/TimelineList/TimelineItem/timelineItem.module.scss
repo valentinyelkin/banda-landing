@@ -1,0 +1,128 @@
+@import '../../../../../../../assets/scss/breakPoints';
+
+.container {
+  position: relative;
+  margin-bottom: 43px;
+  font-family: 'Raleway', sans-serif;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    margin-bottom: 45px;
+  }
+
+  .direction {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -0.01em;
+    color: #25333A;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    width: 100%;
+    height: 4px;
+    background: #FE531E;
+    border-radius: 15px;
+  }
+}
+
+.wrapperMonths {
+  display: flex;
+
+  .months,
+  .num {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #25333A;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  .months {
+    padding-left: 5px;
+  }
+}
+
+.containerDesign {
+  width: 25%;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    width: 37%;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 70%;
+  }
+}
+
+.containerBack {
+  position: relative;
+  width: 92%;
+  left: 72px;
+
+  @media only screen and (max-width: $breakpoint-1800) {
+    width: 84%;
+    left: 60px;
+  }
+
+  @media only screen and (max-width: $breakpoint-max-width) {
+    width: 69%;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 76%;
+    left: 40px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 110%;
+    left: 25px;
+  }
+}
+
+.containerFront {
+  position: relative;
+  width: 41%;
+  left: 224px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    width: 42%;
+    left: 169px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 47%;
+    left: 90px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 82%;
+    left: 51px;
+  }
+}
+
+.containerTesting {
+  width: 80%;
+  margin-bottom: 77px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    width: 95%;
+    margin-bottom: 64px;
+    left: -35px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 77%;
+  }
+}

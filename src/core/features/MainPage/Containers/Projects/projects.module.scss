@@ -1,0 +1,189 @@
+@import "../../../../../assets/scss/breakPoints.scss";
+
+.projectsWrapper {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.projectsFooter {
+  flex: 1 0 16vh;
+  width: 100%;
+  border-top: 1px solid #828282;
+  z-index: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 180px 0 0;
+}
+
+.sliderBtnWrapper {
+  display: flex;
+  transform: translateY(-50%);
+  position: absolute;
+  top: 0;
+  right: 180px;
+  z-index: 2;
+}
+
+.projectsMobTitle {
+  display: none;
+}
+
+.projectsSlider {
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+}
+
+.projectsSliderList {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  transition: .8s;
+}
+
+@media only screen and (max-width: 1600px) and (max-height: 1200px) and (min-width: 669px) {
+  .sliderBtnWrapper {
+    button {
+      max-width: 12vh;
+      max-height: 12vh;
+      svg {
+        width: 25px;
+        height: 18px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) and (max-height: 1200px) and (min-width: 669px) {
+  .sliderBtnWrapper {
+    right: 60px;
+
+    button {
+      max-width: 10vh;
+      max-height: 10vh;
+      svg {
+        width: 25px;
+        height: 18px;
+      }
+    }
+  }
+
+  .projectContent {
+    padding: 90px 60px 30px;
+    justify-content: center;
+  }
+
+  .projectInfo {
+    margin: 0 0 15px;
+  }
+
+  .projectsFooter {
+    padding: 0;
+  }
+
+  .projectDescription {
+    div {
+      max-width: none;
+    }
+  }
+
+  .projectProblem {
+    font-size: 18px;
+  }
+
+  .projectMedia {
+    max-width: 520px;
+    max-height: 300px;
+    flex: 0 0 auto;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-tablet) and (max-height: 1400px) {
+  .sliderBtnWrapper {
+    right: 60px;
+
+    button {
+      max-width: 5.5vh;
+      max-height: 5.5vh;
+      svg {
+        width: 17px;
+        height: 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+  .gradient-vertical,
+  .gradient-horizontal {
+    display: none;
+  }
+
+  .projectsWrapper {
+    background-color: #333;
+    background-image: linear-gradient( rgba(255,255,255,.1), transparent 1px), linear-gradient( 90deg, rgba(255,255,255,.1), transparent 1px);
+    background-size: 15px 15px;
+    background-position: center center;
+    height: auto;
+    padding: 60px 15px;
+
+    &.projectsPageWrapper {
+      padding: 100px 15px 60px;
+
+      .projectsMobTitle {
+        display: none;
+      }
+    }
+  }
+
+  .projectsMobTitle {
+    display: block;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 130%;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0 0 30px;
+
+    span {
+      color: #EFE314;
+      font-size: 36px;
+    }
+  }
+
+  .projectMedia {
+    flex: 0 0 auto;
+    max-width: 290px;
+    height: auto;
+    border: 5px solid #171718;
+  }
+
+  .projectsFooter {
+    flex-flow: column;
+    height: auto;
+    padding: 0;
+    border: none;
+  }
+
+  .sliderBtnWrapper {
+    transform: none;
+    margin: 0 auto;
+    position: static;
+    justify-content: space-between;
+    width: 100%;
+
+    button {
+      max-width: none;
+      max-height: none;
+    }
+  }
+}

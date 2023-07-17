@@ -1,0 +1,90 @@
+@import '../../../../../../../assets/scss/breakPoints';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid #FFFFFF;
+  box-shadow: 0 4px 20px rgba(12, 23, 22, 0.06);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  margin-bottom: 30px;
+  opacity: 0.99;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 94%;
+    height: 280px;
+    margin-bottom: 0;
+    padding: 40px 40px 25px 40px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    height: 345px;
+    padding: 30px 12px 31px 16px;
+  }
+}
+
+.title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.01em;
+  color: #25333A;
+  margin-bottom: 14px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.line {
+  width: 97%;
+  height: 1px;
+  background: #FE531E;
+  border-radius: 15px;
+}
+
+.description {
+  margin-top: 14px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #25333A;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.containerCurrent {
+  height: 252px;
+}
+
+.containerNotification {
+  height: 252px;
+}
+
+.containerWeb {
+  height: 180px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    height: 196px;
+  }
+}
+
+.containerPrevention {
+  height: 280px;
+}
+
+.containerDiscount {
+  height: 180px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    height: 196px;
+  }
+}

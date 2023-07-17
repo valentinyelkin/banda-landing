@@ -1,0 +1,91 @@
+@import '../../../../../assets/scss/breakPoints';
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #25333a;
+  margin-bottom: 32px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    margin-bottom: 24px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 90%;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 94%;
+  }
+}
+
+.wrapperList {
+  min-width: 42%;
+  margin-right: 46px;
+  padding: 56px 0 0 141px;
+
+  @media only screen and (max-width: $breakpoint-1800) {
+    padding: 40px 0 0 91px;
+  }
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    min-width: 46%;
+    margin-right: 26px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    padding: 40px 0 0 61px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    margin-right: 0;
+    padding: 40px 0 0 31px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  height: 738px;
+
+  @media only screen and (max-width: $breakpoint-1600) {
+    height: 574px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    height: 924px;
+    flex-direction: column;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    height: 1246px;
+  }
+
+  .lineWrapper {
+    display: flex;
+    position: absolute;
+    left: 61px;
+    width: 1px;
+    height: 100%;
+    overflow: hidden;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      left: 40px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      left: 30px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      left: 15px;
+    }
+  }
+}

@@ -1,0 +1,515 @@
+@import "../../../../assets/scss/breakPoints.scss";
+
+$careersItem-title-font-sizes: (
+        null: 24px,
+        768px: 28px,
+        1024px: 28px,
+        1280px: 40px,
+        1600px: 40px,
+        1900px: 40px,
+);
+
+$careersItem-text-font-sizes: (
+        null: 14px,
+        768px: 20px,
+        1024px: 20px,
+        1280px: 20px,
+        1600px: 24px,
+        1900px: 24px,
+);
+
+@mixin font-size($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    } @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+};
+
+.absoluteHeader {
+  position: absolute;
+  background: none;
+}
+
+.careersItemWrapper {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: #333333;
+
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #3C3C3C;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #EFE314;
+  }
+}
+
+.careersItemContent {
+  padding: 160px 60px 50px;
+}
+
+.careersItemBackLink {
+  z-index: 1;
+  font-family: OpenSans, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: #EFE314;
+  text-decoration: none;
+
+  svg {
+    margin-right: 10px;
+  }
+}
+
+.careersItemBackText {
+  margin-left: 5px;
+}
+
+.jobHeader {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.titleContainer {
+  z-index: 1;
+}
+
+.jobItemTitle {
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 130%;
+  color: #FFFFFF;
+  margin-top: 19px;
+  @include font-size($careersItem-title-font-sizes);
+}
+
+.jobItemDescription {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: #BDBDBD;
+  @include font-size($careersItem-text-font-sizes)
+}
+
+.jobHeaderLinkGroup {
+  z-index: 2;
+  display: flex;
+  margin-right: 212px;
+  height: 92px;
+}
+
+.applyBtnLink {
+  position: relative;
+  width: 250px;
+  margin-right: 10px;
+  background: linear-gradient(to left, #EFE314 50%, #fff 50%) right;
+  background-size: 200%;
+  transition: .3s;
+  text-decoration: none;
+
+  &:hover {
+    background-position: left;
+  }
+
+  .applyLink {
+    position: absolute;
+    left: 12%;
+    top: 23.91%;
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 49px;
+    text-transform: uppercase;
+    color: #171718;
+  }
+
+  svg {
+    position: absolute;
+    left: 85%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.shareLink {
+  box-sizing: border-box;
+  transition: .3s;
+  text-decoration: none;
+
+  &:hover {
+    background: #EFE314;
+    border: 0.766667px solid #000;
+    path {
+      fill: #333333;
+    }
+  }
+  #tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    margin-top: 3px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+    transition: visibility 2s;
+  }
+
+  svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.description {
+  z-index: 1;
+  max-width: 915px;
+  margin: 30px 0 45px;
+
+  p {
+    font-family: OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: #F2F2F2;
+    @include font-size($careersItem-text-font-sizes);
+  }
+}
+
+.line {
+  z-index: 1;
+  width: 100%;
+  height: 2px;
+  background: #EFE314;
+  margin-bottom: 54px;
+}
+
+.bodyContent {
+  position: relative;
+  z-index: 1;
+  font-family: OpenSans, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: #F2F2F2;
+  @include font-size($careersItem-text-font-sizes);
+
+  ul {
+    margin-top: 10px;
+    padding-left: 25px;
+    list-style: square;
+  }
+}
+
+.bodyTitle {
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+  color: #EFE314;
+  @include font-size($careersItem-title-font-sizes);
+}
+
+.reqSkills {
+  max-width: 680px;
+  margin-bottom: 30px;
+}
+
+.reqPlus {
+  max-width: 595px;
+  margin-bottom: 30px;
+}
+
+.bodyOffer {
+  max-width: 915px;
+  max-height: 418px;
+  margin-bottom: 30px;
+}
+
+.bodyResponsibility {
+  max-width: 915px;
+  margin-bottom: 30px;
+}
+
+.bodyAbout {
+  max-width: 915px;
+  min-height: 206px;
+  margin-bottom: 45px;
+}
+
+@media screen and (max-width: $breakpoint-1600) {
+  .jobHeaderLinkGroup {
+    margin: 0;
+  }
+
+  .description {
+    max-width: 694px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .careersItemContent {
+    padding: 161px 60px 50px;
+  }
+
+  .jobHeaderLinkGroup {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+  .careersItemContent {
+    padding: 96px 21px 35px;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+
+  .jobHeader {
+    margin-top: 0.7vh;
+  }
+
+  .jobHeaderLinkGroup {
+    height: 60px;
+    margin-top: 2vh;
+  }
+
+  .applyBtnLink {
+    width: 211px;
+
+    .applyLink {
+      top: 10% !important;
+    }
+  }
+
+  .shareLink {
+    width: 68px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .careersItemContent {
+    padding: 96px 15px 35px;
+  }
+
+  .jobHeader {
+    margin-top: 2vh;
+  }
+
+  .jobItemTitle {
+    margin-top: 0;
+  }
+
+  .description {
+    margin-bottom: 2vh;
+    margin-top: 3vh;
+  }
+
+  .jobHeaderLinkGroup {
+    margin-top: 0;
+
+    .applyBtnLink {
+      width: 211px;
+    }
+  }
+
+  .line {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .careersItemContent {
+    padding: 81px 15px 25px;
+  }
+  .careersItemBackLink {
+    display: none;
+  }
+
+  .jobHeaderLinkGroup {
+    margin-top: 0;
+  }
+
+  .line {
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .jobHeader {
+    display: grid;
+    grid-template-areas: "title"
+                         "desc"
+                         "links";
+  }
+
+  .applyBtnLink {
+    width: 100% !important;
+  }
+
+  .titleContainer {
+    grid-area: title;
+    margin: 0 auto;
+  }
+
+  .description {
+    grid-area: desc;
+    margin: 1vh 0;
+  }
+
+  .jobHeaderLinkGroup {
+    grid-area: links;
+    margin: 2vh 0;
+    justify-content: center;
+  }
+}
+
+.socialIconShare {
+  background-color: #333;
+  height: 10vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  //border: 0.766667px solid #000;
+}
+
+.socialIconShare:hover {
+  border-color: #EFE314;
+  background-color: #333;
+}
+
+.shareLinkDropdown {
+  box-sizing: border-box;
+  transition: .3s;
+  text-decoration: none;
+
+  svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.socialIconShare span {
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-size: contain !important;
+  transition: .3s;
+}
+
+.dropdown {
+  //border: 0.766667px solid #FFFFFF;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  width: 92px;
+  box-shadow: 0px 0px 0px 0.766667px #fff inset;
+}
+
+
+.dropdown:hover {
+  overflow: visible;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  width: -webkit-fill-available;
+  margin: 92px 0 0 0;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdownContent > a:first-child .socialIconShare {
+  border: 0.766667px solid #fff;
+  border-top-style: none;
+}
+
+.dropdownContent > a:nth-child(2) .socialIconShare {
+  border: 0.766667px solid #fff;
+  border-top-style: none;
+}
+
+.dropdownContent > a:first-child .socialIconShare:hover {
+  border-color: #EFE314;
+}
+
+.dropdownContent > a:first-child .socialIconShare:hover {
+  border: 0.766667px solid #EFE314;
+}
+
+.dropdownContent > a:first-child .socialIconShare:hover .dropdown {
+  border-bottom-style: none;
+}
+
+.dropdownContent > a:nth-child(2) .socialIconShare:hover {
+  border: 0.766667px solid #EFE314;
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+@media screen and (max-width: 1000px){
+  .dropdownContent {
+    margin: 60px 0 0 0;
+  }
+
+  .socialIconShare {
+    height: 7vh;
+  }
+}
+
+.socialFacebookIcon {
+  background: url(/images/icons/facebook-white.svg) no-repeat center;
+}
+
+.socialLinkedinIcon {
+  background: url(/images/icons/linkedin-white.svg) no-repeat center;
+}
+
+.dropdownContent > a:first-child .socialIconShare:hover .socialFacebookIcon {
+  background: url(/images/icons/facebook-yellow.svg) no-repeat;
+}
+
+
+.dropdownContent > a:nth-child(2) .socialIconShare:hover .socialLinkedinIcon {
+  background: url(/images/icons/linkedin-yellow.svg) no-repeat;
+}

@@ -1,0 +1,56 @@
+.active,
+.resultsDots,
+.wrapperDots {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  margin-right: 8px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.active {
+  background: #F1AD4D;
+}
+
+.resultsDots {
+  border: 0.5px solid #07556E;
+}
+
+.activeResultsDots {
+  background: #F1AD4D;
+  border: none;
+}
+
+.realEstateDots {
+  width: 12px;
+  height: 12px;
+  border: 0.5px solid #9E92AE;
+  border-radius: 0;
+}
+
+.realEstateActiveDots {
+  background: #824DCE;
+}
+
+.hotelCommunityActiveDot,
+.hotelCommunityDots {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #25333A;
+  margin-right: 15px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.hotelCommunityActiveDot {
+  background: #FE531E;
+  border: none;
+}
+

@@ -1,0 +1,396 @@
+@import "../../../../../assets/scss/breakPoints";
+
+$careersForm-title-font-sizes: (
+        null: 24px,
+        590px: 40px,
+        768px: 40px,
+        1024px: 60px,
+        1280px: 80px,
+        1600px: 80px,
+        1900px: 107px,
+);
+
+@mixin font-size($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    } @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+};
+
+.removeScrolling {
+  overflow: hidden;
+}
+
+.formContent {
+  margin: 26px 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.formTitle {
+  position: relative;
+  z-index: 1;
+  color: #FFFFFF;
+  max-width: 569px;
+  max-height: 451px;
+  text-transform: uppercase;
+  white-space: pre;
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 147px;
+  text-align: right;
+  letter-spacing: 0.2em;
+  border-right: 10px solid #EFE314;
+  padding-right: 32px;
+  margin: 20px 150px 0 40px;
+  @include font-size($careersForm-title-font-sizes);
+}
+
+.underline {
+  position: relative;
+  z-index: 1;
+  display: none;
+  width: 40%;
+  height: 7px;
+  background-color: #EFE314;
+  margin: 0 auto 42px;
+}
+
+.formWrapper {
+  width: 624px;
+}
+
+.inputPhone {
+  margin: 10px 0;
+}
+
+.formComment {
+  position: relative;
+  z-index: 1;
+  margin-top: 36px;
+
+  h6 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFF;
+    opacity: 0.5;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+  }
+}
+
+.btnsGroup {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  height: 92px;
+  margin-top: 15px;
+
+  span {
+    margin: auto 10px;
+    color: #FFF;
+  }
+}
+
+.cvAttach {
+  position: relative;
+  min-width: 92px;
+  border: 0.766667px solid #FFFFFF;
+  box-sizing: border-box;
+  margin-right: 10px;
+  cursor: url(/images/cursors/hover.png), auto;
+  transition: .3s;
+
+  &:hover {
+    border-color: #EFE314;
+    background: #EFE314;
+
+    path {
+      stroke: #333333;
+    }
+  }
+  &.fileError {
+    border: 0.766667px solid #e45557;
+
+    svg {
+      path {
+        stroke: #e45557;
+      }
+    }
+  }
+  svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  input {
+    display: none;
+  }
+}
+
+.applyFormBtnLink {
+  position: relative;
+  width: 250px;
+  background: linear-gradient(to left, #EFE314 50%, #fff 50%) right;
+  background-size: 200%;
+  transition: .3s;
+
+  &:hover {
+    background-position: left;
+  }
+
+  .applyFormLink {
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 49px;
+    text-transform: uppercase;
+    color: #171718;
+  }
+
+  svg {
+    position: absolute;
+    left: 82%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.required {
+  color: #e45557 !important;
+}
+
+.errorMessage {
+  display: none;
+}
+
+.inputText input[type="text"], .inputText input[type="email"] {
+  height: 50px !important;
+}
+
+.attachText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  &.fileError {
+    color: #e45557;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .formTitle {
+    max-height: 403px;
+    line-height: 134px;
+    margin: 20px 120px 0 0;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+  .formContent {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .formWrapper {
+    width: 100%;
+  }
+
+  .formTitle {
+    max-width: 100%;
+    overflow: visible;
+    white-space: nowrap;
+    letter-spacing: 0.1em;
+    border-right: none;
+    margin: 0 0 30px 0;
+    padding: 0;
+    text-align: center;
+    line-height: 70px;
+  }
+
+  .underline {
+    display: block;
+    width: 33%;
+  }
+
+  #jobForm {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .inputs {
+    width: 48%;
+    margin-top: 47px;
+
+    .inputPhone {
+      margin: 15px 0;
+    }
+  }
+
+  .formComment {
+    width: 48%;
+    margin-left: 20px;
+    margin-top: 0;
+
+    .textareaWrapper {
+      margin-top: 0;
+    }
+
+    .textarea {
+      max-height: 180px !important;
+    }
+  }
+
+  .btnsGroup {
+    max-width: 100%;
+    height: 60px;
+  }
+
+  .cvAttach {
+    min-width: 68px;
+  }
+
+  .applyFormBtnLink {
+    width: 290px;
+  }
+
+  .inputText {
+    flex-flow: row-reverse nowrap !important;
+    align-items: center !important;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .applyFormBtnLink {
+    width: 270px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .formTitle {
+    margin: 0;
+  }
+
+  .underline {
+    width: 30%;
+  }
+
+  .inputs {
+    margin-top: 33px;
+  }
+
+  .formComment {
+    h6 {
+      margin: 0 0 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 590px) {
+  #jobForm {
+    flex-direction: column;
+  }
+
+  .formTitle {
+    line-height: 30px;
+    margin-bottom: 15px;
+  }
+
+  .underline {
+    display: none;
+  }
+
+  .inputs {
+    width: 100%;
+    display: grid;
+    grid-gap: 1vh;
+    grid-template-areas: "name phone"
+                         "email email";
+    margin-top: 15px;
+
+    .inputName {
+      grid-area: name;
+    }
+
+    .inputPhone {
+      grid-area: phone;
+      margin: 0 !important;
+    }
+
+    .inputEmail {
+      grid-area: email;
+      margin: 1vh 0;
+    }
+  }
+
+  .formComment {
+    width: 100%;
+    margin: 20px 0;
+    .textarea {
+      max-height: 70px;
+      overflow: hidden;
+    }
+  }
+
+  .applyFormBtnLink {
+    min-width: 211px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .applyFormBtnLink {
+    min-width: 122px;
+    .applyFormLink {
+      left: 25%;
+    }
+  }
+
+  .inputs {
+    grid-template-areas: "name"
+                         "phone"
+                         "email";
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .btnsGroup {
+    display: grid;
+    grid-template-areas:
+        "attach text"
+        "btn btn";
+    grid-template-rows: 45% 45%;
+    grid-template-columns: 25% 75%;
+    grid-gap: 1vh;
+    height: 125px;
+    justify-content: flex-start;
+    margin-top: 0;
+
+    .attachText {
+      grid-area: text;
+    }
+
+    .cvAttach {
+      grid-area: attach;
+    }
+
+    .applyFormBtnLink {
+      width: 300px;
+      grid-area: btn;
+    }
+  }
+}

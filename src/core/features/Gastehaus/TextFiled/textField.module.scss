@@ -1,0 +1,115 @@
+@import "../../../../assets/scss/breakPoints";
+
+.wrapperText {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  font-family: 'Raleway', serif;
+
+  .lowerTitle {
+    width: 600px;
+    font-weight: 900;
+    font-size: 40px;
+    margin-bottom: 40px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      width: 500px;
+      font-size: 30px;
+      line-height: 130%;
+      margin-bottom: 32px;
+    }
+
+    @media only screen and (max-width: $breakpoint-laptop) {
+      width: 400px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      width: 100%;
+      margin-bottom: 37px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      width: 97%;
+      height: 100%;
+      margin-bottom: 10px;
+      font-size: 30px;
+      line-height: 130%;
+    }
+  }
+
+  .lowerTitleChallenges {
+    @media only screen and (max-width: $breakpoint-mobile) {
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .lowerTitlePlace {
+    width: 665px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      width: 479px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      width: 640px;
+      margin-bottom: 35px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      width: 100%;
+      margin-bottom: 7px;
+    }
+  }
+
+  .descriptionTop {
+    display: block;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    color: #EFE314;
+    margin-bottom: 30px;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      font-size: 25px;
+      line-height: 130%;
+      margin-bottom: 19px;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      margin-bottom: 7px;
+      font-size: 18px;
+      line-height: 170%;
+    }
+  }
+
+  .descriptionBottom {
+    width: 600px;
+    height: 92px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+
+    @media only screen and (max-width: $breakpoint-1600) {
+      width: 500px;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      width: 90%;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      width: 97%;
+      height: 100%;
+      font-size: 18px;
+      line-height: 170%;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../../../assets/scss/breakPoints";
+
+.containerList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titleDescriptionFunctionality,
+.titleDescriptionFeatures,
+.titleDescription {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 129%;
+  margin-bottom: 32px;
+
+  @media only screen and (max-width: $breakpoint-laptop) {
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 24px;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    width: 75%;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 16px;
+  }
+
+  @media only screen and (max-width: $breakpoint-425) {
+    width: 90%;
+  }
+}
+
+.titleDescriptionFeatures {
+  margin-bottom: 24px;
+
+  @media only screen and (max-width: $breakpoint-425) {
+    margin-bottom: 14px;
+  }
+}
+
+.titleDescriptionFunctionality {
+  @media only screen and (max-width: $breakpoint-laptop) {
+    margin-bottom: 31px;
+  }
+}

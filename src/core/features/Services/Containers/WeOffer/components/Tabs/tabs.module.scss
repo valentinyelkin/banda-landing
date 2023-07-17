@@ -1,0 +1,403 @@
+@import '../../../../../../../assets/scss/breakPoints.scss';
+
+.tabContent {
+  h2 {
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    color: #171718;
+    margin: 0 0 20px;
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: #828282;
+  }
+}
+
+.tabItem {
+  background: #fff;
+
+  &:not(:last-child) {
+    padding-right: 20px;
+  }
+
+  button {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #171718;
+    padding: 30px 60px;
+    background: #fff;
+    flex-shrink: 1;
+    flex-grow: 0;
+    transition: .3s;
+
+    &:hover {
+      color: #EFE314;
+    }
+  }
+
+  &.tabItemActive {
+    button {
+      background: #171718;
+      color: #EFE314;
+      position: relative;
+
+      span {
+        position: relative;
+
+        &:before {
+          content: '';
+          display: block;
+          width: 4px;
+          height: 4px;
+          background: #EFE314;
+          position: absolute;
+          top: 50%;
+          left: -20px;
+        }
+      }
+    }
+  }
+}
+
+.tabsList {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0 0 12vh;
+
+  li {
+    border-top: 1px solid #BDBDBD;
+    border-bottom: 1px solid #BDBDBD;
+
+    &:first-child {
+      border-left: 1px solid #BDBDBD;
+    }
+
+    &:last-child {
+      border-right: 1px solid #BDBDBD;
+    }
+  }
+}
+
+.offerRow {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.tabContent {
+  max-width: 780px;
+  margin-right: 80px;
+
+  h2 {
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    color: #171718;
+    margin: 0 0 20px;
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: #828282;
+  }
+}
+
+.tabItem {
+  button {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #171718;
+    padding: 30px 60px;
+    background: #fff;
+    flex-shrink: 1;
+    flex-grow: 0;
+    transition: .3s;
+  }
+
+  &.tabItemActive {
+    button {
+      background: #171718;
+      color: #EFE314;
+      position: relative;
+
+      span {
+        position: relative;
+
+        &:before {
+          content: '';
+          display: block;
+          width: 4px;
+          height: 4px;
+          background: #EFE314;
+          position: absolute;
+          top: 50%;
+          left: -20px;
+        }
+      }
+    }
+  }
+}
+
+.offersInfo {
+  max-width: 520px;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+  h4 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    color: #171718;
+    margin: 0 0 20px;
+    position: relative;
+
+    @media only screen and (max-width: $breakpoint-1680) {
+      margin: 0 0 10px;
+    }
+  }
+
+  li {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: #828282;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+      }
+
+    @media only screen and (max-width: $breakpoint-1680) {
+      line-height: 130%;
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.offerPeople {
+  img {
+    display: block;
+    margin: 0 0 20px;
+  }
+}
+
+.offersOther {
+  div {
+    &:first-child {
+      margin-bottom: 140px;
+    }
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+
+@media only screen and (max-width: $breakpoint-laptop) {
+  .tabsList {
+    margin: 0 0 5vh;
+  }
+
+  .offersInfo {
+    max-width: 420px;
+  }
+
+  .offersOther {
+    margin-right: 15px;
+
+    div{
+      &:first-child {
+        margin-bottom: 80px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-tablet) and (min-height: 700px) and (max-height: 1024px)  {
+  .offerContainer {
+    h1 {
+      font-size: 60px;
+    }
+  }
+
+  .offersOther {
+    div {
+      &:first-child {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-tablet) {
+  .offerContainer {
+    padding: 120px 60px 5vh;
+  }
+
+  .tabsList {
+    margin: 0 0 5vh;
+  }
+
+  .tabItem {
+    button {
+      padding: 30px 40px;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-tablet) and (max-height: 800px){
+  .offerContainer {
+    h1 {
+      font-size: 40px;
+      margin: 0 0 10px;
+    }
+  }
+
+  .tabContent {
+    margin: 0 0 20px 0;
+  }
+
+  .offersInfo {
+    max-width: none;
+    justify-content: center;
+
+    h4 {
+      font-size: 18px;
+    }
+
+    li {
+      font-size: 16px;
+    }
+  }
+
+  .offersOther {
+    div {
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .tabContent {
+    h2 {
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-tablet) and (min-height: 700px) and (max-height: 1024px)  {
+  .tabsList {
+    margin: 0 0 4vh;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-tablet) and (max-height: 800px){
+  .tabsList {
+    margin: 0 0 3vh;
+  }
+
+  .offerRow {
+    flex-flow: column;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+  .tabsList {
+    display: none;
+  }
+
+  .tabContent {
+    h2 {
+      font-size: 26px;
+      color: #fff;
+      margin: 0 0 10px;
+    }
+
+    p {
+      color: #fff;
+      font-size: 14px;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .offerRow {
+    flex-flow: column;
+  }
+
+  .tabContent {
+    margin: 0 0 20px 0;
+  }
+
+  .offerRow {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .offersInfo {
+    display: block;
+    max-width: 200px;
+    margin: 0 auto;
+
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+
+    h4 {
+      color: #fff;
+      margin: 0 0 10px;
+    }
+
+    li {
+      color: #bdbdbd;
+    }
+
+    img {
+      position: static;
+      display: block;
+      transform: none;
+      margin: 0 0 20px;
+    }
+  }
+
+  .offersOther {
+    div {
+      margin-bottom: 40px;
+    }
+  }
+}

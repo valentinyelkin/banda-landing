@@ -1,0 +1,153 @@
+.dcrMain {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.dcrMainWrapper {
+  background: #131516;
+  padding-top: 200px;
+}
+
+.dcrMainImages {
+  position: relative;
+  background: url("/images/projects/dcr/world-map.png") no-repeat;
+  background-size: cover;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.dcrMainImagesRow {
+  padding: 0 20px 180px;
+  max-width: 1480px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dcrMainLogo {
+  margin-right: 50px;
+}
+
+.dcrAboutWrapper {
+  max-width: 1480px;
+  padding: 0 20px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.dcrAboutText {
+  position: relative;
+
+  h2 {
+    font-weight: bold;
+    font-size: 90px;
+    line-height: 130%;
+    color: #fff;
+    margin-bottom: 25px;
+    max-width: 850px;
+
+    &:first-letter {
+      color: #EFE314;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: 0.01em;
+    color: #E0E0E0;
+    font-family: 'Open Sans', sans-serif;
+    max-width: 720px;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.title {
+  opacity: 0;
+  margin-top: -18px;
+}
+
+.dcrAboutImage {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.dcrMainCorner {
+  display: block;
+  max-width: none;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .dcrMainImagesRow {
+    flex-direction: column;
+    padding: 0 20px 80px;
+  }
+
+  .dcrMainLogo {
+    margin-left: 50px;
+    margin-right: 0;
+    max-width: 380px;
+  }
+
+  .dcrMainImages {
+    overflow: hidden;
+  }
+
+  .dcrMainMac {
+    margin: 10px auto 0;
+
+    img {
+      max-height: 480px;
+    }
+  }
+}
+
+@media only screen and (max-width: 669px) {
+  .dcrMainWrapper {
+    padding-top: 100px;
+  }
+
+  .dcrMainImagesRow {
+    padding: 0 0 160px;
+  }
+
+  .dcrMainLogo {
+    max-width: 180px;
+  }
+
+  .dcrMainMac {
+    img {
+      max-height: 350px;
+      transform: translateX(70px);
+    }
+  }
+
+  .dcrAboutWrapper {
+    padding: 0 15px;
+  }
+
+  .dcrAboutImage {
+    max-width: calc(100% - 30px);
+    transform: translateY(-100%);
+  }
+
+  .dcrAboutText {
+    h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
